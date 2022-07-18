@@ -1,0 +1,28 @@
+1. Largest of three salaries
+Test Case 1
+Input:
+Enter three numbers one by one:
+6000
+5000
+5500
+Output:
+6000
+
+Test Case 2
+Input:
+Enter three numbers one by one:
+5500
+6000
+5000
+Output:
+6000
+
+Test Case 3
+Input:
+Enter three numbers one by one:
+5000
+5500
+6000
+Output:
+6000
+
