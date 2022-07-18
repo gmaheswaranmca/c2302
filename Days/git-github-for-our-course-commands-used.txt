@@ -1,0 +1,11 @@
+git clone https://github.com/gmaheswaranmca/c2302.git
+
+
+git status	# red colored items -> files are changed in the file system 
+git add .   # green colored items -> staged files bt file system and git repo
+git status 
+git commit -m "NOTES" #add into local repo
+git status #nothing to commit 
+
+git push origin main # to copy from local repo(our computer) to remote repo (github)
+git pull origin main # to copy from report repo(github) to local repo(our computer) 
