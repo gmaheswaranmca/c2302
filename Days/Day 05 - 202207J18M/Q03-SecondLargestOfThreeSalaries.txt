@@ -26,3 +26,81 @@ Enter three numbers one by one:
 Output:
 5500
 
+firstSalary secondSalary thirdSalary largestSalary	smallestSalary
+6000         5000         5500 			6000			5000
+
+
+
+middleSalary = (firstSalary + secondSalary + thirdSalary) - largestSalary - smallestSalary
+
+middleSalary is second largest/smallest of three salaries 
+
+
+static void Main(string[] args)
+{
+	double firstSalary = 0.0;
+	double secondSalary = 0.0;
+	double thirdSalary = 0.0;
+	//Read salaries
+	Console.Write("Enter first salary:");
+	firstSalary = double.Parse(Console.ReadLine());
+
+	Console.Write("Enter second salary:");
+	secondSalary = double.Parse(Console.ReadLine());
+
+	Console.Write("Enter third salary:");
+	thirdSalary = double.Parse(Console.ReadLine()); //6000 5000 5500
+	//finding largest
+	double largestSalary = double.MinValue; //-ve 
+	if (firstSalary > largestSalary)
+	{
+		largestSalary = firstSalary;
+	}
+
+	if (secondSalary > largestSalary)
+	{
+		largestSalary = secondSalary;
+	}
+
+	if (thirdSalary > largestSalary)
+	{
+		largestSalary = thirdSalary;
+	}
+
+	//finding smallest
+	double smallestSalary = double.MaxValue; //+ve 
+	if (firstSalary < smallestSalary)
+	{
+		smallestSalary = firstSalary;
+	}
+
+	if (secondSalary < smallestSalary)
+	{
+		smallestSalary = secondSalary;
+	}
+
+	if (thirdSalary < smallestSalary)
+	{
+		smallestSalary = thirdSalary;
+	}
+	//find second largest 
+	double middleSalary = (firstSalary + secondSalary + thirdSalary) - largestSalary - smallestSalary;
+
+	//print the largest,smallest and second largest
+	Console.WriteLine("largest of {0},{1} and {2} is {3}",
+		firstSalary,
+		secondSalary,
+		thirdSalary,
+		largestSalary);
+	Console.WriteLine("smallest of {0},{1} and {2} is {3}",
+		firstSalary,
+		secondSalary,
+		thirdSalary,
+		smallestSalary);
+	Console.WriteLine("second largest of {0},{1} and {2} is {3}",
+		firstSalary,
+		secondSalary,
+		thirdSalary,
+		middleSalary);
+	Console.Read();
+}
