@@ -1,0 +1,29 @@
+Read an age of the person (infant[0], toddler[1,2], kinder garder school going[3 4 5],
+primary lower school going[6 7], primary upper school going[8 9 10], 
+lower high school going[11 12 13], upper high school going[14 15], 
+senior secondary school going[16 17], 
+college going[18 19 20 21], graduated[>21])
+
+Test Case 1:
+Input:
+Enter age: 0
+Output:
+the person is infant
+
+Test Case 2:
+Input:
+Enter age: 6
+Output:
+the person is primary lower school going
+
+Test Case 3:
+Input:
+Enter age: 18
+Output:
+the person is college going
+
+Test Case 4:
+Input:
+Enter age: 30
+Output:
+the person is graduated
