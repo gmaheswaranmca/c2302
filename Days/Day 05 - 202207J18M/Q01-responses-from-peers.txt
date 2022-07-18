@@ -1,0 +1,324 @@
+from Reddy Lalasa Sri to everyone:    4:20 PM
+using System;
+namespace largest_of_three
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int salary1, salary2, salary3;
+            for(int i=0;i<3;i++)
+            {
+                Console.WriteLine("Enter the salaries");
+                salary1 = Convert.ToInt32(Console.ReadLine());
+                salary2 = Convert.ToInt32(Console.ReadLine());
+                salary3 = Convert.ToInt32(Console.ReadLine());
+                if(salary1>salary2 && salary1>salary3)
+                {
+                    Console.WriteLine("greatest salary is " + salary1);
+                }
+                else if(salary2>salary1 && salary2>salary3)
+                {
+                    Console.WriteLine("greatest salary is " + salary2);
+                }
+                else
+                {
+                    Console.WriteLine("greatest salary is " + salary3);
+                }
+            }
+        }
+    }
+}
+
+from Sannala_Sumanasri to everyone:    4:21 PM
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace day6_largest_of_3_salaries
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter 3 numbers one by one: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            int c=Convert.ToInt32(Console.ReadLine()); 
+            if(a>b && a>c)
+            {
+                Console.WriteLine(a + " is largest salary");
+            }
+            else if(b>c)
+            {
+                Console.WriteLine(b + " is largest salary");
+            }
+            else
+            {
+                Console.WriteLine(c + " is largest salary");
+            }
+            Console.Read();
+        }
+    }
+}
+
+from ABHIRAMI A S (privately):    4:22 PM
+ static void Main(string[] args)
+        {
+            int s1;
+            int s2;
+            int s3;
+            Console.WriteLine("enter the first salary");
+            s1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter the second salary");
+            s2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter the third salary");
+            s3 = Convert.ToInt32(Console.ReadLine());
+            if(s1>s2 && s1>s3)
+            {
+                Console.WriteLine(" first salary is highest" +s1);
+            }
+            else if(s2>s1 && s2>s3)
+            {
+                Console.WriteLine(" second salary is highest" + s2);
+            }
+            else
+            {
+                Console.WriteLine(" third salary is highest" + s3);
+            }
+            Console.Read();
+        }
+from Gokulraj A K to everyone:    4:24 PM
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace monday_afternoon
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int sal, n, i,a;
+            Console.WriteLine("Enter the number of plps");
+            n = Convert.ToInt32(Console.ReadLine());
+            sal = 0;
+            for (i = 1; i<=n;i++)
+            {
+                Console.WriteLine("enter the salary" +i);
+                a = Convert.ToInt32(Console.ReadLine());
+                if (sal < a)
+                {
+                    sal = a;
+                }
+                else
+                    sal = sal;
+            }
+            Console.WriteLine("largest salry=" + sal);
+            Console.Read();
+        }
+    }
+}
+from Roopa Srinidhi to everyone:    4:24 PM
+using System;
+namespace largestamong3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double s1, s2, s3;
+            Console.WriteLine("Enter s1");
+            s1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter s2");
+            s2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter s3");
+            s3 = Convert.ToDouble(Console.ReadLine());
+            if (s1 > s2)
+            {
+                if (s1 > s3)
+                {
+                    Console.WriteLine("S1 is largest" + s1);
+                }
+                else
+                {
+                    Console.WriteLine("S3 is largest" + s3);
+                }
+            }
+            else if (s2 > s3)
+            {
+                Console.WriteLine("S2 is largest" + s2);
+            }
+            else
+            {
+                Console.WriteLine("S3 is largest" + s3);
+            }
+            
+from Palak Saraf to everyone:    4:25 PM
+double num1, num2, num3;
+            Console.WriteLine("enter first salary");
+            num1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("enter second salar");
+            num2 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("enter third salary");
+            num3 = Convert.ToDouble(Console.ReadLine());
+            if (num1 >= num2 && num1 >= num3)
+            {
+                Console.WriteLine("{0} is greater salary among 3", num1);
+            }
+            else if (num2 >= num1 && num2 >= num3)
+            {
+                Console.WriteLine("{0} number is greater salary among 3", num2);
+            }
+            else
+            {
+                Console.WriteLine("{0} number is greater salary among 3", num3);
+            }
+            Console.Read();
+from Ashish_Ranjan to everyone:    4:25 PM
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace ConsoleApp14
+{
+    internal class Class1
+    {
+        static void Main(String[] args)
+        {
+            double sal1, sal2, sal3;
+            Console.WriteLine("Enter the three number: ");
+            sal1 = Convert.ToInt32(Console.ReadLine());
+            sal2 = Convert.ToInt32(Console.ReadLine());
+            sal3 = Convert.ToInt32(Console.ReadLine());
+            if(sal1 > sal2 && sal1 > sal3)
+            {
+                Console.WriteLine("Largest no: " + sal1);
+            }
+            else if (sal2 > sal1 && sal2 > sal3)
+            {
+                Console.WriteLine("Largest no: " + sal2);
+            }
+            else
+            {
+                Console.WriteLine("Largest no: " + sal3);
+            }
+        }
+    }
+}
+
+from AMRUTHA MS to everyone:    4:26 PM
+using System;
+namespace largest
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int salary1, salary2, salary3;
+            for(int i=0;i<3;i++)
+            {
+                Console.WriteLine("Enter the salaries");
+                salary1 = Convert.ToInt32(Console.ReadLine());
+                salary2 = Convert.ToInt32(Console.ReadLine());
+                salary3 = Convert.ToInt32(Console.ReadLine());
+                if(salary1>salary2 && salary1>salary3)
+                {
+                    Console.WriteLine("high salary is " + salary1);
+                }
+                else if(salary2>salary1 && salary2>salary3)
+                {
+                    Console.WriteLine("high salary is " + salary2);
+                }
+                else
+                {
+                    Console.WriteLine("high is " + salary3);
+                }
+            }
+        }
+    }
+}
+
+
+from Stutee Rath to everyone:    4:26 PM
+{
+            int a, b, c;
+            Console.WriteLine("enter 1st number : ");
+            a=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter 2nd number : ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter the 3rd number :");
+            c = Convert.ToInt32(Console.ReadLine());
+            if (a >= b)
+            {
+                if (a > c)
+                    Console.WriteLine("the largest number is " + a);
+                else
+                {
+                    Console.WriteLine("the largest number is : " + c);
+                }
+            }
+            else
+            {
+                if (b >= c)
+                {
+                    Console.WriteLine("the largest is : " + b);
+                }
+                else
+                {
+                    Console.WriteLine("the largest number is " + c);
+                }
+            }
+            Console.ReadLine();
+       
+from Rahul Bejoy (privately):    4:26 PM
+ double a, b, c, d;
+            Console.WriteLine("Enter 3 numbers one by one: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
+            c = Convert.ToInt32(Console.ReadLine());
+            d = a > b ? (a > c ? a : c) : (b > c ? b : c);
+            Console.WriteLine(d + " is largest salary");
+            Console.Read();
+from Sebin Benny to everyone:    4:28 PM
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace largethreenum
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int sal1, sal2, sal3;
+            Console.WriteLine("Enter the first Salary");
+            sal1=Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the Second Salary");
+            sal2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the third Salary");
+            sal3 = Convert.ToInt32(Console.ReadLine());
+            if((sal1>sal2)&&(sal1>sal3))
+            {
+                Console.WriteLine(sal1 + "is the largest salary");
+            }
+            else if((sal2>sal1)&&(sal2>sal3))
+            {
+                Console.WriteLine(sal2 + "is the largest salary");
+            }
+            else
+            {
+                Console.WriteLine(sal3 + "is the largest salary
+from Rahul Bejoy to everyone:    4:28 PM
+ double a, b, c, d;
+            Console.WriteLine("Enter 3 numbers one by one: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            b = Convert.ToInt32(Console.ReadLine());
+            c = Convert.ToInt32(Console.ReadLine());
+            d = a > b ? (a > c ? a : c) : (b > c ? b : c);
+            Console.WriteLine(d + " is largest salary");
+            Console.Read();
