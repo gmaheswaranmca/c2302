@@ -1,0 +1,153 @@
+Sinduja
+sannala_sumanasri
+
+Discussion:
+	Control Statements 
+		Conditional
+			Branching/Selection 
+				simple if	(without else)					only one option 
+				if..else 									two branches of options 
+				else..if ladder (for multiple options)		many branches 
+			Iteration/Loop
+				while loop 			entry-controlled		
+				do.while loop		exit-controlled 
+				for loop 			entry-controlled 
+		Unconditional
+		Multiway switch 
+			switch expression(variable) is evaluated with label expressions(constant)
+
+Branching/Selection 
+	simple if	
+		(without else)					
+		only one option 
+		Examples: 
+			o to find maximum of N numbers 
+				the comparison along with finding maximum number, we will go for simple if 
+			o to check a number is prime number 
+				prime number: the number if should be divisible only by 1 and the same number 
+				
+				check continuously between 2 and number-1 
+					if devides the number 
+						stop the process 
+			o to count number of odd numbers between 1 and 100 
+				if the number in the range between 1 and 100 is not divisible by 2
+					count continuously 
+			o to count number of odd numbers for given N numbers array 
+				if the number in the array is not divisible by 2	
+					count continuously 
+		
+	if..else 									
+		two branches of options 
+		
+	else..if ladder (for multiple options)		
+		many branches 
+		
+		Example:
+			o menu driven programming to check the option 
+
+
+switch expression(variable) is evaluated with label expressions(constant)
+	o Multiway branching / to go for one of the multiple blocks of code 
+	o variable expression mapping to constant expression 
+	o Syntax:
+		switch(varExpression){
+			case constExpression01:
+				[statements[break;]]
+			case constExpression01:
+				[statements[break;]]
+			case constExpression01:
+				[statements[break;]]
+			case constExpression01:
+				[statements[break;]]
+			case constExpression01:
+				[statements[break;]]
+			default:
+				[statements[break;]]
+		}
+		
+		
+		varExpression: 
+			o integer expression 
+			o character expression 
+			o enumeration expression 
+			o string expression 
+			o boolean expression 
+		constExpression01:
+			the expression has to be evaluate as constant 
+		
+loop:
+	to repeat the task 
+	to repeat the statement(s)
+	
+while loop 			
+	o entry-controlled				
+	o Syntax
+		while(condition)
+			statement;
+		
+		while(condition){
+			blockStatements;
+		}
+		o Example:
+			//initialization;
+			while(condition){
+				//statements 
+				//update part - increment/decrement 
+			}
+	o minimum number of iteration is zero 
+	o when ?
+		variable number of iterations 
+	
+do..while loop 
+	o exit-controlled 
+	o Syntax: 
+		do{
+			//statements 
+		}while(condition);
+		
+		Example:
+		//initialization;
+		do{
+			//statements 
+			//increment/decrement 
+		}while(condition);
+	o minimum number of iteration is one
+		- loop will execute atleast once 
+	o when ? 
+		variable number of iterations	
+		
+		feasible menu-driven program 
+		
+for loop 
+	o entry-controlled loop 
+	o Syntax: 
+		for(initialization ; condition ; incrementOrDecrement)
+			statement;
+			
+		for(initialization ; condition ; incrementOrDecrement){
+			//statements;
+		}
+	o minimum number of iteration is zero
+	o when ?
+		10 steps to carry out 
+		100 flights info if we update 
+		30 students marks are processed 
+		
+		fixed number of iterations 
+			
+foreach loop
+	o to iterate the elements in the container such as array, list 
+
+recursive function 
+	o function that calls itself continuously till the base condition 
+	o recursion can become the loop 
+	
+goto may for the loop 
+
+	
+	
+			
+			
+			
+			
+			
