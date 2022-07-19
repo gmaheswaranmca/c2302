@@ -1,0 +1,530 @@
+from Reddy Lalasa Sri to everyone:    5:13 PM
+using System;
+namespace even
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int count = 0;
+            for(int i=1;i<=100;i++)
+            {
+                if(i%2 == 0)
+                {
+                    if(i>=20 && i<=40)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        count++;
+                    }
+                }
+            }
+            Console.WriteLine(count);
+        }
+    }
+}
+
+from Gokulraj A K to everyone:    5:16 PM
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace print_even
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 1, b = 100,count=0;
+            while(a<=b)
+            {
+                if(a%2==0)
+                {
+                    if((a>=20)&&(a<=40))
+                    {
+                        count = count;
+                    }
+                    else if(a%2==0)
+                    {
+                        count++;
+                    }
+                    else
+                    {
+                        count=count;
+                    }
+                    
+                   
+                       
+                   
+                }
+                a++;
+            }
+            Console.WriteLine("total numbers=" + count);
+            Console.Read();
+        }
+    }
+}
+
+from Sannala_Sumanasri to everyone:    5:16 PM
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace even_numbers_between_1_and_100
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int count=0,i;
+            for (i = 1; i <= 100; i++)
+            {
+                if ((i < 20 || i > 40) && i % 2 == 0)
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine("The even numbers between 1 and 100 and doen't between 20 and 40 is: ");
+            Console.WriteLine(count);
+            Console.Read();
+        
+        }
+    }
+}
+
+from Roopa Srinidhi to everyone:    5:17 PM
+using System;
+namespace odd
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int start = 0;
+            int end = 0;
+            Console.Write("Enter start number:");
+            start = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter end number:");
+          end = Convert.ToInt32(Console.ReadLine());
+            int count = 0;
+            for (int num = start; (num < 20); num++)
+            {
+                if (num %2==0) 
+                 {
+                    Console.WriteLine(num);
+                }
+            }
+             for(int num=40;num<=end;num++)
+            {
+                if (num % 2 == 0)
+                {
+                    Console.WriteLine(num);
+                }
+            }
+            
+            Console.Read();
+        }
+    }
+}
+
+from Gokulraj A K to everyone:    5:18 PM
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace print_even
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 1, b = 100,count=0;
+            while(a<=b)
+            {
+                if(a%2==0)
+                {
+                    if((a>=20)&&(a<=40))
+                    {
+                        count = count;
+                    }
+                   
+                    else
+                    {
+                        count++;
+                    }
+                    
+                   
+                       
+                   
+                }
+                a++;
+            }
+            Console.WriteLine("total numbers=" + count);
+            Console.Read();
+        }
+    }
+}
+
+from AMRUTHA MS to everyone:    5:19 PM
+using System;
+namespace even
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int count = 0;
+            for(int i=1;i<=100;i++)
+            {
+                if(i%2 == 0)
+                {
+                    if(i>=20 && i<=40)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        count++;
+                    }
+                }
+            }
+            Console.WriteLine(count);
+        }
+    }
+}
+
+from Albin_B to everyone:    5:19 PM
+int i = 1,count=0;
+            for(i=1;i<=100;i++)
+            {
+                if (i % 2 == 0 )
+                {
+                    if(i < 20 || i > 40)
+                        count++;
+                }
+                    
+            }
+             Console.WriteLine("total numbers ="+count);
+from Albin_B to everyone:    5:20 PM
+int i = 1,count=0;
+            for(i=1;i<=100;i++)
+            {
+                if (i % 2 == 0 )
+                {
+                    if(i < 20 || i > 40)
+                        count++;
+                }
+                    
+            }
+             Console.WriteLine("total numbers ="+count);
+from Sebin Benny to everyone:    5:20 PM
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace evenbet1100
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {   int count = 0,n=0;
+            for(int i = 0; i <= 100; i++)
+            {
+                if(i%2==0)
+                {
+                    if ((i >= 20) && (i <= 40))
+                        n++;
+                    else
+                        count++;
+                    
+                }
+            }
+            Console.WriteLine("the number of even numbers between 1 & 100 excluded between 20 & 40 is"+ count);
+            Console.ReadLine();
+        }
+    }
+}
+
+from Thousif to everyone:    5:21 PM
+int num = 1,count=0;
+            for(num=1;num<=100;i++)
+            {
+                if (num % 2 == 0 )
+                {
+                    if(num< 20 || i > 40)
+                        count++;
+                }
+                    
+            }
+             Console.WriteLine("total numbers ="+count);
+from SINDHUJAA_V to everyone:    5:22 PM
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace evennos_1_19__41_100
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int l, u;
+            Console.WriteLine("enter the value:");
+            l = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter the value:");
+            u = Convert.ToInt32(Console.ReadLine());
+            int i;
+            int count = 0;
+            for (i = l; i <= u; i++)
+            {
+                if(i<=20 || i >= 40)
+                {
+                    if (i % 2 == 0)
+                    {
+                        count++;
+                        Console.WriteLine(i);
+                    }
+                }
+            }
+            Console.WriteLine(count);
+            Console.Read();
+        }
+    }
+}
+from Logeshrajan_R S to everyone:    5:22 PM
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace printing_even_numbers_from_1to_100
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int count = 0;
+            for(int i=1;i<=100;i++)
+            {
+                if((i%2==0)&&((i<20)||(i>40)))
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine(count);
+        }
+    }
+}
+
+from ATHIRA VINOD to everyone:    5:25 PM
+using System;
+
+public class divitfs
+{
+    public static void Main(string[] args)
+    {
+        int c=0;
+        
+    for(int i=1;i<=100;i++)
+    {
+        if(i%2==0)
+        {
+             if((i>=20)&&(i<=40))
+             {
+                 continue;
+             }
+             else
+             {
+             c++;
+             }
+        }
+    }
+    Console.WriteLine(c); 
+        
+    }
+}
+from Elidindi Ramesh to everyone:    5:25 PM
+int start = 1, end = 100;
+int count = 0;
+for (int i = start; i <= end; i++)
+{
+    if (i < 20 || i > 40)
+    {
+        if ((i % 2 == 0))
+        {
+            count++;
+        }
+    }
+}
+    Console.WriteLine(count);
+from Ganga P Chandran to everyone:    5:26 PM
+int upper = 0, lower = 0,num=0,count=0;
+            Console.Write("Enter start number of the range:");
+            upper = int.Parse(Console.ReadLine());
+            Console.Write("Enter end number of the range:");
+            lower = int.Parse(Console.ReadLine());
+            Console.WriteLine("The even numbers are :");
+            for (num = upper; num <= lower; num++)
+            {
+                    if (((num % 2) == 0) && ((num < 20) || (num > 40)))
+                    {
+                        Console.WriteLine(num);
+                    }
+                count++;
+            }
+            Console.WriteLine("The count is "+count);
+from Srinivasan (privately):    5:26 PM
+int num = 1,count=0;
+            for(num=1;num<=100;i++)
+            {
+                if (num % 2 == 0 )
+                {
+                    if(num< 20 || i > 40)
+                        count++;
+                }
+                    
+            }
+             Console.WriteLine("total numbers ="+count);
+from susheela to everyone:    5:26 PM
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        int count=0;
+        for(int i=1; i<=100;i++)
+        {
+            if((i>20) || (i<40))
+            {
+                if(i%2 == 0)
+                {
+                  count++;
+                }
+                
+            }
+            
+        }
+        Console.WriteLine("total nuber is:" +count);
+    }
+}
+
+
+from Ashish_Ranjan to everyone:    5:27 PM
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace even_numbers_between_1_and_100
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int count = 0, i;
+            for (i = 1; i <= 100; i++)
+            {
+                if ((i < 20 || i > 40) && i % 2 == 0)
+                {
+                    count++;
+                }
+            }
+            Console.WriteLine("The even numbers is: ");
+            Console.WriteLine(count);
+            
+        }
+    }
+}
+
+from ABHIRAMI A S (privately):    5:27 PM
+  int start = 0;
+            int end = 0;
+            Console.Write("Enter start number of the range:");
+            start = int.Parse(Console.ReadLine());
+            Console.Write("Enter end number of the range:");
+            end = int.Parse(Console.ReadLine());
+            int count = 0;
+            for (int num = start; (num <= end); num++)
+            {
+                if (num <20 ||num > 40)
+                    
+                {
+                        if((num % 2) == 0)
+                    {
+                        
+                    
+                  
+                        count++;
+                    }
+                }
+            }
+            Console.WriteLine("The given range is {0}-{1}",
+                start,
+                end);
+            Console.WriteLine("The number of numbers which are even is {0}",
+                count); 
+            Console.Read();
+from AUROJIT MOHANTY to everyone:    5:27 PM
+int count = 0;
+            for(int i=1;i<=100;i++)
+            {
+                if((i<20) || (i>40))
+                {
+                    if(i%2==0)
+                    {
+                        count++;
+                    }
+                }
+            }
+            Console.WriteLine("The count of even numbers are : "+count);
+            Console.Read();
+			
+			
+			
+from Harsh Jain (privately):    5:31 PM
+using System;
+namespace even
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int count = 0;
+            for(int i=1;i<=100;i++)
+            {
+                if(i%2 == 0)
+                {
+                    if(i>=20 && i<=40)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        count++;
+                    }
+                }
+            }
+            Console.WriteLine(count);
+        }
+    }
+}
+from Palak Saraf to everyone:    5:32 PM
+int count = 0;
+            for(int i=1;i<=100;i++)
+            {
+                if((i<20) || (i>40))
+                {
+                    if(i%2==0)
+                    {
+                        count++;
+                    }
+                }
+            }
+            Console.WriteLine("The count of even numbers are : "+count);
+            Console.Read();			

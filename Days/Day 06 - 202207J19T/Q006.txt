@@ -1,0 +1,10 @@
+Q006. 
+-------------------------------------------------------------------
+Find the number of even numbers between 1 and 100 
+where you dont count between 20 and 40
+-------------------------------------------------------------------
+Test Case 1:
+Input:
+Output:
+number of even numbers as per question is 39
+-------------------------------------------------------------------
