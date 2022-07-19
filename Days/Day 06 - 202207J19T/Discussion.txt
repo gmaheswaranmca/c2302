@@ -147,6 +147,17 @@ goto may for the loop
 	
 	
 			
+Unconditional Control Statements:
+1. break
+	stop the loop 
+2. continue 
+	stop the current iteration 
+3. return 
+	stop the function 
+4. goto label; 
+	it will goto the statement where the identifier "label" is associated as the 'goto label'
+
+
 			
 			
 			
