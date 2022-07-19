@@ -1,0 +1,36 @@
+Q007. 
+-------------------------------------------------------------------
+Find the number of prime numbers between 1 and 100 
+where you dont count between 20 and 40
+-------------------------------------------------------------------
+Test Case 1:
+Input:
+Output:
+number of prime numbers as per question is ???
+-------------------------------------------------------------------
+
+Answer:
+
+int count = 0;
+bool isPrime;
+for(int num=1;num<=100;num++)
+{
+	if((num<20) || (num>40))
+	{
+		isPrime = true;
+		for (int mid=2;mid<num;mid++)
+		{
+			if(num%mid==0)
+			{
+				isPrime = false;
+				break;
+			}
+		}
+		if(isPrime==true)
+		{
+			count++;
+		}
+	}
+}
+Console.WriteLine("\nThe count of prime numbers between 1 and 100 excluding range of 20 and 40 are :" + count);
+Console.Read();
