@@ -13,6 +13,7 @@ Discussion:
 				do.while loop		exit-controlled 
 				for loop 			entry-controlled 
 		Unconditional
+			break continue return goto 
 		Multiway switch 
 			switch expression(variable) is evaluated with label expressions(constant)
 

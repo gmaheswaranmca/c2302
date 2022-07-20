@@ -1,0 +1,58 @@
+Find sum of odd digits of the given number 
+for multiple numbers till the user gives us confirmation using 
+the question "Are you going to continue(Y/N)?"
+
+Enter the Number :
+12345
+The sum of the number 12345 is 9
+Are you going to continue(Y/N)?
+y
+Enter the Number :
+23456
+The sum of the number 23456 is 8
+Are you going to continue(Y/N)?
+n
+
+
+
+Answer
+static void Main(string[] args)
+{
+
+
+	string choice = "N";
+
+	do
+	{
+		int num = 0;
+		Console.WriteLine("Enter the Number : ");
+		num = Convert.ToInt32(Console.ReadLine()); //12345
+		if (num >= 0)
+		{
+			int sum = 0;
+			int cNum = num;
+			
+				
+			while (cNum != 0) //12345 23456
+			{
+				int digit = cNum % 10; // unit digit
+				if(digit % 2 == 1) { 
+					sum = sum + digit;
+				}
+				cNum = cNum / 10;      // remove unit digit 
+			}
+			
+
+			Console.WriteLine("The sum of the number {0} is {1}", num, sum); //9 8
+		}
+		else
+		{
+			Console.WriteLine("The given input is not the postive number.");
+		}
+
+		Console.WriteLine("Are you going to continue(Y/N)?");
+		choice = Console.ReadLine();
+	}
+	while (choice.ToUpper() == "Y");
+	Console.Read();
+}

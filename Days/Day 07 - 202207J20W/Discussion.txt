@@ -1,0 +1,111 @@
+-------------------------------------------------------------------------
+num is any integer number 
+
+unitPlace = num % 10;    // extract the unit digit 
+tentPlace= num /10;		 // clear(switch off/remove) the unit digit 
+
+-------------------------------------------------------------------------
+Digit Extraction Problem:
+using loop 
+1. Count number of digits for given number 
+2. Sum of digits of given number 
+3. Reverse the number 
+4. Sum of odd digits of given number 
+using without loop 
+5. Sum of digits of the two digits number 
+6. Sum of digits of the three digits number 
+-------------------------------------------------------------------------
+using loop 
+1. Count number of digits for given number 
+2. Sum of digits of given number 
+3. Reverse the number 
+4. Sum of odd digits of given number 
+Assume number = 12345
+Solution is not arrived from MSD to LSD (not left to right)
+Solution is not arrived from LSD to MSD (ie right to left) 
+
+MSD(Most Significant Digit)
+LSD(Least Significant Digit-Unit Place Value Digit)
+------------------------------------------------------------------------- 
+
+
+------------------------------------------------------------------------- 
+Patterns
+------------------------------------------------------------------------- 
+01
+Number of Lines = 5
+*
+**
+***
+****
+*****
+
+02
+Number of Lines = 5
+    *
+   **
+  ***
+ ****
+*****
+
+03
+Number of Lines = 5
+*****
+****
+***
+**
+*
+
+04
+Number of Lines = 5
+*****
+ ****
+  ***
+   **
+    *
+
+05
+Number of Lines = 5
+    *
+   ***
+  *****
+ *******
+*********
+
+06
+Number of Lines = 5
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+
+07
+Number of Lines = 5
+    **
+   ****
+  ******
+ ********
+**********
+**********
+ ********
+  ******
+   ****
+    **
+	
+08
+Number of Lines = 5
+    **
+   *  *
+  *    *
+ *      *
+*        *
+*        *
+ *      *
+  *    *
+   *  *
+    **

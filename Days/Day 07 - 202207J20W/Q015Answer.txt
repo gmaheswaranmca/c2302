@@ -1,0 +1,68 @@
+Find single digit sum of the given number
+for multiple numbers till the user gives us confirmation using 
+the question "Are you going to continue(Y/N)?"
+
+Enter the Number :
+12345
+The sum of the number 12345 is 6
+Are you going to continue(Y/N)?
+y
+Enter the Number :
+65479
+The sum of the number 65479 is 4
+Are you going to continue(Y/N)?
+y
+Enter the Number :
+-12
+The given input is not the postive numbe
+Are you going to continue(Y/N)?
+y
+Enter the Number :
+12
+The sum of the number 12 is 3
+Are you going to continue(Y/N)?
+n
+
+
+
+Answer:
+
+static void Main(string[] args)
+{
+	string choice = "N";
+
+	do
+	{
+		int num = 0;
+		Console.WriteLine("Enter the Number : ");
+		num = Convert.ToInt32(Console.ReadLine()); //12345
+		if (num >= 0)
+		{
+			int sum = 0;
+			int cNum = num;
+			do
+			{
+				sum = 0;
+				while (cNum != 0) //12345 15
+				{
+					int digit = cNum % 10; // unit digit
+					sum = sum + digit;
+					cNum = cNum / 10;      // remove unit digit 
+				}
+				cNum = sum;//15 6
+			} while (sum > 9);
+
+
+			Console.WriteLine("The sum of the number {0} is {1}", num, sum); //6
+		}
+		else
+		{
+			Console.WriteLine("The given input is not the postive number.");
+		}
+
+		Console.WriteLine("Are you going to continue(Y/N)?");
+		choice = Console.ReadLine();
+	}
+	while (choice.ToUpper() == "Y");
+	Console.Read();
+}

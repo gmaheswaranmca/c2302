@@ -1,0 +1,210 @@
+Friday(Not Available):
+	o Gokulraj 
+	o Delisha Dsouza 
+	o Thousif (may join morning, evalation priority is given first) -- Available 
+
+
+1. Sebin Benny - Mike Issue
+2. Susheela - Power is not there
+3. Stutee Rath - No Response 
+	Audiable later
+4. Thousif - Power Issue 
+5. Veena Lakshmi (Shared Screen)- On Job
+6. Ramesh
+static void Main(string[] args)
+{
+	//Find sum of digits of two digit number
+	int num=0,sum=0;
+	Console.WriteLine("Enter the two Digit Number : ");
+	num=Convert.ToInt32(Console.ReadLine());
+	if((num>=10) && (num<=99) )
+	{
+		//Solution Code for the two digit number.
+		Console.Write("Solution Code ");
+	}
+	//Console.Read();
+	if ((num < 10) || (num > 99))
+	{
+		//Error  Code if not the two digit number.
+		Console.Write("Error Code ");
+	}
+	Console.Read();
+}
+6. Harsh Jain - (Shared Screen)On Job 
+7. Praveen - Mike was working 
+8. Ajithmaran - Voice was broken
+9. Monoj Kumar - 
+
+Solution by Veena Lakshmi,Ramesh,Praveen,Harsh Jain,Manoj:
+
+static void Main(string[] args)
+{
+	int num = 0, sum = 0, unitPlace, tentPlace;
+	Console.WriteLine("Enter the two Digit Number : ");
+	num = Convert.ToInt32(Console.ReadLine());
+	if ((num >= 10) && (num <= 99))
+	{
+		//Solution Code for the two digit number.
+		unitPlace = num % 10;
+		tentPlace= num /10;
+		sum = unitPlace + tentPlace;
+		Console.WriteLine(sum);
+	}
+	else
+	{
+		Console.WriteLine("Invalid Input Please Enter Two Digit No.");
+	}
+	Console.Read();
+}	
+
+10. Stutee - SShare | On Job 
+11. Albin (Talk) 
+Solving Q009
+Stutee, Albin, Chithra, Gokulraj, Logeshrajan
+static void Main(string[] args)
+{
+    int num = 0, sum = 0, unitPlace, tentPlace;
+	string input="N";
+   
+	do
+	{
+		Console.WriteLine("Enter the two Digit Number : ");
+		num = Convert.ToInt32(Console.ReadLine());
+		if ((num >= 10) && (num <= 99))
+		{
+			//Solution Code for the two digit number.
+			unitPlace = num % 10;
+			tentPlace = num / 10;
+			sum = unitPlace + tentPlace;
+			Console.WriteLine(sum);
+		}
+		else
+		{
+			Console.WriteLine("Invalid Input Please Enter Two Digit No.");
+		}
+		Console.WriteLine("Are you going to continue(Y/N)?");
+	  
+		input = Console.ReadLine();
+	}
+	while (input=="Y");
+	Console.Read();
+}	
+12. Chithra
+13. Logeshrajan
+14. Delisha
+//Q010 Q011
+static void Main(string[] args)
+{
+	string choice = "N";
+
+	do
+	{
+		int num = 0, sum = 0, unitPlace, tenPlace, hunderdPlace, quotient;
+		Console.WriteLine("Enter the three Digits Number : ");
+		num = Convert.ToInt32(Console.ReadLine()); //123
+		if ((num >= 100) && (num <= 999))
+		{
+			//Solution Code for the two digit number.
+			unitPlace = num % 10; //3
+			quotient = num / 10; //12
+								 //tenPlace = 12 divided by 10 -> remainder is 2 quotient is 1
+			tenPlace = quotient % 10;//12%10 -> 2
+			hunderdPlace = quotient / 10;//12/10->1
+			sum = unitPlace + tenPlace + hunderdPlace;
+			Console.WriteLine(sum);
+		}
+		else
+		{
+			Console.WriteLine("Invalid Input Please Enter Two Digit No.");
+		}
+
+		Console.WriteLine("Are you going to continue(Y/N)?");
+
+		choice = Console.ReadLine();
+	}
+	while (choice.ToUpper() == "Y");
+	Console.Read();
+}
+15. Ganga P Chandran
+static void Main(string[] args)
+{
+
+	string choice = "N";
+
+	do
+	{
+		int num = 0;
+		Console.WriteLine("Enter the Number : ");
+		num = Convert.ToInt32(Console.ReadLine()); //123
+		if (num >= 0)
+		{
+			int sum = 0;
+			int cNum = num;
+			while (cNum != 0)
+			{
+				int digit = cNum % 10; // unit digit
+				sum = sum + digit;
+				cNum = cNum / 10;      // remove unit digit 
+			}
+			Console.WriteLine("The sum of the number {0} is {1}", num, sum);
+		}
+		else
+		{
+			Console.WriteLine("The given input is not the postive number.");
+		}
+
+		Console.WriteLine("Are you going to continue(Y/N)?");
+		choice = Console.ReadLine();
+	}
+	while (choice.ToUpper() == "Y");
+	Console.Read();
+	
+	
+}
+
+
+Ramesh !!!!!
+
+static void Main(string[] args)
+{
+
+
+	string choice = "N";
+
+	do
+	{
+		int num = 0;
+		Console.WriteLine("Enter the Number : ");
+		num = Convert.ToInt32(Console.ReadLine()); //12345
+		if (num >= 0)
+		{
+			int sum = 0;
+			int cNum = num;
+			do
+			{
+				sum = 0;
+				while (cNum != 0) //12345 15
+				{
+					int digit = cNum % 10; // unit digit
+					sum = sum + digit;
+					cNum = cNum / 10;      // remove unit digit 
+				}
+				cNum = sum;//15 6
+			} while (sum > 9);
+
+
+			Console.WriteLine("The sum of the number {0} is {1}", num, sum); //6
+		}
+		else
+		{
+			Console.WriteLine("The given input is not the postive number.");
+		}
+
+		Console.WriteLine("Are you going to continue(Y/N)?");
+		choice = Console.ReadLine();
+	}
+	while (choice.ToUpper() == "Y");
+	Console.Read();
+}
+
+

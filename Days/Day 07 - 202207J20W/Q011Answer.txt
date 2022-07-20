@@ -1,0 +1,74 @@
+Find sum of digits of three digit number
+for multiple numbers till the user gives us confirmation using 
+the question "Are you going to continue(Y/N)?"
+
+Test Case 
+Enter the three Digits Number :
+123
+6
+Are you going to continue(Y/N)?
+y
+Enter the three Digits Number :
+253
+10
+Are you going to continue(Y/N)?
+y
+Enter the three Digits Number :
+1
+Invalid Input Please Enter Two Digit No.
+Are you going to continue(Y/N)?
+y
+Enter the three Digits Number :
+1234
+Invalid Input Please Enter Two Digit No.
+Are you going to continue(Y/N)?
+y
+Enter the three Digits Number :
+987
+24
+Are you going to continue(Y/N)?
+y
+Enter the three Digits Number :
+654
+15
+Are you going to continue(Y/N)?
+n
+
+Press any key to continue . . .
+
+
+
+Answer
+
+static void Main(string[] args)
+{
+	string choice = "N";
+
+	do
+	{
+		int num = 0, sum = 0, unitPlace, tenPlace, hunderdPlace, quotient;
+		Console.WriteLine("Enter the three Digits Number : ");
+		num = Convert.ToInt32(Console.ReadLine()); //123
+		if ((num >= 100) && (num <= 999))
+		{
+			//Solution Code for the two digit number.
+			unitPlace = num % 10; //3
+			quotient = num / 10; //12
+								 //tenPlace = 12 divided by 10 -> remainder is 2 quotient is 1
+			tenPlace = quotient % 10;//12%10 -> 2
+			hunderdPlace = quotient / 10;//12/10->1
+			sum = unitPlace + tenPlace + hunderdPlace;
+			Console.WriteLine(sum);
+		}
+		else
+		{
+			Console.WriteLine("Invalid Input Please Enter Two Digit No.");
+		}
+
+		Console.WriteLine("Are you going to continue(Y/N)?");
+
+		choice = Console.ReadLine();
+	}
+	while (choice.ToUpper() == "Y");
+	Console.Read();
+}

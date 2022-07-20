@@ -1,0 +1,24 @@
+//Find sum of digits of number
+
+static void Main(string[] args)
+{
+	int num = 0;
+	Console.WriteLine("Enter the Number : ");
+	num = Convert.ToInt32(Console.ReadLine()); //123
+	if (num >= 0)
+	{
+		int sum = 0;
+		int cNum = num;
+		while (cNum != 0)
+		{
+			int digit = cNum % 10; // unit digit
+			sum = sum + digit;
+			cNum = cNum / 10;      // remove unit digit 
+		}
+		Console.WriteLine("The sum of the number {0} is {1}", num, sum);
+	}
+	else
+	{
+		Console.WriteLine("The given input is not the postive number.");
+	}
+}	

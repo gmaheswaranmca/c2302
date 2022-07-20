@@ -1,0 +1,24 @@
+//Find sum of digits of three digit number
+
+static void Main(string[] args)
+{
+	int num = 0, sum = 0, unitPlace, tenPlace, hunderdPlace, quotient;
+	Console.WriteLine("Enter the three Digits Number : ");
+	num = Convert.ToInt32(Console.ReadLine()); //123
+	if ((num >= 100) && (num <= 999))
+	{
+		//Solution Code for the two digit number.
+		unitPlace = num % 10; //3
+		quotient = num / 10; //12
+		//tenPlace = 12 divided by 10 -> remainder is 2 quotient is 1
+		tenPlace = quotient % 10;//12%10 -> 2
+		hunderdPlace = quotient / 10;//12/10->1
+		sum = unitPlace + tenPlace + hunderdPlace;
+		Console.WriteLine(sum);
+	}
+	else
+	{
+		Console.WriteLine("Invalid Input Please Enter Two Digit No.");
+	}
+	Console.Read();
+}	

@@ -1,0 +1,35 @@
+Find single digit sum of the given number
+
+static void Main(string[] args)
+{
+
+	int num = 0;
+	Console.WriteLine("Enter the Number : ");
+	num = Convert.ToInt32(Console.ReadLine()); //12345
+	if (num >= 0)
+	{
+		int sum = 0;
+		int cNum = num;
+		do {
+			sum = 0;
+			while (cNum != 0) //12345 15
+			{
+				int digit = cNum % 10; // unit digit
+				sum = sum + digit;
+				cNum = cNum / 10;      // remove unit digit 
+			}
+			cNum = sum;//15 6
+		} while(sum > 9);
+
+
+		Console.WriteLine("The sum of the number {0} is {1}", num, sum); //6
+	}
+	else
+	{
+		Console.WriteLine("The given input is not the postive number.");
+	}
+
+	
+
+
+}

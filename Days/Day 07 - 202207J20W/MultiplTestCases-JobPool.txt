@@ -1,0 +1,16 @@
+Continuous Jobs / Many Test Cases 
+
+static void Main(string[] args)
+{
+	string choice = "N";
+
+	do
+	{
+		//Code
+
+		Console.WriteLine("Are you going to continue(Y/N)?");
+		choice = Console.ReadLine();
+	}
+	while (choice.ToUpper() == "Y");
+	Console.Read();
+}

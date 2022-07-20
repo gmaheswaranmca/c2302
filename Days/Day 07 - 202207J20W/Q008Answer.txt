@@ -1,0 +1,21 @@
+//Find sum of digits of two digit number
+
+static void Main(string[] args)
+{
+	int num = 0, sum = 0, unitPlace, tentPlace;
+	Console.WriteLine("Enter the two Digit Number : ");
+	num = Convert.ToInt32(Console.ReadLine());
+	if ((num >= 10) && (num <= 99))
+	{
+		//Solution Code for the two digit number.
+		unitPlace = num % 10;
+		tentPlace= num /10;
+		sum = unitPlace + tentPlace;
+		Console.WriteLine(sum);
+	}
+	else
+	{
+		Console.WriteLine("Invalid Input Please Enter Two Digit No.");
+	}
+	Console.Read();
+}	

@@ -1,0 +1,57 @@
+Find sum of digits of two digit number
+for multiple numbers till the user gives us confirmation using 
+the question "Are you going to continue(Y/N)?"
+
+Test Case 
+	Enter the two Digit Number :
+	23
+	5
+	Are you going to continue(Y/N)?
+	Y
+	Enter the two Digit Number :
+	45
+	9
+	Are you going to continue(Y/N)?
+	Y
+	Enter the two Digit Number :
+	234
+	Invalid Input Please Enter Two Digit No.
+	Are you going to continue(Y/N)?
+	Y
+	Enter the two Digit Number :
+	12
+	3
+	Are you going to continue(Y/N)?
+	N
+----End of Program-----------
+			
+			
+Answer 
+static void Main(string[] args)
+{
+    int num = 0, sum = 0, unitPlace, tentPlace;
+	string input="N";
+   
+	do
+	{
+		Console.WriteLine("Enter the two Digit Number : ");
+		num = Convert.ToInt32(Console.ReadLine());
+		if ((num >= 10) && (num <= 99))
+		{
+			//Solution Code for the two digit number.
+			unitPlace = num % 10;
+			tentPlace = num / 10;
+			sum = unitPlace + tentPlace;
+			Console.WriteLine(sum);
+		}
+		else
+		{
+			Console.WriteLine("Invalid Input Please Enter Two Digit No.");
+		}
+		Console.WriteLine("Are you going to continue(Y/N)?");
+	  
+		input = Console.ReadLine();
+	}
+	while (input=="Y");
+	Console.Read();
+}	
