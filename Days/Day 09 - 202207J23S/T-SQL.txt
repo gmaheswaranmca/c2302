@@ -30,6 +30,10 @@ Sub Languages of SQL
 			CREATE TABLE <tableName>(<tableDefinition>);
 			ALTER TABLE <tableName> <alterDefintion>;
 			DROP TABLE <tableName>;
+			
+			TRUNCATE TABLE <tableName>;
+				-- Delete all the data 
+				-- resets the table structure to the default 
 		
 		
 	2. DML - Data Manipulation Language : Select, Inert, Delete, Update
