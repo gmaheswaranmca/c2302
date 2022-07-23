@@ -1,0 +1,121 @@
+Database:
+	to store/retrieve data (composite) 
+	
+	ages
+		age 
+		age 
+	salaries
+		salary
+		salary 
+	employees
+		employee_name age salary 
+		employee_name age salary 
+		employee_name age salary 
+		employee_name age salary 
+	fan - watts, air throw, etc 
+	flight - 	
+		travel_date, source, destination 
+		travel_date, source, destination 
+		travel_date, source, destination 
+		travel_date, source, destination 
+	
+	structure
+	object 
+	
+	flat file database: 
+		- text
+		- binary 
+		
+		- sequential access
+		- random access 
+		
+		
+		logical structure for the data to store into "persistent store"
+		decided by the programmer 
+	
+	database models 
+		Hierarchical model 
+			tree like data arrangement 
+				one-one
+				one-many 
+				many-one
+		Network model 			
+			graph like data arrangement 
+			- best model for the data 
+			- poor model for the storage 
+				one-one
+				one-many 
+				many-one 
+				many-many 
+		
+		DBMS 
+			format of the data is fixed: 
+				table 
+			DB (DataBase) is a collection of data tables.
+			
+			table synonymous/similar terms: tuple, relation, record
+			
+			data table : 
+				columns 
+					definitions of each attribute/column 
+				rows 
+					data 
+			
+			Oracle was the famous and market leader for RDBMS
+		RDBMS
+			Relational DBMS - it deals the relationships with DBMS as well 
+				one-one
+				one-many 
+				many-one 
+				many-many
+			
+		Object based data base model 
+			Tried to implement object based data base model 
+			
+			
+			
+		Object-Relational database model 
+			Hibrid of object & relation DBMS 
+			
+		Evolution of the javascript:
+			JSON (Javascript Object Notation)
+			POJO (Plain Old Java Object) 
+			
+			flight:
+				flight_id	flight_number 	source destination 
+				
+			flight_id	flight_number 	airline_name	source  	destination	travel_date
+			101	AI 1242	Air India	Mumbai	New Delhi	23-07-2022
+			
+			{flight_id:101,	flight_number: "AI 1242", airline_name:	"Air India",
+			source: "Mumbai" 	,
+			destination: "New Delhi",
+			travel_date: "23-07-2022"}
+			
+			document(json)-based data model - NO-SQL 
+			
+		W3C - World Wide Web Consortium 
+			2011/12 - HTML5/CSS5 standard is fully defined 
+			2023 - HTML5/CSS5
+			
+			node - js standalone development 
+			borwser - js 
+------------------------------------------------------------------------
+	DBMS 
+		Oracle 
+		MySQL
+		SQLite
+		Postgres
+		Microsoft SQL Server 
+	No-SQL 
+		Mongo 
+------------------------------------------------------------------------		
+Microsoft SQL Server 		
+	SQL is pronounsed as "Sequel"
+
+	T-SQL(version of Microsoft SQL Server) as query language
+		- It is included the ANSI-SQL (common standard)  
+------------------------------------------------------------------------
+		
+				
+			

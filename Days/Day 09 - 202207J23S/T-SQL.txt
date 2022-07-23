@@ -1,0 +1,103 @@
+table: rows and columns 
+data table: column definitions + records in the rows 
+Synonymous to attrobute: column 
+primary key - column(s) should be NOT NULL and UNIQUE 
+	o Every data table can have maximum only one primary key 
+	o used to uniquely identify each record in the table 
+-------------------------------------------------------------------
+T-SQL
+	o SQL version available inside Microsft SQL Server 
+		simply, Microsft "SQL"
+	o It includes "ANSI_SQL"
+	
+Sub Languages of SQL 
+	1. DDL - Data Definition Language 
+		:Create, Alter, Drop 
+		:Truncate Table <tableName>;
+		
+		Create TABLE 
+		Create VIEW 
+		Create DATABASE 
+		
+		Alter TABLE 
+		Alter VIEW 
+		
+		Drop TABLE 
+		Drop VIEW 
+		Drop DATABASE 
+		
+		TABLE:
+			CREATE TABLE <tableName>(<tableDefinition>);
+			ALTER TABLE <tableName> <alterDefintion>;
+			DROP TABLE <tableName>;
+		
+		
+	2. DML - Data Manipulation Language : Select, Inert, Delete, Update
+		Insert 
+			INSERT INTO <tableName>(<Columns List>)
+			VALUES(<data>);
+			
+		Update
+			UPDATE <tableName>
+			SET <updateColumn>=<valueExpression>[,
+				<updateColumn>=<valueExpression>[,
+				...]
+				]
+			[WHERE <condition>];
+		
+		Delete 
+			DELETE FROM <tableName> 
+			[WHERE <codition>];
+	
+		DQL - Data Query Language 
+			SELECT 
+				SELECT <columnsOrExpressions>
+				FROM <tablesWithJoin>
+				WHERE <contion>
+				[GROUP BY <groupByColumns>
+				 HAVING <havingConidition>
+				];
+				
+	Conditions:					
+		WHERE clause
+			purpose: filtering
+		
+			WHERE source = 'Mumbai'
+			WHERE source = 'Mumbai' and destination='New Delhi'
+			
+		Aggregations used in 'SELECt clause' 
+			COUNT(*)  --  number of records / rows in the table 
+			COUNT(SOURCE) -- number of NON NULL data of the source (included duplicate)
+			COUNT(DISTINCT SOURCE) -- number of distinct values of column SOURCE
+			MAX(flight_fare) -- maximum value of the column flight_fare 
+			MIN(flight_fare) -- minimum value of the column flight_fare 
+			SUM(number_of_seats) - sum of number_of_seats of all the flights 
+			SUM(number_of_seats*flight_fare)/SUM(number_of_seats) - 
+				average of the flight ticket fare 
+
+			AVG(number_of_seats) - value is equal to SUM(number_of_seats) / COUNT(*) 
+			
+		Conditional Operators used in WHERE clause:
+			 <						less than
+			 >						greater than 
+			 <=						less than or equal to 
+			 >=						greater than or equal to 
+			 =						equal to 
+			 !=			<>			not equal to 
+			 <column> IN (dataExprList)	either of the values given in the dataExprList	
+			 <column> NOT IN (dataExprList)	
+			 <column> BETWEEN <startRange> aND <endRange>
+			 <column> NOT BETWEEN <startRange> aND <endRange>
+			LIKE 					wild card string/text comparison
+									% for many, _ (underscore) for any single characater
+		
+		SORTING the records/rows 
+			ORDER BY column [ASC|DESC,column2[ASC|DESC]]
+			
+			By Default ASC will be enabled 
+			
+			ORDER BY ordinal_number [ASC|DESC]
+									
+		
+	3. TCL - Transaction Control Language 
+	4. DCL - Data Control Language 
