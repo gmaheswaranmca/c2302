@@ -255,3 +255,13 @@ ORDER BY 8 desc,4;
 SELECT * 
 FROM flight 
 ORDER BY 8 desc,4 asc;
+
+--list distinct source_point names	
+--list distinct fares
+--find number of flights
+--find number of fares
+--find number of distinct fares
+--find max fare 
+--find min fare 
+--find total seats
+--find average seats per flight 
