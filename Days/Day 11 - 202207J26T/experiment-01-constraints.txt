@@ -1,0 +1,70 @@
+
+CREATE TABLE flight(
+    flight_id int, 
+    flight_no varchar(50),
+    airline_name varchar(256),
+    source_point varchar(128),
+    destination_point varchar(128),
+    travel_date datetime,
+    number_of_seats int,
+    ticket_fare float);
+sp_help flight;
+select * from flight;
+    
+INSERT INTO flight( flight_id, flight_no, airline_name, source_point, destination_point,travel_date,number_of_seats,ticket_fare)
+VALUES (1, 'AI 101', 'AIR INDIA', 'BHUBANESWAR', 'BANGALORE', '2022-07-25', 250, 8000);
+INSERT INTO flight( flight_id, flight_no, airline_name, source_point, destination_point,travel_date,number_of_seats,ticket_fare)
+VALUES (2, 'AI 102', 'AIR INDIA', 'BHUBANESWAR', 'MUMBAI', '2022-07-25', 250, 7000);
+INSERT INTO flight( flight_id, flight_no, airline_name, source_point, destination_point,travel_date,number_of_seats,ticket_fare)
+VALUES (3, 'AI 103', 'AIR INDIA', 'BHUBANESWAR', 'TRIVENDRUM', '2022-07-25', 250, 10000);
+
+
+INSERT INTO flight( flight_id, flight_no, airline_name, source_point, destination_point,travel_date,number_of_seats,ticket_fare)
+VALUES (4, 'AI 104', 'AIR INDIA', 'BHUBANESWAR', 'NEW DELHI', '2022-07-26', 250, 9000);
+    
+INSERT INTO flight( flight_id, flight_no, airline_name, source_point, destination_point,travel_date,number_of_seats,ticket_fare)
+VALUES (4,'AI 104', 'AIR INDIA', 'BHUBANESWAR', 'NEW DELHI', '2022-07-26', 250, 9000);
+drop table flight;
+CREATE TABLE flight(
+    flight_id int unique, 
+    flight_no varchar(50),
+    airline_name varchar(256),
+    source_point varchar(128),
+    destination_point varchar(128),
+    travel_date datetime,
+    number_of_seats int,
+    ticket_fare float);
+    CREATE TABLE flight(
+    flight_id int primary key, 
+    flight_no varchar(50),
+    airline_name varchar(256),
+    source_point varchar(128),
+    destination_point varchar(128),
+    travel_date datetime,
+    number_of_seats int,
+    ticket_fare float);
+
+INSERT INTO flight( flight_id, flight_no, airline_name, source_point, destination_point,travel_date,number_of_seats,ticket_fare)
+VALUES (1, 'AI 101', 'AIR INDIA', 'BHUBANESWAR', 'BANGALORE', '2022-07-25', 250, 8000);
+INSERT INTO flight( flight_id, flight_no, airline_name, source_point, destination_point,travel_date,number_of_seats,ticket_fare)
+VALUES (NULL, 'AI 101', 'AIR INDIA', 'BHUBANESWAR', 'BANGALORE', '2022-07-25', 250, 8000);
+
+CREATE TABLE flight(
+    flight_id int primary key, 
+    flight_no varchar(50) unique not null,
+    airline_name varchar(256) not null,
+    source_point varchar(128)not null,
+    destination_point varchar(128)not null,
+    travel_date datetime null,
+    number_of_seats int not null default(250) check (number_of_seats>=0),
+    ticket_fare float not null);
+
+INSERT INTO flight( flight_id, flight_no, airline_name, source_point, destination_point,travel_date,number_of_seats,ticket_fare)
+VALUES (1, 'AI 101', 'AIR INDIA', 'BHUBANESWAR', 'BANGALORE', '2022-07-25', 250, 8000);
+
+INSERT INTO flight( flight_id, flight_no, airline_name, source_point, destination_point,travel_date,number_of_seats,ticket_fare)
+VALUES (2, 'AI 102', 'AIR INDIA', 'BHUBANESWAR', 'BANGALORE', '2022-07-25', 250, 8000);
+
+INSERT INTO flight( flight_id, flight_no, airline_name, source_point, destination_point,travel_date,number_of_seats,ticket_fare)
+VALUES (3, 'AI 103', 'Air india' , 'BHUBANESWAR', 'BANGALORE', '2022-07-25', -2, 8000);
+
