@@ -17,8 +17,6 @@ INSERT INTO flight( flight_id, flight_no, airline_name, source_point, destinatio
 VALUES (2, 'AI 102', 'AIR INDIA', 'BHUBANESWAR', 'MUMBAI', '2022-07-25', 250, 7000);
 INSERT INTO flight( flight_id, flight_no, airline_name, source_point, destination_point,travel_date,number_of_seats,ticket_fare)
 VALUES (3, 'AI 103', 'AIR INDIA', 'BHUBANESWAR', 'TRIVENDRUM', '2022-07-25', 250, 10000);
-
-
 INSERT INTO flight( flight_id, flight_no, airline_name, source_point, destination_point,travel_date,number_of_seats,ticket_fare)
 VALUES (4, 'AI 104', 'AIR INDIA', 'BHUBANESWAR', 'NEW DELHI', '2022-07-26', 250, 9000);
     
