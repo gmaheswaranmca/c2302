@@ -1,0 +1,89 @@
+flight: 
+	flight_id, ....
+customer: 
+	customer_id, ...
+booking: 
+	booking_id, booking_number, customer_id, flight_id, ...
+	101				100101			10			1
+---------------------------------------------------------
+Abhirami: 
+	doubt	
+	o cross-join 
+	o equi-join why we are doing?
+---------------------------------------------------------	
+Ramesh:
+	alter
+		rename "field name", 
+		"add constraint" *****
+---------------------------------------------------------
+Chitra -- Doubt in join 
+---------------------------------------------------------
+Rahul - Joins
+---------------------------------------------------------
+Stutee -
+	One Update, column of two rows to be updated with different values 
+	
+	Normal update not possible.
+	
+	Update emp 
+	SET salary = 5000
+	WHERE (emp_id IN(1,2));
+	
+	Update emp 
+	SET salary = CASE 
+		WHEN emp_id=1 THEN 5000 
+		WHEN emp_id=2 THEN 7000 
+		WHEN emp_id=3 THEN 8000
+		ELSE salary 
+		END;
+	
+	Update emp 
+	SET salary = CASE emp_id
+		WHEN 1 THEN 5000 
+		WHEN 2 THEN 7000 
+		WHEN 3 THEN 8000
+		ELSE salary 
+		END;
+	
+	emp 
+		emp_id full_name salary 	dept_id 
+		10 		rahul		NULL	10
+		20 		stutee		NULL	20
+		30		jain		NULL	30
+		
+	emp_sal 
+		emp_id salary 
+		10		7000	
+		20		8000
+		30		6000
+	
+	Update emp 
+	SET emp.salary = sal.salary 
+	FROM emp_sal sal 
+	WHERE (emp.emp_id=sal.emp_id)
+	
+	emp 
+CREATE TABLE emp(
+	emp_id int, 
+	full_name varchar(100),
+	salary float, 	
+	dept_id int);
+INSERT INTO emp	
+VALUES(10,'rahul',NULL,	10),
+(20,'stutee',NULL,	20),
+(30,'jain',NULL,	30);
+		
+CREATE TABLE emp_sal(
+	emp_id int, 
+	salary float);
+INSERT INTO emp_sal
+VALUES(10,7000),
+		(20,8000),
+		(30,6000);
+	
+	
+
+	
+
+		
+	
