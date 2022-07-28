@@ -183,3 +183,19 @@ GO
 
 --EXEC sp_change_fare 3,11000;
 --select * from flight;
+
+--DROP PROCEDURE sp_search_flights
+CREATE PROCEDURE sp_search_flights
+--ALTER PROCEDURE sp_search_flights
+	@search_text VARCHAR(50)
+AS
+BEGIN
+	SELECT * 
+	FROM flight 
+	WHERE (source_point LIKE ('%' + @search_text + '%'))
+		OR 
+		(destination_point LIKE ('%' + @search_text + '%'));
+END
+GO 
+
+--EXECUTE sp_search_flights 'DELHI'
