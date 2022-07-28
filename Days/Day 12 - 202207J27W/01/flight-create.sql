@@ -1,3 +1,6 @@
+
+
+
 CREATE TABLE flight(
 	flight_id int PRIMARY KEY, 
 	flight_no varchar(50)UNIQUE NOT NULL,
