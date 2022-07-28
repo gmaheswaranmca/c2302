@@ -28,8 +28,8 @@ CREATE TABLE booking(
     booking_id int primary key,
     booking_date datetime not null,
     booking_number varchar(50) unique not null,
-    customer_id int not null foreign key references customer(customer_id),
-    flight_id int not null foreign key references flight(flight_id),
+    customer_id int not null ,
+    flight_id int not null ,
     travel_date datetime not null,
     number_of_passengers int not null default(1),
     total_fare float not null default(0));
