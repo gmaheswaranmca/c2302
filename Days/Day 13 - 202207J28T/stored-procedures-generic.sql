@@ -147,14 +147,39 @@ BEGIN
 	/*Print STR(@vcustomer_id) + ',' + STR(@vflight_id) 
 		+ ',' + FORMAT(@vtravel_date,'dd-MM-yyyy');
 	*/
-	
-	INSERT INTO booking(booking_id,booking_date,booking_number,
-		customer_id,flight_id,
-		number_of_passengers,travel_date,total_fare)
-	VALUES(@booking_id,getdate(),@booking_number,
-		@vcustomer_id,@vflight_id,
-		@number_of_passengers,@vtravel_date,@vbooking_amount);
+	BEGIN TRANSACTION;
+		INSERT INTO booking(booking_id,booking_date,booking_number,
+			customer_id,flight_id,
+			number_of_passengers,travel_date)
+		VALUES(@booking_id,getdate(),@booking_number,
+			@vcustomer_id,@vflight_id,
+			@number_of_passengers,@vtravel_date);
+
+		UPDATE booking 
+		SET total_fare=@vbooking_amount
+		WHERE booking_id=@booking_id;
+	COMMIT TRANSACTION;
 END
 GO
 
 --EXECUTE sp_create_booking 'ashish','AI 302',10014,'005',2;
+
+
+--DROP PROCEDURE sp_change_fare 
+
+CREATE PROCEDURE sp_change_fare 
+--ALTER PROCEDURE sp_change_fare 
+	@flight_id INT,
+	@fare FLOAT
+AS
+BEGIN
+	BEGIN TRANSACTION;
+	UPDATE flight 
+	SET ticket_fare=@fare
+	WHERE flight_id=@flight_id;
+	COMMIT TRANSACTION;
+END
+GO
+
+--EXEC sp_change_fare 3,11000;
+--select * from flight;
