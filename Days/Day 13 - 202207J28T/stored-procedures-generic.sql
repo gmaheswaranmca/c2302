@@ -111,3 +111,50 @@ end
 go
 
 -- execute sp_print_natrual_stop_inside 15
+
+
+
+--DROP PROCEDURE sp_create_booking
+
+CREATE PROCEDURE sp_create_booking
+--ALTER PROCEDURE sp_create_booking
+	@username VARCHAR(50),
+	@flight_no VARCHAR(50),
+	@booking_id INT,
+	@booking_number VARCHAR(50),
+	@number_of_passengers INT
+AS
+BEGIN
+	DECLARE @vcustomer_id INT;
+	DECLARE @vflight_id INT;
+	DECLARE @vtravel_date DATETIME;
+	DECLARE @vfare FLOAT;
+	DECLARE @vbooking_amount FLOAT;
+
+	SELECT @vcustomer_id=customer_id 
+	FROM customer
+	WHERE username=@username;
+	
+	SELECT @vflight_id=flight_id,
+		@vtravel_date=travel_date,
+		@vfare = ticket_fare
+	FROM flight
+	WHERE flight_no=@flight_no;
+
+	SET @vbooking_amount = @vfare * @number_of_passengers;
+
+
+	/*Print STR(@vcustomer_id) + ',' + STR(@vflight_id) 
+		+ ',' + FORMAT(@vtravel_date,'dd-MM-yyyy');
+	*/
+	
+	INSERT INTO booking(booking_id,booking_date,booking_number,
+		customer_id,flight_id,
+		number_of_passengers,travel_date,total_fare)
+	VALUES(@booking_id,getdate(),@booking_number,
+		@vcustomer_id,@vflight_id,
+		@number_of_passengers,@vtravel_date,@vbooking_amount);
+END
+GO
+
+--EXECUTE sp_create_booking 'ashish','AI 302',10014,'005',2;
