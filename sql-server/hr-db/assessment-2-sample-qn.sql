@@ -127,27 +127,31 @@ VALUES (205,'Shelley','Higgins','shelley.higgins@sqltutorial.org','515.123.8080'
 INSERT INTO employees(employee_id,first_name,last_name,email,phone_number,hire_date,salary,manager_id,department_id) 
 VALUES (206,'William','Gietz','william.gietz@sqltutorial.org','515.123.8181','1994-06-07',8300.00,205,11);
 
+Queries
+1. Run the above create table and Insert scripts
+2. Solve the following 
+(a) To display the full name, email id, salary of all the employees 
+(b) To display the full name, email id for department 'Purchasing'
+(c) To display the employees who are getting more than salary 8000
+(d) To display the employees whose department id is 7 or 11
+(e) To display department name, number of employees for each department 
+(f) To insert a new department and employee 
+(g) To increase the salary of the employees to 20% whose salary is less than 8000
+(h) To display department name, total salary of the department 
+(i) Write the output of the following 
+	-- Slect MIN(SALARY) from employee 
+	-- Slect SUM(SALARY) from employee 
+	-- Slect AVG(SALARY) from employee 
+	-- Slect COUNT(DISTINCT SALARY) from employee 
+3. Write stored procedure to display the employees for given department_id 
+		Name of the stored procedure is sp_list_employees_by_department
+		argument is @department_id INT 
+		Stored procedure has to display the employees for given @department_id 
+		
+4. Introduce the column location_id into department table 
+   And create the location table to have location_id, location_name 
+   Introduce all the required keys included FOREIGN KEY for the department table. 
+   And query the department_name, location_name using department, location tables.
+	
 
-Queries:
-o INSERT YOUR NAME INTO EMPLOYEES
-o UPDATE William Gietz's salary to 50% extra
-o Display Employee Full Name, email, phone number
-o Display Employee Full Name, email, phone number, department id
-o Display Employee Full Name, email, phone number, department name
-o Display Employee Full Name, email, phone number, manager id
-o Display Employee Full Name, email, phone number, manager name
-o Display maximum salary 
-o Display minimum salary 
-o Display total salary 
-o Display number of employees
-o Display distinct salaries
-o Display number of managers (NO DISTINCT)
-o Display number of managers (DISTINCT)
-o Display department name, number of employees for each department 
-o Display Employee Full Name, email, phone number 	--- I
-	where salary is greater than or equal to 8000
-o Display Employee Full Name, email, phone number 	--- II
-	where salary Department is either 3 or 5 
-o Display Employee Full Name, email, phone number 	--- I
-	where employee name starts with  	
-o 
+		

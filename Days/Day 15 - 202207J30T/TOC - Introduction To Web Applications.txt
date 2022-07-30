@@ -1,0 +1,18 @@
+Introduction to Web Applications
+Learning Outcomes:
+1. Able to explain the client and server architecture.
+2. Able to explain the various tiers of Web Application and examples of technologies used in
+these tiers
+Campus C#.NET with WPF - Curriculum for PEP
+Quest Global Technical Academy
+Topics: (1 day)
+1. Client server architecture
+2. Web Applications
+3. Flow of control in a web application
+4. Browser as a thin client and Web Server
+5. Introduction to HTML, CSS and JavaScript
+6. Benefits of web applications
+7. Static pages and Dynamic pages
+8. Application servers
+9. N-tier architecture
+10. Difference between web server and application server

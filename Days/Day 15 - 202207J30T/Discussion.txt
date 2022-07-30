@@ -1,0 +1,117 @@
+LAMP - Linux 	Apache 	MySQL 		PHP
+		 OS   	Server  DB			Technology 
+				Web		Server 		Web Application 
+	   Windows
+WAMP -   OS 	  ----------------SAME----------
+XAMPP - Linux/Windows 
+	---- Bundle 
+	
+	
+	ASP 	
+	JSP
+	PHP 		C like coding 		+ embedded HTML = Server Pages (runs on Apache) -> 
+									Web Page required for Client Browser 
+				Apache - PHP Web Server 
+				
+			is differed with 
+	
+	.NET 	C#/VB.NET 	ASP.NET - JSF (Java Server Faces)
+	
+-------------------------------------------------------------------	
+	Static Page - Web Page 	- HTML5 / CSS3 [/ JavaScript]
+	Dynamic Page - Server Page - Page may embed HTML and Server 
+					Code(PHP-C-like/JSP-Java/.NET-C#-VB.NET)
+-------------------------------------------------------------------
+	Web Server 
+		-> .html			->  Static Page 
+		-> .php / .jsp 		->  Dyamic Page wrt Server
+								1. Request the .jsp page 
+									www.maheswaran.com/profile.jsp 
+								2. .jsp page(profile.jsp) will be run by the web server 
+								3. Server will generate the static content/page(response) required for the client 
+								4. The server response will be sent back to the browser 
+	---------------------------------------------------------------
+			Web Browser 					Web Server
+	---------------------------------------------------------------			
+		1. 
+		address bar 
+		url 	
+		www.maheswaran.com/profile.jsp
+		is typed 		
+		
+		
+		2. the browser takes this url 
+		and sends to server (HTTP/IP)
+		....Waits for server response....
+					
+											3. Server receives the browser request 
+												ie profile.jsp is requested
+											
+											4. Server has to parse/run the profile.jsp 
+											
+											5. Server generates static content (response) 
+											
+											6. Server sends the response to browser 
+		7. browser receives the response 
+		
+		8. displays the response (static content 
+		 ie page) on browser tab window 
+	---------------------------------------------------------------
+	web server 
+	server 			- o program running in a computer is called server 
+						and 
+					    the server is resolved using computer's address 
+					    along with associated port number
+					  
+					  o web server will have by default 80 as port 
+						HTTP/IP 
+					  o database server 
+						mysql runs on port 3306
+						TCP/IP
+						
+						TCP	--> synchronous -- connected 
+						UDP --> asynchronous -- not connected 
+	---------------------------------------------------------------				  
+			Browser						Server 
+			1. Sends the URL to Server 						
+										2. Receives Request URL 
+										3. Sends Response to Browser 
+			4. Receives Response and 
+			   Print the Page 
+	---------------------------------------------------------------
+			Server 		- Program runs on computer (ip address) and on port (80 etc)
+			Client(User)- Program to interact the server for some response 
+	---------------------------------------------------------------		
+			Server				Client 
+		1	local computer		local computer 
+		2   server computer 	server computer OR 	
+            of Network			other computers in Network 
+		3   internet server 	all user computers/devices of the internet 
+			computer 	
+	---------------------------------------------------------------
+	**************Web Application**************************
+	---------------------------------------------------------------
+		Web Site 			- a collection of web pages 
+			Web Page / Web Document - synonymous 
+		Web Application 
+			Server Page - Static/Dynamic 
+			
+			
+			1. Web Application client is web browser 
+			So the application will run on web browser 
+			2. Web Server processes (browser) client request 
+			
+			
+	---------------------------------------------------------------
+		Web Application 
+			Client (Browser)		-	Page: URL + GET/POST 
+										API: URL + GET/POST/DELETE/PATCH/PUT
+			Server (Web Server) 	-	PHP(dynamic)/JS/CSS/HTML(static)	
+	---------------------------------------------------------------		
+		Browser						Server 
+			1. Sends the URL to Server 						
+										2. Receives Request URL 
+										3. Sends Response to Browser 
+			4. Receives Response and 
+			   Print the Page 	
+	---------------------------------------------------------------		
