@@ -114,4 +114,120 @@ XAMPP - Linux/Windows
 										3. Sends Response to Browser 
 			4. Receives Response and 
 			   Print the Page 	
+	---------------------------------------------------------------	
+	HTML5/CSS3/JavaScript 		- for 
+			Web Document = Web Page 
+			author of HTML: Tim Berners-Lee
+			
+			"Hyper Links On Hyper Text" 
+			
+			"Hyper Text Markup Language" 
+	---------------------------------------------------------------			
+	Web Site (Static) 
+		Home About Us 	Services	Careers		About Us 	Contact Us 
+						Products 
+	---------------------------------------------------------------
+	gmail (Dynamic)
+		If I am logged into gmail, I will see my mails. 
+	---------------------------------------------------------------
+	HTML5	-   Define Content 
+		CSS3	-	Define Look and Feel(Styles) of the Content 
+		JavaScript 	- To run some code inside the web page 
+			For example, Contact Us Form 
+				Registration Form 
+				Before submission to validate the data 
 	---------------------------------------------------------------		
+	HTML Page = HTML + CSS + JS + Images etc 
+		CSS3
+			Inline Style Sheet 
+			Embedded Style Sheet 
+			External Style Sheet 
+				Imported Style Sheet 
+				Linked Style Sheet 
+		JavaScript 
+			Tag/Elements events 
+			embedded javascript 
+			external javascript(s)
+	---------------------------------------------------------------		
+	Benefits of Web Application:
+		amazon(web app) for purchasing goods 
+			1. sellers - selling products 	
+			2. buyers - buying products 
+			3. amazon is partner for sellers 
+		amazon site how it is working 
+			Once we do search,
+			1. Requests is sent to server
+				i. Receives the search text "POCO"
+				ii. Parses 
+					a. from the database, it tries to find the products 
+						matching search text 
+					b. once it is matched, the search result from database
+						will become response 
+							>> products listings page 
+			2. Sent "listings page" from server to browser 
+				Browser displays the listings page 
+				Here user will pick the product 
+		swiggy/zomato(app):
+			1. search for food "chicken briyani"
+				list of restaurants 
+					pick the menu items 
+						decide to go for items 
+						pay or cash on delivery 
+		swiggy/zomato how it is working:
+			search "chicken briyani"
+			request is sent to the server 
+				-- server receives the reques 
+				-- filters from database "chicken briyani" selling restaurants 
+				-- using results, it forms the restaurants listing page 
+				-- sends the response page to the browser/app 
+			browser receives the response page and displays in the browser/app 
+		Benefits:
+			1. Sells the services/products 
+			2. Application will work on browser 
+				and the application is written for web server 
+			3. Now days, hostings are faster cheaper 
+			4. Clouds are there to host the site --- high available site 
+			5. thin client based development 
+			6. develop advanced solutions 
+			7. changes in the application, no need to install in the client 
+	---------------------------------------------------------------		
+	Static Page:	.html page 			 page that is directly served to client 			
+	Dynamic Page: 	.jsp / .aspx / .php  page that runs inside the server and then served to client  	
+	---------------------------------------------------------------			
+	Dynamic Server Page is programmed in the server 
+	---------------------------------------------------------------			
+	Web Server vs Application Server 
+	
+	N-Tier
+	
+	Two Tier
+		1. Client (Application)			
+		2. Database - Server 
+	Three Tier 
+		1. Client - Browser 
+		2. Web Server 			- Business Login / Presentation / Database Calls 
+		3. Database Server 
+	
+	Four Tier 
+		1. Client - Browser 
+		2. Web Server 			- Presentation 
+		3. Application Server (EJB - Enterprise Java Beans)
+								-Business Login / Database Calls
+								high load balanced server 
+								multi-threaded
+		4. Database Server 
+	---------------------------------------------------------------
+	
+	
+			
+			
+							
+				
+			
+		
+			
+	
+	
+	
+	
+	
