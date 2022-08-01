@@ -215,8 +215,36 @@ XAMPP - Linux/Windows
 								-Business Login / Database Calls
 								high load balanced server 
 								multi-threaded
+				Examples of Application Servers: 
+					Weblogic, JBoss, Websphere				
 		4. Database Server 
 	---------------------------------------------------------------
+	
+web server and application server:
+
+	In web server, HTML and HTTP protocols are used.	
+	
+	While in this, GUI as well as HTTP and RPC/RMI protocols are used.
+	
+EJB - Enterprise Java Beans 
+	Java Bean - POJO (Plain Old Java Objecct) 	
+	== Business Objects 
+		--- Business Rules/Logics 
+		--- Transactions will be hanldled better way 
+	
+
+S.NO	Web Server	Application Server
+1.	Web server encompasses web container only.	While application server encompasses Web container as well as EJB container.
+2.	Web server is useful or fitted for static content.	Whereas application server is fitted for dynamic content.
+3.	Web server consumes or utilizes less resources.	While application server utilize more resources.
+4.	Web servers arrange the run environment for web applications.	While application servers arrange the run environment for enterprises applications.
+5.	In web servers, multithreading is supported.	While in application server, multithreading is not supported.
+6.	Web server’s capacity is lower than application server.	While application server’s capacity is higher than web server.
+7.	In web server, HTML and HTTP protocols are used.	While in this, GUI as well as HTTP and RPC/RMI protocols are used.
+8.	Processes that are not resource-intensive are supported.	Processes that are resource-intensive  are supported.
+9.	Transactions and connection pooling is not supported.	Transactions and connection pooling is supported.
+10.	The capacity of fault tolerance is low as compared to application servers.	It has high fault tolerance.
+11.	Web Server examples are Apache HTTP Server , Nginx.	Web Servers example are JBoss , Glassfish.	
 	
 	
 			

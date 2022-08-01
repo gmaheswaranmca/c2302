@@ -1,0 +1,85 @@
+***C****
+	struct Date{
+		int day;
+		int month;
+		int year;
+	};
+	struct Flight{
+		char flight_no[250];
+		struct Date travel_date;
+		char source[250];
+		char destination[250];
+		float ticket_fare;
+		int number_of_seats;
+	};
+    
+    struct Booking{
+        //attributes
+    };
+	
+	void ReadFlight(Flight* flight){
+		printf("Enter the details of the flight:");
+		printf("Enter flight number:"); scanf("%s",flight->flight_no);
+		//....
+	}
+    void ReadBooking(Booking* booking){
+        //......
+    }
+	
+	int main(){
+		struct Flight flight;
+		ReadFlight(&flight);
+        
+        //...
+        struct Booking booking;
+        ReadBooking(&booking);
+        
+		return 0;
+	}
+	
+		
+	C++	
+	struct Date{
+        
+		int day;
+		int month;
+		int year;
+	};
+	struct Flight{
+        
+		char flight_no[250];
+		struct Date travel_date;
+		char source[250];
+		char destination[250];
+		float ticket_fare;
+		int number_of_seats;
+		
+		void Read(){
+			printf("Enter the details of the flight:");
+			printf("Enter flight number:"); scanf("%s",this->flight_no);
+		}
+	};
+    
+    struct Booking{
+        //attibutes 
+        
+        void Read(){
+            //read attributes of bookings 
+        }
+    }
+	
+	
+	int main(){
+		Flight flight;
+		flight.Read();
+        
+        Booking booking;
+        booking.Read();
+		return 0;
+	}
+    
+--------------------------------------------------------------------
+Procedural Language              Object-Oriented Language 
+???                             --->
+--------------------------------------------------------------------        
+	

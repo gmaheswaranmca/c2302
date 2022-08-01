@@ -14,5 +14,5 @@ Topics: (1 day)
 6. Benefits of web applications
 7. Static pages and Dynamic pages
 8. Application servers
-9. N-tier architecture
+9. N-tier architecture				
 10. Difference between web server and application server

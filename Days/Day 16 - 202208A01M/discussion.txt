@@ -1,0 +1,346 @@
+CLR - Common Language Runtime 
+IL - Intermediate Language 
+C# - HLL
+VB - HLL 
+----------------------------------------------
+Step 1 - HLL Code is translated into IL Code 
+Step 2 - IL Code is tranlated into Machine Code and EXECUTION
+----------------------------------------------
+CLR - understands only IL Code 
+
+IL is developed for CLR
+
+C# and VB will be undestandable by programmers (users)
+
+Will CLR understands C#? NO
+	C# Compiler translates C# code into IL Code
+Will CLR understands VB? NO
+	VB Compiler translates VB code into IL Code
+	
+.NET is language independent	
+----------------------------------------------
+I like to write a Class(Factorial) with one static function named 
+	int findFactorial(int) 
+Actualy I pick VB to do the above task.
+
+I like to call the findFactorial from C# code?
+
+Is there any possibility?
+	YES
+	
+How come?
+	Using Language Interoperability
+----------------------------------------------	
+Object-Oriented programming (C#)
+	o Abstraction 
+		Modeling the relevant attributes and interactions of entities as classes 
+		to define an abstract representation of a system.
+	o Encapsulation 
+		Hiding the internal state and functionality of an object and 
+		only allowing access through a public set of functions.
+	o Inheritance 
+		Ability to create new abstractions based on existing abstractions.
+	o Polymorphism 
+		Ability to implement inherited properties or methods 
+		in different ways across multiple abstractions.
+----------------------------------------------
+	object          :       instance for the class          - physical instance 
+    class           :       blue print to create object     - definition for the objects 
+    
+    object oriented programming 
+----------------------------------------------    
+    Real-time examples for class: 
+    class: Employee 
+    class: Student 
+    
+    class: Person 
+    class: Bird
+    class: Animal 
+    class: Car
+    class: Fan 
+    
+    class is the definition 
+        having the name 
+        
+    ---------------------------------
+    class House 
+    ---------------------------------
+        Kitchen kitchen;
+        Room bedRoom;
+        Room anotherBedRoom;
+        LivingArea livingArea;
+        
+    -------------------------------------
+    class Car 
+    -------------------------------------
+        seats                       attributes 
+        engine 
+        streering
+        clutch
+        gear 
+        break 
+        accelarator 
+        speedo meeter
+        wheels 
+        music-system
+        --------------------------------driver
+        drive()                        behaviours               ---> car will run 
+        controlSpeed(+-)                                        --->  30KM/Hour      60KM/Hour     80|90|100|120KM/Hour 
+        applyBreak()                                            --->  break may stop the car by instance reduce of the speed 
+        playMusic()                                             ---> music is played 
+        start()                                                 ---> engine is ready to the run the car 
+        stop()
+    -------------------------------------    
+    
+    Car numbered "TN 48 Z 3454" is the physical entity will have its own attribures
+    that we defined the class Car.
+    
+    Car is the whole which will containe inner objects like engine, etc
+    
+    -------------------------------------
+    
+    class Fan 
+    ----------------------------------------------------
+        regulator                   attributes 
+        wings 
+        rotor
+        capacitor 
+        ------------------------------------------
+        switchON()                  behaviours 
+        changeSpeed()                       operate on the attributes of the object 
+        switchOFF()
+    ----------------------------------------------------    
+    
+    Real world all the objects are like that
+        the behaviors of the object will operates on attributes of the object 
+        
+        
+    In programming, 
+        object 
+            attributes - data members 
+            behavours - member methods / functions 
+           
+        encapsulation - putting together the member data and member functions so that 
+                        member functions may operate on member data 
+                        
+        class - definition for the object 
+            definition for the object members 
+                -- member data definition 
+                -- member functions definition 
+              
+        object - construction using the class 
+               - object of type class 
+               
+               
+        if we have the Car class, 
+        we can define so many objects using the Car class. 
+        
+---------------------------------------------------------------------
+class object 
+encapsulation 
+data hiding 
+abstraction 
+inheritance 
+polimorphism 
+---------------------------------------------------------------------
+1. class 
+    class is the definition for objects. 
+    the definition includes member data and member functions. 
+    
+    --- blue-print 
+    --- template 
+    
+2. object 
+    variable of type class CLASSNAME
+    real-world/physical entity of type class CLASSNAME
+    
+    -- object constructed using blue-print/template/class 
+    
+Qn:
+    In programming, why do we go for class?
+    In OOP, class is the foundation for OOP.
+
+Qn:
+    Before OOP, what was there in the place of the term "class".
+    
+    record/structure is there in procedural language 
+    
+Qn:
+    procedural                      vs          OOP            
+        record/structure                        class 
+        
+        
+
+    Similarity between 
+        --------------------composite type 
+        object / record will contain multiple data of different type 
+        
+        For employee object / record 
+        we will have the inner data 
+            such as emp_name, emp_number, salary etc 
+                    
+    Difference 
+        In procedural, 
+            --struct will not include the functions along with member data definition 
+            --object of type struct will not have functions to operate on data 
+                    ==> We are going for the outside function to operate on the data 
+                        here, we have to pass the object as an argument to the function 
+            
+        In OOPS, 
+            --class will define the member data and functions 
+            --object defined using the type class CLASSNAME 
+                so functions for the object may operate directly on the data of the object 
+        
+Qn:
+   Other advantages of the class in OOPs?
+   1. encapsulation 
+        the mechanism by which 
+        binding member data and member functions together 
+        so that member functions may operate on the member data 
+        
+        --- In class, encapsulation is the part
+        
+   2. data hiding 
+        --- hiding the member data when member functions expose the behaviours of the object 
+        --- How do we hide? using access specifier "private" 
+            access specifiers are: private, public, protected 
+                               -------          ---------
+            
+   3. abstraction 
+        calling the function, or object's function 
+        will not reveal the definition is nothing but abstraction 
+        
+        object's behaviours will be known using functions only.
+        
+        TV.switchON()
+        TV.changeChannel();
+        TV.changeVolume();
+        
+   4. inheritance 
+        --- class Car 
+        --- class Audi : Car 
+        --- class Mercedes : Car 
+        
+        defining derived class(new class) from the base class(existing class) is called inheritance 
+        
+        base class: parent/super class          
+        derived class: chile/sub class 
+        
+        
+        derived class = base class + extra definition 
+                      = {base class member data / member functions} + 
+                        {new member data / member functions defined in the derived class}
+                      = reuse the base class into derved class 
+        -- class ModernAudi : Audi : Car                ----> Multi level inheritance 
+        -- class BatteryCar                             -----> Definition about the battery usage 
+                                                            in driving the car 
+        -- class BatteryAudiCar : Car, BatteryCar       -----> Multiple inheritance 
+        
+        
+        Multi level inheritance : Car    ------>>    Audi     ---->>> ModernAudi 
+        Multiple inheritance  : More than one base class in the inheritance 
+        
+        Hierachical :   A base class is inherited to more than one derived class 
+            Car                 
+          /     \
+         /       \   
+        Audi    Mercedes 
+        
+        Hybrid Inheritance: Mixed of Multi-level, multiple or hierarchical 
+        
+   5. polimorphism = poly + morphism = many + forms 
+        Cat(Pet) is in hungry.
+        Owner brings the milk near to hungry-sleeping cat, 
+        what will happen?
+        
+        Cat will smell and ready for taking milk 
+        
+        If owner is not bringing the milk longer, 
+        and if there any rat is running near the cat....
+        What will happen? 
+        
+        Cat will hunt the rat by how?
+        
+        With Smell behaviour 
+        cat will identify the owner's milk 
+        or 
+        rat is roaming 
+        
+        
+        smells(milk) and 
+        smells(rat) behaviours 
+        of the cat object 
+        
+        
+        polimorphism: object takes multilple forms 
+        
+        cat object's "smells" behaviours takes mutliple forms 
+        one is smells(milk) and another one is smells(rat)
+        -------------------------------------------------
+        polimorphisms in c#
+        1. function overloading     :   same named function having different definitions 
+                    Example:        Console.WriteLine(oneArgument)
+                                    Console.WriteLine(ManyArguments)
+        2. constructor overloading : 
+            Constructor: Special function to construct the object 
+                In constructor, we initialize the member data, construct the 
+                member data(object), etc 
+                    Car 
+                        -- contains engine 
+                        
+                     At car construction, 
+                        construct engine also 
+                        
+                More than one constructor for a class is called constructor overloading         
+        3. function overriding 
+               In inheritance, if both parent and child have the same function prototype/signature 
+               we call it as function overriding
+                
+        4. dynamic binding for function overriding 
+                parent reference object variable refers the child, 
+                then the child member function is called by the parent reference 
+                
+                The drive function is defined in Car, Audi, and Mercedes.
+                Car--> Audi, Car --> Mercedes 
+                Audi, Mercedes overrides the drive() function 
+                
+                Car car = new Audi();
+                car.drive();            // which will call the Car's drive() function 
+                                        // or Audi's drive() function ?
+                
+                car = new Mercedes();
+                car.drive()
+                            // which will call the Car's drive() function 
+                            // or child Mercedes's drive() function ?
+        
+                If drive() function in parent is defined as virtual/abstract 
+                and drive is overridden in the child class 
+                then above the drive() function will call the Audi / Mercedes drive() function 
+                
+                Otherwise, drive() function of Parent will be called.
+        
+        
+        
+        
+        
+        
+        
+   
+   
+   
+    
+        
+              
+                
+                
+            
+           
+            
+            
+            
+    
+    
+        
+    
+    
+    
