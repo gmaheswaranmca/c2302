@@ -1,0 +1,20 @@
+Account
+- accountNumber : string
+- accountHolderName: string
+- balance : float
+
++ Read(): void
++ Print() : void
++ doDeposit(float amount):void
++ doWithdraw(float amount):void
+
+Main 
+Define the account object under your name. 
+
+Menu Based Main Driver Code:
+1. Read  !!!!Account Number, Account Holder Name, Initial Balance
+2. Print
+3. Deposit
+!!!Reading the amount to deposit
+4. Withdraw
+!!!Reading the amount to withdraw
