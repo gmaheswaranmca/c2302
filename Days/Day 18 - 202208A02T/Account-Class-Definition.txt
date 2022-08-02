@@ -5,8 +5,8 @@ Account
 
 + Read(): void
 + Print() : void
-+ doDeposit(float amount):void
-+ doWithdraw(float amount):void
++ DoDeposit(float amount):void
++ DoWithdraw(float amount):void
 
 Main 
 Define the account object under your name. 
@@ -42,14 +42,14 @@ Menu Based Main Driver Code:
 			float amount = 0.0f;
 			Console.WriteLine("Enter amount to deposit:");
 			amount = int.Parse(Console.ReadLine());
-			//account.doDeposit(amount);
+			//account.DoDeposit(amount);
 		}
 		else if(4 == menu)
 		{
 			float amount = 0.0f;
 			Console.WriteLine("Enter amount to withdraw:");
 			amount = int.Parse(Console.ReadLine());
-			//account.doWithdraw(amount);
+			//account.DoWithdraw(amount);
 		}
 		else
 		{
