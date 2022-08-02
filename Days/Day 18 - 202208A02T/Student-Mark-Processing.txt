@@ -1,0 +1,38 @@
+Student
+--------------------------
+-studentName:string
+-rollNumber:int
+-primaryLangMark:int
+-secondaryLangMark:int
+-scienceMark:int
+-socialScienceMark:int
+-mathMark:int
+--------------------------
+Read():void
+Print():void 
+findTotal():int
+--------------------------
+
+Test Case 1:
+Input: 
+Enter Student Name: Maheswaran
+Enter Roll Number: 1001
+Enter Language(Primary) Mark: 56
+Enter Language(Secondary) Mark: 67
+Enter Science Mark: 55
+Enter Social Science Mark: 89
+Enter Mathematics Mark: 75
+Output:
+The student Maheswaran(1001) Total Mark is 342
+
+Test Case 2:
+Input: 
+Enter Student Name: Raj
+Enter Roll Number: 1002
+Enter Language(Primary) Mark: 80
+Enter Language(Secondary) Mark: 80
+Enter Science Mark: 90
+Enter Social Science Mark: 90
+Enter Mathematics Mark: 90
+Output:
+The student Raj(1002) Total Mark is 430

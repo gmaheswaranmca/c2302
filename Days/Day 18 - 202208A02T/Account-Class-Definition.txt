@@ -19,6 +19,37 @@ Menu Based Main Driver Code:
 4. Withdraw
 !!!Reading the amount to withdraw
 
+class Account{
+		private string accountNumber;
+        private string accountHolderName;
+        private float balance;
+        public void Read()
+        {
+            Console.WriteLine("Enter the Account number:");
+            accountNumber = Console.ReadLine();
+            Console.WriteLine("Enter the Account Holder Name:");
+            accountHolderName = Console.ReadLine();
+            Console.WriteLine("Enter the Intial Balance:");
+            balance = float.Parse(Console.ReadLine());
+        }
+        public void Print()
+        {
+            Console.WriteLine($"Account number:{accountNumber}");
+            Console.WriteLine($"Account Holder Name:{accountHolderName}");            
+            Console.WriteLine($"Balance:{balance}");
+ 
+        }
+        public void DoDeposit(float amount)
+        {
+            balance = balance + amount;
+            Console.WriteLine("Deposition is succeful");
+            
+        }
+}
+
+
+
+// Driver Code
 
  static void Main(string[] args)
 {
