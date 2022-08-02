@@ -18,3 +18,42 @@ Menu Based Main Driver Code:
 !!!Reading the amount to deposit
 4. Withdraw
 !!!Reading the amount to withdraw
+
+
+ static void Main(string[] args)
+{
+	int menu = 0;
+	//Account account = new Account();
+	do
+	{
+		Console.WriteLine("Choice(1-Read, 2-Print, 3-Deposit, 4-Withdraw, 0-Exit):");
+		menu = int.Parse(Console.ReadLine());
+
+		if(1 == menu)
+		{
+			//account.Read();
+		}
+		else if (2 == menu)
+		{
+			//account.Print();
+		}
+		else if(3 == menu)
+		{
+			float amount = 0.0f;
+			Console.WriteLine("Enter amount to deposit:");
+			amount = int.Parse(Console.ReadLine());
+			//account.doDeposit(amount);
+		}
+		else if(4 == menu)
+		{
+			float amount = 0.0f;
+			Console.WriteLine("Enter amount to withdraw:");
+			amount = int.Parse(Console.ReadLine());
+			//account.doWithdraw(amount);
+		}
+		else
+		{
+			Console.WriteLine("Exit from the app....");
+		}
+	} while (menu != 0);
+}
