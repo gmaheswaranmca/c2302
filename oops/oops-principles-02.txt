@@ -1,0 +1,185 @@
+How to Explain Object-Oriented Programming to Kids
+	Everything’s an object, right? 
+	Well, almost everything. 
+	The assertion that everything is an object is 
+	the concept which underlies object-oriented programming, or 
+	OOP for short.
+
+	The whole paradigm of object-oriented paradigm is 
+	the concept of objects. 
+	These objects contain data, 
+	which we also refer to as attributes or properties, and methods. 
+	Objects can interact with each other.
+
+	Object-oriented programming is 
+	one of the most complex parts of programming 
+	to learn and to teach. 
+	If it is so difficult to learn and to teach, 
+	how do you explain it to a kid?
+
+	When you explain coding to a child, 
+	it’s helpful to use something they already know. 
+	It’s the same when you want to know 
+	how to explain object-orientated programming to a kid, 
+	you make it relatable.
+
+	By using something familiar, 
+	it will help you explain programming concepts. 
+	Also make it simple and entertaining. 
+	This will help to prevent boredom and keep them engaged 
+	in what you’re explaining.
+
+	We will deal with the basics of object-oriented programming, 
+	its main principles and how to easily explain them to a child.
+
+The basics of Object-Oriented Programming (simple definition)
+	--Object-oriented programming is based on the concept of objects. 
+	
+		o In object-oriented programming 
+			data structures, or objects are defined, 
+			each with its own properties or attributes. 
+	
+		o Each object can also contain its own procedures or methods.
+		
+	Software is designed by using objects that interact with one another. 
+	This offers various benefits, like:
+		o being faster and easier to execute;
+		o providing a clear structure for a program;
+		o making code easier to modify, debug and maintain; and
+		o making it easier to reuse code.
+
+	Object oriented languages are diverse, 
+	but the most popular ones are class-based languages 
+	in which objects are instances of classes. 
+	
+	Significant object-oriented languages 
+	include Java, C++, C#, Python and Javascript.
+
+	The simplest way to explain object-orientated programming to a kid is 
+	to use something like a car as an example. 
+	A car has a model name, a colour, a year 
+	in which it was manufactured, 
+	an engine size and so on.
+
+	We would therefore create a Car object 
+	with the name, colour, engine size and year as attributes.
+
+	For every new car we use, we would use the car object. 
+	For instance, we can have a 2019 Blue BMW or a 2017 Red Audi. 
+	In each instance we would reuse the code contained in the original object.
+
+	The main principles of object-oriented programming 
+	are 
+		encapsulation, 
+		abstraction, 
+		inheritance and 
+		polymorphism. 
+	We will now deal with these four principles and how to explain them to a child.
+	
+	Encapsulation
+		The principle of encapsulation entails 
+		that all the properties and methods of an object is kept private and safe 
+		from interference by other objects. 
+		
+		In each object we can have both private and public variables and methods. 
+		Private variables and methods cannot be called or used by other objects, 
+		whereas public ones can.
+
+		To explain this, let’s again use our car example. 
+		The attributes such as colour, year and model would be private variables. 
+		They can just not be changed by other objects.
+
+		In turn we can have a public method called Start. 
+		Other objects, for instance a Person object, 
+		would be able to call this method.
+
+		We can use a computer game as an example 
+		that would be more relatable to children. 
+		Let’s look at a role-playing game as an example. 
+		In a typical role-playing game, 
+		we may have a main character or hero.
+
+		This hero will have several variables 
+		like name, outfit, hair colour and skin colour. 
+		The hero may also have methods 
+		like attack, walk, run and talk. 
+		Typically, these would be private variables and methods 
+		that can’t be modified by other objects in the game.
+
+		The hero may also have a variable 
+		Health and a method called Damage. 
+		These would typically be public variables and methods 
+		which can be modified by other objects. 
+		An enemy object would be able to call this method 
+		and change the value of the variable when it attacks the hero.
+
+	Abstraction
+		Abstraction can be seen as an extension of encapsulation. 
+		Oftentimes, programs are very large with thousands of lines of code. 
+		This is difficult to maintain, but abstraction helps with this.
+
+		Abstraction means that every object 
+		only exposes a high-level mechanism for using it. 
+		Thus, the code within, to a large extent becomes irrelevant to other objects 
+		interacting with the object.
+
+		Let’s use our car example again. 
+		As stated, it might have a Start method attached to it. 
+		This Start method may have some code inside it 
+		which provides what happens when the method is called. 
+		The object calling that method does not need to know it works or 
+		what code makes it work, but only that it works.
+
+		Using the game example, 
+		the Attack method may have many lines of code contained in it. 
+		This code can specify how the hero can be attacked 
+		and what effect the attack may have on the health of the hero.
+
+		The enemy object does not need to be aware how the attack works, 
+		just that it works and that it reduces the health of the hero.
+
+	Inheritance
+		As stated before, programs often contain thousands of lines of code 
+		which is complicated and difficult to maintain. 
+		Another problem often encountered is that we have similar objects. 
+		They can share some code or logic, but they are not exactly the same.
+
+		If we had to create a brand-new object for every object we use in our program 
+		it would lead to more code and complexity. 
+		In order to prevent this, we can use inheritance. 
+		With inheritance we extract the logic in one object, 
+		called the parent, to another object, called the child.
+
+		Using our car example, we can, for instance, 
+		extract the features like year, colour and model into another object. 
+		We can thus use our car object to create other objects like trucks, 
+		busses or vans due to their similar nature.
+
+		In our game example, we can have a variety of enemies. 
+		These enemies can all be child objects of a parent enemy object. 
+		Each enemy may have similar attributes, 
+		but also different attributes like outfit or weapon.
+
+	Polymorphism
+		We have now seen how inheritance enables us to use a parent object 
+		to define a child object. 
+		The problem is that the child might have a different way of implementing a method.
+
+		Polymorphism gives us a way to use an object exactly 
+		like its parent but keeping its own methods as they are.
+
+		As an example, let’s look at a Vehicle object. 
+		We can use this object to create other objects like a Car, a Truck or a Motorcycle. 
+		If the Vehicle has a Start method, 
+		it may be implemented by each child object differently. 
+		Polymorphism enables each child object to implement the Start method differently.
+
+		In our game, our enemies may each have an Attack method 
+		which it inherits from the parent, 
+		but each with its own implementation.
+
+		Object oriented programming may be complicated to learn, 
+		not only for adults, but also for children. 
+		However, the more you use examples and 
+		something that is relatable to children, 
+		the easier it will be to explain.
