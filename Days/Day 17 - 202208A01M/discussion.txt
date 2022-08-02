@@ -318,29 +318,3 @@ Qn:
                 then above the drive() function will call the Audi / Mercedes drive() function 
                 
                 Otherwise, drive() function of Parent will be called.
-        
-        
-        
-        
-        
-        
-        
-   
-   
-   
-    
-        
-              
-                
-                
-            
-           
-            
-            
-            
-    
-    
-        
-    
-    
-    
