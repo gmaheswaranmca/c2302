@@ -1,0 +1,38 @@
+Task 02 
+
+Read five numbers (USE FIVE VARIABLES)
+And find sum of five numbers 
+And find maximum of five numbers 
+And find minimum of five numbers 
+
+Note use the following functions to solve the above problem
+	1. int FindSumOfFive(int first, int second, int third, int fourth, int fifth)
+	2. int FindMaxOfThree(int first, int second, int third)
+	3. int FindMinOfThree(int first, int second, int third)
+	
+	
+------------------------------------------------
+Trying the solution 	
+------------------------------------------------
+Driver Program 
+	int first;
+	int second;
+	int third;
+	int fourth;
+	int fifth;
+	Console.Write("Enter first number:"); first = int.Parse(Console.ReadLine());
+	Console.Write("Enter second number:"); second = int.Parse(Console.ReadLine());
+	Console.Write("Enter third number:"); third = int.Parse(Console.ReadLine());
+	Console.Write("Enter fourth number:"); fourth = int.Parse(Console.ReadLine());
+	Console.Write("Enter fifth number:"); fifth = int.Parse(Console.ReadLine());
+	
+	int sum = FindSumOfFive(first,second,third,fourth,fifth);
+	Console.WriteLine($"The sum is {sum}");
+	
+	int max = FindMaxOfThree(FindMaxOfThree(first,second,third),fourth,fifth);
+	Console.WriteLine($"The max is {max}");
+	
+	int min = FindMinOfThree(FindMinOfThree(first,second,third),fourth,fifth);
+	Console.WriteLine($"The min is {min}");
+	
+Now the job is to define the functions: 	
