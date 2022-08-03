@@ -1,0 +1,36 @@
+Solve the below and then REFACTOR using "Extract To Method" into functions:
+
+For a given number 
+
+1. Check a number is Odd 
+	Solve
+	Print
+2. Find sum of the digits 
+	Solve
+	Print
+3. Count number of digits 
+	Solve
+	Print
+4. Check a number is divisible by 5
+	Solve
+	Print
+	
+---------------------------------------------------
+Pseudo Code 
+---------------------------------------------------
+Step 1: Read a number 
+Step 2: Check a number is odd 
+		If Odd
+			Print as "Odd Number"
+		Else 
+			Print as "Not Odd Number"
+Step 3: Find sum of digits 
+		Print sum 
+Step 4: Count the number of digits 
+		Print count 
+Step 5: Check a number is divisible by 5
+		If Yes
+			Print "Number is Divisible By 5"
+		Else 
+			Print "Number is not Divisible By 5"
+			

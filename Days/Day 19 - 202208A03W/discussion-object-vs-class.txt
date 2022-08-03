@@ -1,0 +1,137 @@
+members 
+	member data / attribute
+	member function (method)
+
+class level members					(static qualifier is used to denote class level members)
+	class level member data 
+	class level member functions 
+	
+	static members will be called using class name 
+	
+	CLASSNAME.member...
+	
+Example:
+----------------------------------------------------------------------------
+class PrimePrintingForIntervals
+{
+	public static void PrintPrimeNumbersAndFindSum(int startInterval)
+	{
+		int endInterval = startInterval + 10;
+		int flag = 0;
+		int sum1 = 0;
+		Console.Write("\nThe prime numbers between " + startInterval + " and " + endInterval + " are : ");
+		for (int i = startInterval; i <= endInterval; i++)
+		{
+			flag = IsPrimeNumber(i);
+			if (flag == 1)
+			{
+				Console.Write(i + " ");
+				sum1 += i;
+			}
+		}
+		Console.WriteLine("\n\nThe sum of prime numbers between " + startInterval + " and " + endInterval + " is : " + sum1);
+	}
+
+	public static int IsPrimeNumber(int number)
+	{
+		int flag = 1;
+		for (int j = 2; j < number / 2; j++)
+		{
+			if (number % j == 0)
+			{
+				flag = 0;
+				break;
+			}
+		}
+
+		return flag;
+	}
+}	
+	
+	
+Driver Code for the above functions:
+static void Main(string[] args)
+{
+	Console.WriteLine("Find the sum of prime numbers between 'given nubmer' and 'given number plus 10'");
+	Console.WriteLine("Enter a start number:");
+	int b = int.Parse(Console.ReadLine());
+
+	PrimePrintingForIntervals.PrintPrimeNumbersAndFindSum(b);
+
+	Console.Read();
+}	
+----------------------------------------------------------------------------	
+
+
+
+object level members 				(non-static members)
+	object level member data 
+	object level member functions 
+	
+	non-static members will be called using object 
+	OBJECTREFNAME has to refer the created object "new CLASSNAME([...])"
+	OBJECTREFNAME.member...
+	
+Example:	
+----------------------------------------------------------------------------
+class PrimePrintingForIntervals
+{
+	public void PrintPrimeNumbersAndFindSum(int startInterval)
+	{
+		int endInterval = startInterval + 10;
+		int flag = 0;
+		int sum1 = 0;
+		Console.Write("\nThe prime numbers between " + startInterval + " and " + endInterval + " are : ");
+		for (int i = startInterval; i <= endInterval; i++)
+		{
+			flag = IsPrimeNumber(i);
+			if (flag == 1)
+			{
+				Console.Write(i + " ");
+				sum1 += i;
+			}
+		}
+		Console.WriteLine("\n\nThe sum of prime numbers between " + startInterval + " and " + endInterval + " is : " + sum1);
+	}
+
+	public int IsPrimeNumber(int number)
+	{
+		int flag = 1;
+		for (int j = 2; j < number / 2; j++)
+		{
+			if (number % j == 0)
+			{
+				flag = 0;
+				break;
+			}
+		}
+
+		return flag;
+	}
+}
+	
+Driver Code:
+static void Main(string[] args)
+{
+	Console.WriteLine("Find the sum of prime numbers between 'given nubmer' and 'given number plus 10'");
+	Console.WriteLine("Enter a start number:");
+	int b = int.Parse(Console.ReadLine());
+
+	PrimePrintingForIntervals value = new PrimePrintingForIntervals();
+
+	value.PrintPrimeNumbersAndFindSum(b);
+
+	Console.Read();
+}	
+----------------------------------------------------------------------------	
+	
+	
+	OBJECT REFERENCE variable can hold only one object at a time 
+	
+	OBJECTREFNAME = new CLASSNAME([...])	<---| "NOT REFERRED" OBJECT		--> GC may collect this anytime
+	//....										|
+	//...										|
+	OBJECTREFNAME = new CLASSNAME([...])		| 
+	//...
+	//...
+	
