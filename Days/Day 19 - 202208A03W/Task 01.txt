@@ -34,3 +34,130 @@ Step 5: Check a number is divisible by 5
 		Else 
 			Print "Number is not Divisible By 5"
 			
+			
+---------------------------------------------------
+Before Refactoring
+---------------------------------------------------			
+static void MainVersion1(string[] args)
+{
+	int num;
+	Console.WriteLine("Enter a number");
+	num = Convert.ToInt32(Console.ReadLine());
+	if (num % 2 == 0)
+	{
+		Console.WriteLine("the number is odd");
+	}
+	else
+	{
+		Console.WriteLine("the number is  not odd");
+	}
+	int remainder, sum = 0;
+	int temp = num;
+	while (temp > 0)
+	{
+		remainder = temp % 10;
+		sum = sum + remainder;
+		temp = temp / 10;
+	}
+	Console.WriteLine("sum is:" + sum);
+	int temp1 = num;
+	int count = 0;
+	while (temp1 != 0)
+	{
+		temp1 = temp1 / 10;
+		count++;
+	}
+	Console.WriteLine("the number of digits =" + count);
+	if (num % 5 == 0)
+	{
+		Console.WriteLine("the number is divisible by 5");
+	}
+	else
+	{
+		Console.WriteLine("the number is  not divisible by 5");
+	}
+	Console.Read();
+}	
+---------------------------------------------------			
+
+
+
+---------------------------------------------------
+After Refactoring
+---------------------------------------------------
+static void Main(string[] args)
+{
+	int num;
+	//Read number
+	Console.WriteLine("Enter a number");
+	num = Convert.ToInt32(Console.ReadLine());
+	PrintIfOdd(num);
+	int sum = FindSumOfDigits(num);
+	//print sum of digits
+	Console.WriteLine("sum is:" + sum);
+	int count = FindCountOfDigits(num);
+	//print the count of digits
+	Console.WriteLine("the number of digits =" + count);
+	PrintIfDivisibleBy5(num);
+	Console.Read();
+}
+private static void PrintIfDivisibleBy5(int num)
+{
+	//print as "divisible" if divisible by 5
+	if (IsDivisibleBy5(num))// check num is divisible by 5
+	{
+		Console.WriteLine("the number is divisible by 5");
+	}
+	else
+	{
+		Console.WriteLine("the number is  not divisible by 5");
+	}
+}
+
+private static bool IsDivisibleBy5(int num)
+{
+	return num % 5 == 0;
+}
+private static int FindSumOfDigits(int num)
+{
+	// find sum of digits
+	int remainder, sum = 0;
+	int temp = num;
+	while (temp > 0)
+	{
+		remainder = temp % 10;
+		sum = sum + remainder;
+		temp = temp / 10;
+	}
+	return sum;
+}
+private static int FindCountOfDigits(int num)
+{
+	//count the digits
+	int temp1 = num;
+	int count = 0;
+	while (temp1 != 0)
+	{
+		temp1 = temp1 / 10;
+		count++;
+	}
+	return count;
+}
+private static void PrintIfOdd(int num)
+{
+	//print  as "odd" if odd
+	if (IsOddNumber(num)) //check num is odd
+	{
+		Console.WriteLine("the number is odd");
+	}
+	else
+	{
+		Console.WriteLine("the number is  not odd");
+	}
+}
+private static bool IsOddNumber(int num)
+{
+	return num % 2 != 0;
+}
+
+---------------------------------------------------			
