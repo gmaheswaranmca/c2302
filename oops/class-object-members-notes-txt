@@ -1,0 +1,142 @@
+function*********************************
+	1. function can have 
+		"arguments" or 
+		"no arguments"
+	2. function can return only one value 
+		- function cannot return more than one value 
+	3. function cannot return value if its return type is void 
+	
+	arguments are input to the function 
+	return value is output from the function 
+	
+	How To get two outputs out of the function?
+	possible. 
+		Example 
+		1. In C language to swap(exchange) data via function, we are using two pointers.
+		2. In C language to find area and circumference via function by passing length and width, 
+		Solution we can have four arguments 
+		First two arguments are length and width 
+		Last two arguments are pointers to area and circumference 
+		Example 
+		1. In C# language to swap(exchange) data via function, we can use "ref" arguments 
+		2. 
+		(a)
+		In C language to find area and circumference via function by passing length and width, 
+		Solution we can have four arguments 
+		First two arguments are length and width 
+		Last two arguments are either "out" arguments 
+		(b)
+		"ref" arguments 
+	
+why "function"?
+	1. code reusabliity
+		Math.Pow(number,exponent) 		returns number^exponenet 
+		Example 
+		Math.Pow(5,2)	returns 25			<----- 5^2
+		Math.Pow(5,3)	returns 125			<----- 5^3
+		Math.Pow(11,2)  returns 121			<----- 11^2 
+		
+		Name of the function is "Pow"
+		Arguments of "Pow" are number and exponent 
+		Return value --- It is returning 
+					 --- the value of the "number^exponent"
+	
+	2. int FindArea(int length, int width)
+		Name of the function "FindArea"
+		Number of Arguments are two 
+			- It takes length and width of the rectangle as arguments 
+		Return value --- It is returning 
+					 --- returns area of the rectangle as integer
+			
+		
+
+
+
+
+Class members***************************
+	object attributes (member data)
+	object functions 
+	static attributes 
+	static functions 
+	
+	object getters or setters or both : to encapsulate the object attributes 
+	object constructors : to initialize the object : argument constructor, no-argument constructor 
+	
+	static constructor : it should not have argument. 
+	
+	
+	
+--------------------------------------------------	
+	object attributes:
+		- attribute is also called "member data" 
+		- they are object level variables
+		- attributes of object will be memory allocated at the time "object creation"
+		
+	object(instance) creation(instantiation) 
+		- object is created using "new" operator and "constructor"
+		- at object creation the reference of the object is returned 
+		- the object reference variable can hold the reference of the object 
+		- the reference variable is created using the syntax 
+			CLASSNAME ref_variable_name;				// REFERENCE var is declared 
+			ref_variable_name = new CLASSNAME([args]);	// object creation and assinged the created object REFERENCE into 
+														// REFERENCE variable 
+			
+			OR 
+			CLASSNAME ref_variable_name = new CLASSNAME([args]); // declared REFERENCE var hold the created object REFERENCE
+			
+			OR
+			CLASSNAME ref_variable_name = null;
+			ref_variable_name = new CLASSNAME([args]);
+		
+	object constructor 
+		- a special method that should not have return type 
+		- its name is same as its class name 
+		- it can have argument 
+		- it is used to initialze the attributes 
+			So, types: 
+				- argument constructor 
+					- we can define any number of constructors to have different argument to initialize the attributes
+				- no-argument constructor 
+					- it is the default constructor 
+						- ie implicitly it is declared
+	object functions
+		- object function can access/manipulate the object attributes 
+		- they are the service functions to be used by object clients 
+		- object function cannot be called inside the static functions directly 
+
+	object client
+		- the outside function where we call the service functions of the object 
+		- the client function may be 
+			same object's member function 
+			another object's member function 
+			same class's static function 
+			another class's static function 
+
+	object getters or setters or both :	
+		- the getters and setters are called properties 
+		- properties can have only getters or only setters or both 
+		- properties are used to encapsulate the object attributes individually
+		
+	
+	class attributes
+		- they are class level variables 
+		- they can be accessed using CLASSNAME and dot operator 
+		- all objects of the same class can share the class attributes 
+	
+	class functions 
+		- they are class level functions declared using qualifier "static"
+		- those functions can be called inside the object function directly 
+		- inside class function, we cannot call the object function directly 
+		
+	static constructor: 
+		- class named "static" qualified special function 
+		- it has no return value 
+		- it has no arguments 
+		- it is called the runtime when it is required 
+		- it is used to initialize the class attributes 
+			
+		
+		
+	
+		
+		

@@ -1,0 +1,149 @@
+--------------------------------------------------------------------------------------
+Question "OOPB"
+--------------------------------------------------------------------------------------
+What will be the output of the following C# code?
+
+...........................................................
+using System;
+
+class Rectangle
+{
+	public int length;
+	public int width;
+	public Rectangle(int l, int w)
+	{
+		length = l;
+		width = w;
+	}
+	public int FindArea()
+	{
+		int area = length * width;
+		return area;
+	}
+	public int FindCircumference()
+	{
+		return 2 * (length + width);
+	}
+}
+class MainProgram
+{
+	static void Main(string[] args)
+	{
+	     
+		Rectangle rect = new Rectangle(4,3);
+		int area = rect.FindArea();
+		Console.WriteLine("area is " + area);
+		int circumference = rect.FindCircumference();
+		Console.WriteLine("circumference is " + circumference);
+		Console.Read();
+	}
+}
+...........................................................
+
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+***********************Options***********************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+A..........................................................
+Compile Time Error.
+Because The attributes should be private
+B..........................................................
+Compile Time Error.
+Because The attributes should not be public
+C..........................................................
+area is 12
+circumference is 14
+D..........................................................
+area is 14
+circumference is 12
+...........................................................
+
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+***********************Answer***********************
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Option C
+--------------------------------------------------------------------------------------
+
+The program has the class "Rectangle" and with following definitions
+------------------------------------------
+class Rectangle
+------------------------------------------
+	attributes:
+	+length
+	+width
+	------------------------------------------	
+	methods:
+	+Rectangle(int l, int w):constructor
+	+findArea():int
+	+findCircumference():int
+------------------------------------------
+Task 01
+	The above program you run in your computer screen. 
+	Check what is the output.
+	
+Note:	
+	For Task 01
+		Task01 is sub namespace of the project namespace 
+		Task01 namespace has class Task01Program and Rectangle 
+		Task01Program has client function "MainTask01" for Rectangle class 	
+	
+Suggestion: ---------------------Task 02 (Do from original task)
+	The attributes are here public.
+	And not accessed outside.
+	So, the attributes can become private.
+	
+Task 03  (Do from original task):
+	Read the length and breath from keyboard to construct the object named "rect" 
+	
+Task 04  (Do from original task):	
+	Print the length and breath before printing the "area" and "circumference" 
+	
+	Suggestion:	Task 05
+		As we are printing the attributes outside the object 
+		we can change the attibute to "read only" properties 
+		and we can use 
+		
+Task 04  (Do from original task):	
+	Print the attribtues of "rect" before printing the "area" and "circumference" 
+	
+	Suggestion:	Task 05  (Do from original task)
+		As we are printing the attributes outside the object 
+		we can change the attibute to "read only" properties 
+		and attributes can become "private"
+		and we can use then outside the class 
+		So, "encapsulation" will not be violated
+		
+Task 06  (Do from original task):			
+	Remove the constructor from class 
+	Read the length and breath from keyboard using attibutes of object "rect"
+	Print the length and breath before printing the "area" and "circumference" 	
+	
+	Suggestion:	Task 07  (Do from original task)
+		As we are reading the attributs and 
+		   we are printing the attributes outside the object 
+		we can change the attibute to "read/write" properties 
+		and attributes can become "private"
+		and we can use then outside the class 
+		So, "encapsulation" will not be violated
+		
+		
+Task 08  (Do from original task)		
+	Have attributes, properties, constructors, toString() all together
+	
+	- Read the length and breath from keyboard using attibutes of object "rect"
+	- Print the length and breath before printing the "area" and "circumference"
+	Continuing to ****DO**** the following as well 
+	- Read the length and breath from keyboard using local varibles and assign arg construcotor based created object into "rect"
+	- Print the length and breath before printing the "area" and "circumference"
+	
+	
+	
+
+		
+			
+			
+			

@@ -1,0 +1,70 @@
+Question "OOPA"
+---------------------------------------------------------
+What is the output of the program?
+using System;
+
+class SRectangle
+{
+	public static int FindArea(int length, int width)
+	{
+		return length * width;
+	}
+	public static int FindCircumference(int length, int width)
+	{
+		return 2 * (length + width);
+	}
+}
+
+class MainProgram
+{
+	static void Main(string[] args)
+	{
+	     
+		int area = SRectangle.FindArea(4,3);
+		Console.WriteLine("area is " + area);
+		int circumference = SRectangle.FindCircumference(4,3);
+		Console.WriteLine("circumference is " + circumference);
+		
+		Console.Read();
+	}
+}
+---------------------------------------------------------
+
+Task 01:
+	Just try the above code 
+	Notes: 
+		Creating code file ProgramOopA
+		In application namespace "AppOopA"
+			Create the Sub Namespace "Task01"
+			Task01 
+				Define "SRectangle"
+				and 
+				Have the driver code inside the function MainTask01() of the class Task01Program 
+					!!!MainTask01() is "public static void" function 
+						
+-------------------------------------------
+Task 01: Code Hierarchy
+	namespace AppOopA	 
+		|
+		|-->  class Program 
+				     |--> static void Main(string[] args)		!!! calls "using AppOopA.Task01" -> Task01Program.MainTask01()
+		|-->  namespace Task01 
+				|--> class SRectangle 
+					        |--> public static int FindArea(int,int)
+							|--> public static int FindCircumference(int,int)		
+				|--> class Task01Program 
+							|--> public static void MainTask01() !!! client/driver code 
+							
+								
+-------------------------------------------	
+
+Overall Notes:
+	Name of the solution and project is "AppOopA"
+	Framework chosen is "4.7.2"
+	Application Type: [C# Windows Console]
+
+-------------------------------------------
+
+Task 02:
+	
+
