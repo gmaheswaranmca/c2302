@@ -11,7 +11,8 @@ Create a class “Student” with the following members:
 		nextRollNumber – static, to assign rollNumber automatically
 
 	Methods:
-		Student()			- constructor to assign nextRollNumber into rollNumber and increment nextRollNumber	
+		Student()			- constructor to assign nextRollNumber into rollNumber 
+								and increment nextRollNumber	
 		Read()				- Read the fields from keyboard other than rollNumber, total and average
 		Calculate()			- Update the fields total and average 
 		Display()			- Print the fields  
@@ -21,4 +22,36 @@ Create a class “Student” with the following members:
 		
 	Write a Main method and prepare student mark list of ‘2’ students.
 
+Test Case:
+Input:
+	Enter 2 students student name, mark 1, mark 2, mark 3 in each line:
+	Chitra 
+	50 
+	60 
+	70
+	Stutee 
+	70 
+	80
+	60
+Output:
+	Mark List 
+	Student#1
+	Name: Chitra
+	Roll Number: 1001
+	Mark 1: 50
+	Mark 2: 60
+	Mark 3: 70
+	Total: 180
+	Average: 60
+	Student#2
+	Name: Stutee
+	Roll Number: 1002
+	Mark 1: 70
+	Mark 2: 80
+	Mark 3: 60
+	Total: 210
+	Average: 70
+	Next Roll Number is 1003
+	
+	
 	

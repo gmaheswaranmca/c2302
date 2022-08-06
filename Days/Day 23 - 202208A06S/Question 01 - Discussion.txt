@@ -1,0 +1,106 @@
+Question 1:
+	Class members (static)
+		static constructor 
+		static member field 
+		static member function 
+	Object memers (non-static)
+		object constructor
+		object member field 
+		object member function 
+	Client(/Main/Driver) Code
+		
+		
+o static/class-level members we will access with CLASSNAME and dot operator 
+o non-static/object members we will access with object reference and dot operator 
+o static member field 
+	- variable declared inside the class with qualifier "static"  is called static member field
+	- static field is class-level scoped member 
+	- static field is memory allocated for the entire class 
+	Note: field,attribute,data,variable are synonymous 
+o static constructor
+	- the class named constructor with qualifier "static" is called static constructor 
+	- static constructor will not have return value 
+	- static constructor will not have arguments
+	- it is no-argument no-return value special function 	
+	- it is used to initialize the static fields 
+o static function 
+	- the function qualified with "static" keyword and accessed using the class name 
+		is called static function 
+	- the static function can access the static fields or 
+		call other static functions 
+	- the static function should not access the object fields/functions 
+o object member field 
+	- variables declared without static qualifier at class level are the attributes of the object 
+	- Those object member fields will be accessed by the object's reference 
+o object constructor 
+	- the class named special function without static qualifier to inialize the object member fields 
+	is called object constructor 
+	- object constructor will not have the return value 
+	- object constructor may have arguments  
+		So 
+		argument construcor 		
+		no-argument constructor (if there is no constructor defined, 
+			then by default no-argument constructor will be with the class)
+o object member function 
+	- the function without static qualifier to operate on member fields is called object member function 
+	- member function will become service functions of the object 
+	- member function's main objective is to operate on object fields 
+	      leads to ---> Encapsulation 
+				leads to ---> Data Hiding 
+				
+				
+				
+Output:
+	Mark List 
+	Student#1
+	Name: Chitra			Read			Display
+	Roll Number: 1001		object constructor <-- nextRollNumber	Display
+	Mark 1: 50				Read 			Display
+	Mark 2: 60				Read 			Display	
+	Mark 3: 70				Read 			Display
+	Total: 180				Calculate		Display
+	Average: 60				Calculate		Display
+	Student#2
+	Name: Stutee
+	Roll Number: 1002
+	Mark 1: 70
+	Mark 2: 80
+	Mark 3: 60
+	Total: 210
+	Average: 70
+	Next Roll Number is 1003	static constructor | object constructor | DisplayRollNumber
+	
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Actual Output We got after running
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Enter 2 students student name, mark 1, mark 2, mark 3 in each line:
+Chitra
+50
+60
+70
+Stutee
+70
+80
+60
+Mark List
+Student#1
+Name: Chitra
+Roll Number: 1001
+Mark 1: 50
+Mark 2: 60
+Mark 3: 70
+Total: 180
+Average: 60
+Student#2
+Name: Stutee
+Roll Number: 1002
+Mark 1: 70
+Mark 2: 80
+Mark 3: 60
+Total: 210
+Average: 70
+Next Roll Number is 1003
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^	
+					
+	
