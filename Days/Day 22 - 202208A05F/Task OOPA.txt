@@ -65,6 +65,29 @@ Overall Notes:
 
 -------------------------------------------
 
-Task 02:
-	
+Task 02: To find sum of two numbers using function 
+namespace AppOppA
+{
+	namespace Task02
+	{
+		class Addition
+		{
+			public static int FindSumOfTwo(int first, int second)
+			{
+				return first + second;
+			}
+		}
 
+		class Task02Program
+		{
+			public static void MainTask02()
+			{
+				int firstNumber = 10;
+				int secondNumber = 5;
+				int sum = Addition.FindSumOfTwo(firstNumber,secondNumber);
+				Console.WriteLine("sum is " + sum);
+				Console.Read();
+			}
+		}
+	}
+}
