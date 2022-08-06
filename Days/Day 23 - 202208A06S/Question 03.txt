@@ -39,3 +39,102 @@ Create a class “Flight” with the following members:
 			parameters are sourcePoint, destinationPoint, noOfSeats, ticketFare
 		Use Flight object constructor to initialize the third flight 
 			parameter is "Flight flight"
+
+
+Test Case:
+Input:
+	Enter 3 flight details source, destination, no of seats, ticket fare in each line:
+	Hyderabad 
+	New Delhi 
+	250
+	8500
+	Bhubaneswar
+	Mumbai
+	150
+	6500
+	Trivendram
+	Calcutta
+	175
+	7500
+	Option(1-Booking, 2-Cancellation): 1
+	Pick the flight 
+	1. 100101 (Hyderabad-New Delhi)
+	2. 100102 (Bhubaneswar-Mumbai)
+	3. 100103 (Trivendram-Calcutta)
+	Your Choice: 2
+	Are you sure to continue? yes
+	Option(1-Booking, 2-Cancellation): 1
+	Pick the flight 
+	1. 100101 (Hyderabad-New Delhi)
+	2. 100102 (Bhubaneswar-Mumbai)
+	3. 100103 (Trivendram-Calcutta)
+	Your Choice: 2
+	Are you sure to continue? yes
+	Option(1-Booking, 2-Cancellation): 1
+	Pick the flight 
+	1. 100101 (Hyderabad-New Delhi)
+	2. 100102 (Bhubaneswar-Mumbai)
+	3. 100103 (Trivendram-Calcutta)
+	Your Choice: 2
+	Are you sure to continue? yes
+	Option(1-Booking, 2-Cancellation): 1
+	Pick the flight 
+	1. 100101 (Hyderabad-New Delhi)
+	2. 100102 (Bhubaneswar-Mumbai)
+	3. 100103 (Trivendram-Calcutta)
+	Your Choice: 1
+	Are you sure to continue? yes
+	Option(1-Booking, 2-Cancellation): 1
+	Pick the flight 
+	1. 100101 (Hyderabad-New Delhi)
+	2. 100102 (Bhubaneswar-Mumbai)
+	3. 100103 (Trivendram-Calcutta)
+	Your Choice: 3
+	Are you sure to continue? yes
+	Option(1-Booking, 2-Cancellation): 1
+	Pick the flight 
+	1. 100101 (Hyderabad-New Delhi)
+	2. 100102 (Bhubaneswar-Mumbai)
+	3. 100103 (Trivendram-Calcutta)
+	Your Choice: 1
+	Are you sure to continue? yes
+	Option(1-Booking, 2-Cancellation): 2
+	Pick the flight 
+	1. 100101 (Hyderabad-New Delhi)
+	2. 100102 (Bhubaneswar-Mumbai)
+	3. 100103 (Trivendram-Calcutta)
+	Your Choice: 2
+	Are you sure to continue? no
+Output:
+	Flight#1
+	Flight Number: 100101
+	Source:Hyderabad
+	Destination:New Delhi
+	No of Seats: 250
+	No of Booked Seats: 2
+	Ticket Fare:8500
+	Number of Available Seats:248
+	Total Booking Amount: 17000
+	Flight#2
+	Flight Number: 100102
+	Source:Bhubaneswar
+	Destination:Mumbai
+	No of Seats: 150
+	No of Booked Seats: 2
+	Ticket Fare:6500
+	Number of Available Seats:148
+	Total Booking Amount: 13000
+	Flight#3
+	Flight Number: 100103
+	Source:Trivendram
+	Destination:Calcutta
+	No of Seats: 175
+	No of Booked Seats:1
+	Ticket Fare:7500
+	Number of Available Seats:174
+	Total Booking Amount: 7500
+	Total Turnover: 37500
+	Next Flight Number is 100104
+	
+	
+	
