@@ -22,7 +22,7 @@ Create a class “Flight” with the following members:
 		BookATicket()		- Increase a noOfBookedSeats
 		CancelATicket()		- Decrease a noOfBookedSeats
 		Display()			- Print the fields  
-		DisplayRollNumber() – static method
+		DisplayNextFlightNumber() – static method
 
 		static Flight() 	– static constructor to initialize nextFlightNumber
 		
@@ -30,9 +30,12 @@ Create a class “Flight” with the following members:
 	Do booking and cancellation for using do..while loop till "Do you continue?" is "yes"
 	Each time the booking or cancellation we have to pick the flight and do
 	Print flights details at the end 
-	Note: Use this for object fields inside object functions/constructors
+	
+	At the end print total turnover(all flights booking amount together) collected 
+	
+	Note: Use "this" reference for object fields inside object functions/constructors
 	Note: Use no-argument constructor to initialize the first flight 
 		Use parameterized constructor to initialize the second flight 
-			parameters are sourcePoint, destinationPoint, noOfSeats, ticketFare, noOfBookedSeats
+			parameters are sourcePoint, destinationPoint, noOfSeats, ticketFare
 		Use Flight object constructor to initialize the third flight 
 			parameter is "Flight flight"

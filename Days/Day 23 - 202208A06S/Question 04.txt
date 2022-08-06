@@ -1,0 +1,41 @@
+Question:
+Create a class “MovieTheatre” with the following members:
+	Fields:
+		theatreCode	- int
+		theatreName	- string
+		movieName - string
+		noOfSeats
+		ticketFare
+		noOfBookedSeats
+		noOfAvailableSeats
+		totalBookingAmount
+		
+		nextTheatreCode – static, to assign theatreCode automatically
+		
+		noOfAvailableSeats = noOfSeats - noOfBookedSeats
+		totalBookingAmount = noOfBookedSeats * ticketFare
+
+	Methods:
+		MovieTheatre()			- constructor to assign nextTheatreCode into theatreCode and increment nextTheatreCode	
+		Read()				- Read the fields from keyboard other than theatreCode, noOfAvailableSeats and totalBookingAmount
+		Calculate()			- Update the fields noOfAvailableSeats and totalBookingAmount 
+		BookTicket(int numberOfTickets)		- Increase noOfBookedSeats by "numberOfTickets"
+		CancelTicket(int numberOfTickets)		- Decrease noOfBookedSeats by "numberOfTickets"
+		Display()			- Print the fields  
+		DisplayNextTheatreCode() – static method
+
+		static MovieTheatre() 	– static constructor to initialize nextTheatreCode
+		
+	Write a Main method and construct ‘3’ theatres.
+	Do booking and cancellation for using do..while loop till "Do you continue?" is "yes"
+	Each time the booking or cancellation we have to pick the theatre and do
+	Print theatres details at the end 
+	
+	At the end print total turnover(all theatres booking amount together) collected 
+	
+	Note: Use "this" reference for object fields inside object functions/constructors
+	Note: Use no-argument constructor to initialize the first theatre 
+		Use parameterized constructor to initialize the second theatre 
+			parameters are theatreName, movieName, noOfSeats, ticketFare
+		Use MovieTheatre object constructor to initialize the third theatre 
+			parameter is "MovieTheatre theatre"
