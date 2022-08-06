@@ -1,0 +1,38 @@
+Question:
+Create a class “Flight” with the following members:
+	Fields:
+		flightNumber	- int
+		sourcePoint
+		destinationPoint
+		noOfSeats
+		ticketFare
+		noOfBookedSeats
+		noOfAvailableSeats
+		totalBookingAmount
+		
+		nextFlightNumber – static, to assign flightNumber automatically
+		
+		noOfAvailableSeats = noOfSeats - noOfBookedSeats
+		totalBookingAmount = noOfBookedSeats * ticketFare
+
+	Methods:
+		Flight()			- constructor to assign nextFlightNumber into flightNumber and increment nextFlightNumber	
+		Read()				- Read the fields from keyboard other than flightNumber, noOfAvailableSeats and totalBookingAmount
+		Calculate()			- Update the fields noOfAvailableSeats and totalBookingAmount 
+		BookATicket()		- Increase a noOfBookedSeats
+		CancelATicket()		- Decrease a noOfBookedSeats
+		Display()			- Print the fields  
+		DisplayRollNumber() – static method
+
+		static Flight() 	– static constructor to initialize nextFlightNumber
+		
+	Write a Main method and construct ‘3’ flights.
+	Do booking and cancellation for using do..while loop till "Do you continue?" is "yes"
+	Each time the booking or cancellation we have to pick the flight and do
+	Print flights details at the end 
+	Note: Use this for object fields inside object functions/constructors
+	Note: Use no-argument constructor to initialize the first flight 
+		Use parameterized constructor to initialize the second flight 
+			parameters are sourcePoint, destinationPoint, noOfSeats, ticketFare, noOfBookedSeats
+		Use Flight object constructor to initialize the third flight 
+			parameter is "Flight flight"
