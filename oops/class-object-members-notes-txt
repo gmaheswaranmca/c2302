@@ -137,6 +137,19 @@ Class members***************************
 			
 		
 		
-	
+this ->   inside the object function 
+		this  = same object's reference of the called object function
+		base  = base class's object reference of the called object function 
+this -> "object constuctor call" we can use along with the constructor 
+		in the initializer part of the constructor 
+		
+		Syntax for the constructor with initializer 
+		ConstructorName(argments)[:	initializer]
+		{
+			//body of the constructor 
+		}
+		
+		"object constuctor call" is called using keyword this 
+		like "this(arguments)" 
 		
 		

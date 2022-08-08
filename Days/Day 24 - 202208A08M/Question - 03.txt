@@ -1,0 +1,77 @@
+Question 3 (class Multi Level Inheritance)
+Define the following classes 
+**************Base Class:**************
+class SchoolStudent
+	* static nextRollNumber: int 
+	+ static DisplayNextRollNumber()
+	
+	* rollNumber: int 
+	* studentName: string
+	* firstLanguageMark: int
+	* secondLanguageMark: int
+	* totalMark:int 
+	* averageMark: int
+	
+	+ SchoolStudent(studentName,firstLanguageMark,secondLanguageMark) !!! sets also the roll number using static field and increment nextRollNumber
+	+ Read()	!!! prints name, languages marks
+	+ Display() !!! prints name, roll no, languages marks
+	+ DisplayTotalAndAverage() 
+	+ Calculate()
+**************Derived Class 1:**************	
+class HighSchoolStudent : SchoolStudent
+	* scienceMark
+	* socialScienceMark
+	* mathematicsMark
+	+ HighSchoolStudent(...,scienceMark,socialScienceMark,mathematicsMark) !!!calls base class constructor 
+	+ Read()	!!! base.Read() call, then read science, social science and maths marks
+	+ Display() !!! base.Display() call, print science, social science and maths marks, base.DisplayTotalAndAverage() call
+	+ Calculate() !!! calculate newly using languages marks along with science, social science and maths marks
+				  !!! Here, we dont call base.Calculate()	
+	
+**************Derived Class Level 2:**************	
+class FrenchLanguageCreditedHighSchoolStudent : HighSchoolStudent
+	* evsMark
+	* mathematicsMark
+	+ FrenchLanguageCreditedHighSchoolStudent(...,frenchMark) !!!calls base class constructor 
+	+ Read()	!!! base.Read() call ie highSchooler.Read(), then read french mark
+	+ Display() !!! schooler.Display() call, print science, social science, maths marks, schooler.DisplayTotalAndAverage() call
+	+ Calculate() !!! calculate newly using languages, science, social science and french marks
+				  !!! Here, we dont call base.Calculate()
+	
+Note: If we give new definition to base class member function, 
+	we know that we have to use "new" keyword at derived class.
+	
+
+Write the deriver program to 
+1. define "firstChild" object of class "FrenchLanguageCreditedHighSchoolStudent"
+2. read name, languages marks, other subject marks 
+3. calculate total and average 
+4. print the mark list of "firstChild"
+5. print the next roll number 
+
+
+Test Case:
+Input/Output:
+***************Enter Student Details:***************
+Enter student name:Mahesh
+Enter first language mark:50
+Enter second language mark:60
+Enter Science mark:70
+Enter Social Science mark:60
+Enter Mathematics mark:80
+Enter French mark:50
+
+Mark List:
+Student#1:
+Name: Mahesh
+Roll Number: 1001
+First Language Mark: 50
+Second Language Mark: 60
+Science Mark: 70
+Social Science Mark: 60
+Mathematics Mark: 80
+French Mark: 50
+Total: 370
+Average: 61.66667
+Next Roll Number is 1002
+Press any key to shutdown app!!!

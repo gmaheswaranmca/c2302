@@ -1,0 +1,37 @@
+Enter number of students:2
+Enter 2 students student name, mark 1, mark 2, mark 3 One By One:
+Enter Details for Student#1
+Maheswaran
+45
+43
+65
+Enter Details for Student#2
+Ashish
+80
+90
+70
+Mark List
+
+
+Student#1
+
+Name: Maheswaran
+Roll Number: 1001
+Mark 1: 45
+Mark 2: 43
+Mark 3: 65
+Total: 153
+Average: 51
+
+
+Student#2
+
+Name: Ashish
+Roll Number: 1002
+Mark 1: 80
+Mark 2: 90
+Mark 3: 70
+Total: 240
+Average: 80
+
+Next Roll Number is 1003

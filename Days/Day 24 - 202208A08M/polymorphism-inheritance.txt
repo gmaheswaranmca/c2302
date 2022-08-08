@@ -1,0 +1,181 @@
+overloading:
+	int FindSum(int first, int second)
+	int FindSum(int first, int second, int third)
+	float FindSum(float first, float second)
+	Rational FindSum(Rational first, Rational second)
+	
+overloading: (From .NET Library Classes)
+	Example:
+		Console.WriteLine(string)
+		Console.WriteLine(string,args...)
+		
+Inheritance:
+	
+	It is technique by which 
+	we can inherit a class(base class) to another class(derived class).
+	
+	-- Here base class is reused inside the derived class. 
+	
+	"is-a relationship"
+	
+	Inheritance, together with encapsulation and polymorphism, 
+	is one of the three primary characteristics of object-oriented programming. 
+	
+	Inheritance enables 
+	you to create new classes that reuse, extend, 
+	and modify the behavior defined in other classes. 
+	
+	The class whose members are inherited is called the base class, 
+	and the class that inherits those members is called the derived class. 
+
+
+	**************Base Class:**************
+	SchoolStudent
+		* static nextRollNumber: int 
+		+ static DisplayNextRollNumber()
+		* rollNumber: int 
+		* studentName: string
+		* firstLanguageMark: int
+		* secondLanguageMark: int
+		* totalMark:int 
+		* averageMark: int
+		+ SchoolStudent(studentName,firstLanguageMark,secondLanguageMark)
+		+ Read()
+		+ Display() 
+		+ Calculate()
+	**************Derived Class 1:**************	
+	PrimarySchoolStudent : SchoolStudent
+		* evsMark
+		* mathematicsMark
+		+ PrimarySchoolStudent(evsMark,mathematicsMark)
+		+ Read()
+		+ Display() 
+		+ Calculate()
+	**************Derived Class 2:**************
+	HighSchoolStudent : SchoolStudent
+		* scienceMark
+		* socialScienceMark
+		* mathematicsMark 
+		+ PrimarySchoolStudent(scienceMark,socialScienceMark,mathematicsMark)
+		+ Read()
+		+ Display() 
+		+ Calculate()
+	Assume a family of two children house 
+	One is studying primary school
+	another one is studying high school 
+	Define two students in the driver code and call its member functions
+	
+	-- base class members other than private qualifier can be accessed at derived class 
+	-- base class members with protected qualifier 
+	   can be accessed at derived classes
+	   so DATA HIDING is enabled for base and derived classes 
+	-- In C# 
+		Initialialization of derived class object 
+			for both base class member fields initialization
+			and for derived class member fields initialization
+		can be done 
+		by calling base class constructor from derived class constructor  
+		
+		
+o In C#, to define newly the same named member function of base class at derived class 
+  we have to use the "new" keyword
+o In C#, to call the base constructor from derived constructor 
+  use ":base([argsToBaseConstructor])" between 
+  function arguments closing paranthesis and 
+  function body start id opening curly/flower bracket
+  Example:
+	public PrimarySchoolStudent(string p_studentName,
+            int p_firstLanguageMark,
+            int p_secondLanguageMark,
+            int p_evsMark, 
+			int p_mathematicsMark):base(p_studentName, p_firstLanguageMark, p_secondLanguageMark)
+        {   
+            this.evsMark = p_evsMark;
+            this.mathematicsMark = p_mathematicsMark;
+        }
+
+o To access base class members, we can use "base." to qualify base class members 
+o To access the invoking class members, we can use "this." as usual.
+	class SchoolStudent
+	{
+		//...
+		public void Display()
+        {
+            Console.WriteLine($"Name: {this.studentName}");
+            Console.WriteLine($"Roll Number: {this.rollNumber}");
+            Console.WriteLine($"First Language Mark: {this.firstLanguageMark}");
+            Console.WriteLine($"Second Language Mark: {this.secondLanguageMark}");
+        }
+        public void DisplayTotalAverage()
+        {
+            Console.WriteLine($"Total: {this.total}");
+            Console.WriteLine($"Average: {this.average}");
+        }
+		//...
+	}
+	
+	class PrimarySchoolStudent: SchoolStudent
+	{
+		//...
+		public new void Display()
+        {
+            base.Display();
+            Console.WriteLine($"EVS Mark: {this.evsMark}");
+            Console.WriteLine($"Mathematics Mark: {this.mathematicsMark}");
+            base.DisplayTotalAverage();
+        }
+		//...
+	}
+
+		
+Types of inheritance:
+	Single Level Inheritance: only one base class, only one derived class 
+		class SchoolStudent 
+		class PrimarySchoolStudent: SchoolStudent 
+	Hierarchical Inheritance: one base class to more than one derived classes 
+		class SchoolStudent
+		class PrimarySchoolStudent:SchoolStudent	
+		class HighSchoolStudent:SchoolStudent		
+	Multi Level Inheritance: base class, derived class, further derived class, and so on  
+		class SchoolStudent 
+		class HighSchoolStudent: SchoolStudent 
+		class FrenchLanguageCreditedHighSchoolStudent: HighSchoolStudent
+Note:
+	To access the one of grand parent class same method,
+	Define the grand parent class refernce variable to hold base or this.
+	Then call the grand parent method using the reference variable.
+
+
+*********************abstract class*********************	
+abstract class can have zero or more abstract function 
+abstrct function is a function which will have qualifier abstract 
+	and it will be defined in the derived class using qualifier "override"
+
+C# doesn't support multiple inheritance.	
+*********************Interfaces*********************
+	An interface is a reference type that defines a set of members. 
+	
+	All classes and structs 
+	that implement that interface 
+	must implement that set of members. 
+	
+	An interface may define a default implementation for any or all of these members. 
+	
+	A class can implement multiple interfaces 
+	even though it can derive from only a single direct base class.		
+	
+		
+	
+	Multiple Inheritance: more than one base class, only one derived class 
+		class SchoolStudent 
+		interface ILaguagesSubjectName
+		class PrimarySchoolStudentv2:SchoolStudent, ILaguagesSubjectName 
+	Hybrid Inheritance: Mix of above 
+		class SchoolStudent 
+		class LaguagesSubjectName
+		class PrimarySchoolStudentv2:SchoolStudent, ILaguagesSubjectName  
+		class HighSchoolStudent:SchoolStudent
+		class FrenchLanguageCreditedHighSchoolStudent: HighSchoolStudent
+		
+	
+	

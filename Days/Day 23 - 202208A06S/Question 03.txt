@@ -27,6 +27,7 @@ Create a class “Flight” with the following members:
 		static Flight() 	– static constructor to initialize nextFlightNumber
 		
 	Write a Main method and construct ‘3’ flights.
+	
 	Do booking and cancellation for using do..while loop till "Do you continue?" is "yes"
 	Each time the booking or cancellation we have to pick the flight and do
 	Print flights details at the end 
@@ -137,4 +138,12 @@ Output:
 	Next Flight Number is 100104
 	
 	
+1. Like Question 1		without multiple constructors, BookATicket, CancelATicket 
+2. Question 1 
+	--> Multiple constructors 
+		--> Each constructor is defined individually 
+3. Internal calls between constructors using "this constructor"	call 
+4. Introduce functions BookATicket, CancelATicket
+5. Single Menu Driven without do..while loop for BookATicket, CancelATicket
+6. Do..while base menu driven for BookATicket, CancelATicket
 	
