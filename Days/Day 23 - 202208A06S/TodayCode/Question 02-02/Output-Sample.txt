@@ -1,3 +1,5 @@
+****************************Test Case 1*************************
+
 Enter number of students:2
 Enter 2 students student name, mark 1, mark 2, mark 3 One By One:
 Enter Details for Student#1
@@ -35,3 +37,90 @@ Total: 240
 Average: 80
 
 Next Roll Number is 1003
+
+******************************Test Case 2***************************
+Enter number of students:5
+Enter 5 students student name, mark 1, mark 2, mark 3 One By One:
+Enter Details for Student#1
+Savitri
+70
+50
+60
+Enter Details for Student#2
+Ashish
+20
+60
+90
+Enter Details for Student#3
+Aurojith
+70
+80
+50
+Enter Details for Student#4
+Gokul
+80
+60
+50
+Enter Details for Student#5
+Lalasha
+80
+90
+70
+Mark List
+
+
+Student#1
+
+Name: Savitri
+Roll Number: 1001
+Mark 1: 70
+Mark 2: 50
+Mark 3: 60
+Total: 180
+Average: 60
+
+
+Student#2
+
+Name: Ashish
+Roll Number: 1002
+Mark 1: 20
+Mark 2: 60
+Mark 3: 90
+Total: 170
+Average: 56.66667
+
+
+Student#3
+
+Name: Aurojith
+Roll Number: 1003
+Mark 1: 70
+Mark 2: 80
+Mark 3: 50
+Total: 200
+Average: 66.66666
+
+
+Student#4
+
+Name: Gokul
+Roll Number: 1004
+Mark 1: 80
+Mark 2: 60
+Mark 3: 50
+Total: 190
+Average: 63.33333
+
+
+Student#5
+
+Name: Lalasha
+Roll Number: 1005
+Mark 1: 80
+Mark 2: 90
+Mark 3: 70
+Total: 240
+Average: 80
+
+Next Roll Number is 1006

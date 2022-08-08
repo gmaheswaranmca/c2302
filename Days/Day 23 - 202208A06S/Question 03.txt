@@ -147,3 +147,154 @@ Output:
 5. Single Menu Driven without do..while loop for BookATicket, CancelATicket
 6. Do..while base menu driven for BookATicket, CancelATicket
 	
+	
+DisplayAfterRead()		
+	This is printing the flight details in a line 
+
+
+flight2.GetTotalBookingAmount()	returns value of field "totalBookingAmount"
+	why this function? 
+		to sum up all the totalBookingAmount outside 
+		we wrote this function to read each flight's "totalBookingAmount" outside the function 
+	what is the alternative?
+		Otherwise we can change accessibility of "totalBookingAmount" as "public"
+		
+	
+	
+Tested Code from the solution availabe:
+
+	
+We experiment the flight object
+Enter 3 flight details source, destination, no of seats, ticket fare in each lin
+e:
+Hyd
+Del
+250
+8500
+Bhu
+Mum
+150
+6500
+Tri
+Cal
+175
+7500
+Choice(1-Booking,2-Cancellation):1
+Pick the flight
+1.(1011)Hyd-Del
+2.(1012)Bhu-Mum
+3.(1013)Tri-Cal
+Your choice(use the flight serial number): 2
+Are you sure to continue (true/false)
+true
+Choice(1-Booking,2-Cancellation):1
+Pick the flight
+1.(1011)Hyd-Del
+2.(1012)Bhu-Mum
+3.(1013)Tri-Cal
+Your choice(use the flight serial number): 2
+Are you sure to continue (true/false)
+true
+Choice(1-Booking,2-Cancellation):1
+Pick the flight
+1.(1011)Hyd-Del
+2.(1012)Bhu-Mum
+3.(1013)Tri-Cal
+Your choice(use the flight serial number): 2
+Are you sure to continue (true/false)
+true
+Choice(1-Booking,2-Cancellation):1
+Pick the flight
+1.(1011)Hyd-Del
+2.(1012)Bhu-Mum
+3.(1013)Tri-Cal
+Your choice(use the flight serial number): 1
+Are you sure to continue (true/false)
+true
+Choice(1-Booking,2-Cancellation):1
+Pick the flight
+1.(1011)Hyd-Del
+2.(1012)Bhu-Mum
+3.(1013)Tri-Cal
+Your choice(use the flight serial number): 3
+Are you sure to continue (true/false)
+true
+Choice(1-Booking,2-Cancellation):1
+Pick the flight
+1.(1011)Hyd-Del
+2.(1012)Bhu-Mum
+3.(1013)Tri-Cal
+Your choice(use the flight serial number): 1
+Are you sure to continue (true/false)
+true
+Choice(1-Booking,2-Cancellation):2
+Pick the flight
+1.(1011)Hyd-Del
+2.(1012)Bhu-Mum
+3.(1013)Tri-Cal
+Your choice(use the flight serial number): 2
+Are you sure to continue (true/false)
+false
+----------------------------------------------------
+Flight #1
+Flight No: 1011
+Source Point: Hyd
+Destination Point: Del
+No of Seats: 250
+No of Booked Seats: 2
+Ticket Fare: 8500
+Total Booking Amount: 17000
+No of Available Seats: 248
+----------------------------------------------------
+Flight #2
+Flight No: 1012
+Source Point: Bhu
+Destination Point: Mum
+No of Seats: 150
+No of Booked Seats: 2
+Ticket Fare: 6500
+Total Booking Amount: 13000
+No of Available Seats: 148
+----------------------------------------------------
+Flight #3
+Flight No: 1013
+Source Point: Tri
+Destination Point: Cal
+No of Seats: 175
+No of Booked Seats: 1
+Ticket Fare: 7500
+Total Booking Amount: 7500
+No of Available Seats: 174
+----------------------------------------------------
+Total TurnOver:37500
+----------------------------------------------------
+Next Flight Number is 1014
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+									
+		
