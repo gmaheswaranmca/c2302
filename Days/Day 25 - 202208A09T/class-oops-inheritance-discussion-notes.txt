@@ -222,11 +222,128 @@ what can be the members of the derived class?
 	methods
 	constructors 
 	finalizer
-
-
+	
+fields methods constructors finalizers properties indexer events 	
+------------------------------------------------------------------------
+Inheritance
+	Types of inheritance 
+		Single Level Inheritance : one base -> one derived class 
+			class SchoolStudent 
+			class PrimarySchoolStudent:SchoolStudent
+		Multi Level Inheritance 	base class -> derived class -> derived derived class ....
+			class SchoolStudent 
+			class HighSchoolStudent:SchoolStudent
+			class FrenchLanguageCreditedHighSchoolStudent:HighSchoolStudent
+		Hierarchical Inheritance	one base class -> multiple derived classes 
+			class SchoolStudent 
+			class PrimarySchoolStudent:SchoolStudent
+			class HighSchoolStudent:SchoolStudent
+		Multiple Inheritance 		one or more base classes into derived class 
+			This is not possible in C#.
+			Because, In C#, a class can inherit only one base class. 
+			But with interfaces, multiple inheritance is possible. 
+			
+			Before C# 8.0,
+				interface is also a type having only abstract members  
+			
+			o interface can have more than one base interfaces 
+			o interface has to be implmented into the class 
+			o And a class can implement more than one interface 
+			
+			interface IShape
+			{
+				int FindArea();
+			}
+			
+			by default, interface functions are abstract and also public.
+		Hybrid inheritance 
+			Mix of the above all the inheritances 
+------------------------------------------------------------------------
+	To define no-implementation(no-definition) function in C#:
+	class Shape
+	{
+		public int FindArea();
+	}
+	//Wrong in this code 
+	
+	
+	//To fix, "abstract" qualifier is used to declare the function without definition 
+	class Shape
+	{
+		public abstract int FindArea();
+	}
+	//Wrong 
+	//To fix, "abstract" qualifier has to be given to the class as well 
+	//        if we have one of the function is abstract in the class 
+			
+	abstract class Shape
+	{
+		public abstract int FindArea();
+	}
+	
+	//if class is abstract, then we cannot create the object for the abstract class.
 		
+	abstract class Shape
+	{
+		public abstract int FindArea();
+		public int FindCircumference()
+		{
+			//definition 
+		}
+	}
 	
+	abstract class Rectangle:Shape
+	{
+		public override int FindArea()
+		{
+			//definition 
+		}
+	}
+	class Box:Rectangle
+	{
+	}
 	
+	"concrete class"  -> all the functions of the class should have the definitions 
+------------------------------------------------------------------------
+	abstract function: no-definition function 
+	class that has one or more abstract functions should be abstract 
+	abstract class cannot be intantiated / object created 
+	concrete class is one having definition for all its functions 
+	abstract class may or may not have the abstract functions 
+	abstract class can have functions all defined 
+	==> abstract class cannot be intantiated / object created 
+------------------------------------------------------------------------
+	Realt-time scenario,
+	"abstract class" will have only abstract functions 
+	
+	interface is evolved?
+	
+	interface -> we can think pure abstract class 
+			but here we cannot declare the attributes 
+------------------------------------------------------------------------			
+	abstract 	 derived class 	
+	"ideas" ---> "events" 
+	
+	MySQL 			--> DLL implemented DB 
+	SQLServer 		--> DLL implemented DB 
+	Oracle 			--> DLL implmeneted DB 
+	
+	DB 				.dll 
+		Connect 
+		Read 
+		Write 
+		Disconnect 
+		BeginTran
+		EndTran
+		
+	DriverDB
+		
+	DB db = DriverDB.GetDB();
+	
+	db.Connect();
+	db.Write("INSERT INTO ...");
+	db.Disconnect();
+------------------------------------------------------------------------	
 	
 	
 	
