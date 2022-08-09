@@ -1,0 +1,154 @@
+Object Oriented Programming
+class: 
+	It is a definition for creating objects
+	
+	!!!It is a blueprint to construct objects 
+	
+	It is a "user-defined" data type.		*****
+	
+	Here the term user meant the programmer
+	
+	It is a reference type.
+	
+	//Declaration and Initialization:
+	Customer c1 = new Customer();		//I
+	Customer c2 = c1;
+
+	c1 				new Customer()		
+	[	.]--------->[			]
+						^
+	c2 					|
+	[	.]--------------.
+	
+	//Declaration 
+	Customer c1;					//II
+	Customer c2;
+	//Assignment 
+	c1 = new Customer();
+	c2 = c1;
+
+	reference type :
+		the varaiable created using reference type 
+		will not hold the object 
+		and will hold the reference of the object 
+		so it is called "reference type" 
+		
+object:	
+	object is the physical memory allocations for the object fields 
+	and its reference can be asssinged into reference variable 
+	to refer the object members 
+	
+	object is the physical entity created using the type class.
+	
+define a class:
+	class Customer
+	{
+		//members 
+	}
+	
+to create the object:
+	"new Constructor"
+	
+	If constructor is not defined, 
+	compiler will provide "parameterless constructor" 
+	
+	constructor can be defined explicitly.
+	
+	The name of the constructor is "CLASS NAME"
+	
+	return type of the constructor is ?
+	constructor will not have any return type.
+	
+	parameters of the constructor?
+	constructor may take take the parameters.
+	
+	It there is no parameters, 
+	then constructor is called "parameterless constructor".
+	
+	It there is the parameters, 
+	then constructor is called "parameterized constructor".
+	
+	
+	class Customer [:BaseClass]
+	{
+		//members 
+	}
+	
+	Every class will have its base(parent) class.
+
+	If we are definig the base class,
+	C# will provide the object as the base class.
+	
+base class:
+	base class is nothing but the class 
+	from which new classes will be defined 
+	
+inheritance:
+	class Teacher
+	{
+		//definition 
+	}
+	
+	class ScienceTeacher : Teacher 
+	{
+		//defintion 
+	}
+	
+	Teacher is the generalization
+	ScienceTeacher is the specialization from the generalization "Teacher"
+	
+	class CLASSNAME: BASECLASS
+	{
+	}
+	
+	In inheritance, 
+	we inherit the existing class to new class.
+	
+	existing class ---> is called base class (parent class / super class) 
+	new class --> is called derived class 	 (child class / sub class) 
+	
+	"inheritance === extension === derivation" are all synonymous for Inheritance 
+	
+	by inheritance,
+	members of the base class is inherited or derived to 
+	derived class.
+	
+	
+	class Parent
+	{
+		//properties - attributes / behaviours(members) 
+	}
+	
+	class Child : Parent 
+	{
+		//parent properties are inherited 
+		//and additional properties (attributes/behaviours) are also added here
+	}
+	
+	by inheritance, reused the base class(parent class) into derived class(child class).
+	
+	inheritance leads to "reusability" of the existing (composite) type 
+	
+--------------------------------------------------------------------------
+	Syntax for inheritance:
+	class CLASSNAME : BASECLASSNAME
+	{
+		//new members of the 
+	}
+	
+	How many base classes we can have?
+	
+	In C#, we can have maximum only one base class.
+	
+	ie. In C#, we cannot have more than one base classes.
+	
+	So, In C#, we will not have multiple inheritance. 
+	
+	But interfaces can be used to achieve multiple inheritance. 
+	
+	
+	
+	
+	
+	
+	

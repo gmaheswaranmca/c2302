@@ -1,0 +1,540 @@
+***************Introduction to classes***************
+Reference types
+	A type that is defined as a class is a reference type.
+	
+	At run time, 
+	when you declare a variable of a reference type, 
+	the variable contains the value null 
+	until you explicitly create an instance of the class 
+	by using the new operator, 
+	or assign it an object of a compatible type 
+	that may have been created elsewhere
+
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	//Declaring an object of type MyClass.
+	MyClass mc = new MyClass();
+
+	//Declaring another object of the same type, assigning it the value of the first object.
+	MyClass mc2 = mc;	
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	
+	When the object is created, 
+	enough memory is allocated on the managed heap for that specific object, 
+	and the variable holds only a reference to the location of said object.
+	
+	Types on the managed heap require overhead 
+	both when they are allocated and 
+	when they are reclaimed by the automatic memory management functionality of the CLR, 
+	which is known as garbage collection. 
+	
+	However, 
+	garbage collection is also highly optimized and in most scenarios, 
+	it does not create a performance issue. 
+	
+Declaring Classes
+	Classes are declared by using the class keyword followed by a unique identifier.
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	//[access modifier] - [class] - [identifier]
+	public class Customer
+	{
+	   // Fields, properties, methods and events go here...
+	}
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	
+	The class keyword is preceded by the access level. 
+	
+	Because public is used in this case, 
+	anyone can create instances of this class. 
+	
+	The name of the class follows the class keyword.
+	
+	The name of the class must be a valid C# identifier name.
+	
+	The remainder of the definition is the class body, 
+	where the behavior and data are defined. 
+	
+	Fields, properties, methods, and events on a class 
+	are collectively referred to as class members.
+
+Creating objects
+	Although they are sometimes used interchangeably, 
+	a class and an object are different things. 
+	
+	A class defines a type of object, 
+	but it is not an object itself. 
+	
+	An object is a concrete entity based on a class, 
+	and is sometimes referred to as an instance of a class.
+	
+	Objects can be created by using the new keyword 
+	followed by the name of the class 
+	that the object will be based on.
+	
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	Customer object1 = new Customer();
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	When an instance of a class is created, 
+	a reference to the object is passed back to the programmer. 
+	
+	In the previous example, 
+	object1 is a reference to an object that is based on Customer. 
+	
+	This reference refers to the new object but does not contain the object data itself.
+	
+	In fact, you can create an object reference without creating an object at all.
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	Customer object2;
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	
+	We don't recommend creating object references 
+	such as the preceding one 
+	that don't refer to an object 
+	because trying to access an object through such a reference 
+	will fail at run time. 
+	
+	However, such a reference can be made to refer to an object, 
+	either by creating a new object, 
+	or by assigning it an existing object.
+	
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	Customer object3 = new Customer();
+	Customer object4 = object3;
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	
+	This code creates two object references 
+	that both refer to the same object. 
+	
+	Therefore, any changes to the object made through object3 
+	are reflected in subsequent uses of object4. 
+	
+	Because objects that are based on classes are referred to by reference, 
+	classes are known as reference types.
+	
+	
+	
+	
+Members 
+	Member			Description
+	Fields			Fields are variables declared at class scope. 
+					A field may be a built-in numeric type or 
+					an instance of another class. 
+					For example, 
+					a calendar class may have a field 
+					that contains the current date.
+					
+	Constants		Constants are fields 
+					whose value is set at compile time 
+					and cannot be changed.
+					
+	Properties		Properties are methods on a class 
+					that are accessed as 
+					if they were fields on that class. 
+					
+					A property can provide protection for a class field 
+					to keep it from being changed 
+					without the knowledge of the object.
+					
+	Methods			Methods define the actions that a class can perform. 
+					Methods can take parameters that provide input data, 
+					and can return output data through parameters. 
+					
+					Methods can also return a value directly, without using a parameter.
+					
+	Events			Events provide notifications about occurrences, 
+					such as button clicks or the successful completion of a method, 
+					to other objects. 
+					
+					Events are defined and triggered by using delegates.
+					
+	Operators		Overloaded operators are considered type members. 
+					When you overload an operator, 
+					you define it as a public static method in a type. 
+					
+	Indexers		Indexers enable an object to be indexed in a manner similar to arrays.
+	
+	Constructors	Constructors are methods that are called 
+					when the object is first created. 
+					
+					They are often used to initialize the data of an object.
+					
+	Finalizers		Finalizers are used very rarely in C#. 
+					They are methods that are called by the runtime execution engine 
+					when the object is about to be removed from memory. 
+					
+					They are generally used to make sure that any resources 
+					which must be released are handled appropriately.
+					
+	Nested Types	Nested types are types declared within another type. 
+					Nested types are often used to describe objects 
+					that are used only by the types that contain them.
+Class inheritance
+	Classes fully support inheritance, 
+	a fundamental characteristic of object-oriented programming. 
+	
+	When you create a class, 
+	you can inherit from any other class 
+	that is not defined as sealed, 
+	and other classes can inherit from your class and 
+	override class virtual methods.
+	
+	Furthermore, you can implement one or more interfaces.
+	
+	Inheritance is accomplished by using a derivation, 
+	which means a class is declared by using a base class 
+	from which it inherits data and behavior. 
+	
+	A base class is specified by appending a colon and the name of the base class 
+	following the derived class name.
+	
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^	
+	public class Manager : Employee
+	{
+		// Employee fields, properties, methods and events are inherited
+		// New Manager fields, properties, methods and events go here...
+	}
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	
+	When a class declares a base class, 
+	it inherits all the members of the base class except the constructors. 
+	
+	A class in C# can only directly inherit from one base class. 
+	
+	However, because a base class may itself inherit from another class, 
+	a class may indirectly inherit multiple base classes. 
+	
+	Furthermore, a class can directly implement one or more interfaces.
+	
+	....
+	A class can be declared abstract. 
+	
+	An abstract class contains abstract methods 
+	that have a signature definition but no implementation. 
+	
+	Abstract classes cannot be instantiated. 
+	
+	They can only be used through derived classes 
+	that implement the abstract methods. 
+	
+	By contrast, 
+	a sealed class does not allow other classes to derive from it. 
+	
+	Class definitions can be split between different source files. 
+	
+Inheritance 
+	Inheritance, together with encapsulation and polymorphism, 
+	is one of the three primary characteristics of object-oriented programming.
+	
+	Inheritance enables you to create new classes that reuse, extend, and modify 
+	the behavior defined in other classes.
+	
+	The class whose members are inherited is called the base class, 
+	and the class that inherits those members is called the derived class.	
+	
+	A derived class can have only one direct base class.			******
+	
+	However, inheritance is transitive. 
+		If ClassC is derived from ClassB, 
+		and ClassB is derived from ClassA, 
+		ClassC inherits the members declared in ClassB and ClassA.
+		
+	Conceptually, a derived class is a specialization of the base class. ******
+		
+		For example, if you have a base class Animal, 
+		you might have 
+		one derived class that is named Mammal and 
+		another derived class that is named Reptile. 
+		
+		A Mammal is an Animal, 
+		and a Reptile is an Animal, 
+		but each derived class represents 
+		different specializations of the base class.
+		
+	Interface declarations may define a default implementation for its members. 
+	These implementations are inherited by derived interfaces, 
+	and by classes that implement those interfaces.	
+	
+
+Abstract and Sealed Classes and Class Members 
+	The abstract keyword enables you 
+	to create classes and 
+	class members that are incomplete and 
+	must be implemented in a derived class.
+
+	The sealed keyword enables you 
+	to prevent the inheritance of a class or 
+	certain class members 
+	that were previously marked virtual.
+
+Abstract Classes and Class Members
+	Classes can be declared as abstract 
+	by putting the keyword 
+		abstract 
+	before the class definition.
+		
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^	
+	public abstract class A
+	{
+		// Class members here.
+	}
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	
+	An abstract class cannot be instantiated. 
+	The purpose of an abstract class 
+	is to provide a common definition of 
+	a base class that multiple derived classes can share.
+	
+	For example, 
+	a class library may define an abstract class 
+	that is used as a parameter to many of its functions, 
+	and require programmers using that library 
+	to provide their own implementation of 
+	the class by creating a derived class.
+	
+	Abstract classes may also define abstract methods. 
+	This is accomplished by adding the keyword abstract 
+	before the return type of the method.
+	
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	public abstract class A
+	{
+		public abstract void DoWork(int i);
+	}	
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	
+	Abstract methods have no implementation, 
+	so the method definition 
+	is followed by a semicolon instead of a normal method block. 
+	
+	Derived classes of the abstract class must implement all abstract methods. 
+	
+	When an abstract class inherits a virtual method from a base class, 
+	the abstract class can override the virtual method with an abstract method.
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	public class D
+	{
+		public virtual void DoWork(int i)
+		{
+			// Original implementation.
+		}
+	}
+
+	public abstract class E : D
+	{
+		public abstract override void DoWork(int i);
+	}
+
+	public class F : E
+	{
+		public override void DoWork(int i)
+		{
+			// New implementation.
+		}
+	}
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	If a virtual method is declared abstract, 
+	it is still virtual to any class inheriting from the abstract class. 
+	
+	A class inheriting an abstract method cannot access 
+	the original implementation of the method—in the previous example, 
+	DoWork on class F cannot call DoWork on class D. 
+	
+	In this way, an abstract class can force derived classes 
+	to provide new method implementations for virtual methods.
+	
+
+Sealed Classes and Class Members
+	Classes can be declared as sealed 
+	by putting the keyword 
+		sealed 
+	before the class definition. 
+	
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	public sealed class D
+	{
+		// Class members here.
+	}	
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	
+	A sealed class cannot be used as a base class.
+	
+	For this reason, it cannot also be an abstract class.
+	
+	Sealed classes prevent derivation. 
+	
+	Because they can never be used as a base class, 
+	some run-time optimizations can make calling sealed class members slightly faster.
+	
+	A method, indexer, property, or event, on a derived class 
+	that is overriding a virtual member of the base class can declare that member as sealed.
+	
+	This negates the virtual aspect of the member for any further derived class. 
+	
+	This is accomplished by putting the sealed keyword 
+	before the override keyword in the class member declaration. 
+	
+	
+	
+Interfaces
+	An interface contains definitions for a group of related functionalities 
+	that a non-abstract class or a struct must implement.
+	
+	An interface may define static methods, which must have an implementation.
+	
+	Beginning with C# 8.0, 
+	an interface may define 
+	a default implementation for members.
+	
+	An interface may not declare 
+		instance data such as fields, 
+		auto-implemented properties, or 
+		property-like events.
+		
+	By using interfaces, 
+	you can, for example, 
+	include behavior from multiple sources in a class.
+	
+	That capability is important in C# 
+	because the language doesn't support multiple inheritance of classes. 
+	
+	In addition, you must use an interface 
+	if you want to simulate inheritance for structs, 
+	because they can't actually inherit from another struct or class.
+	
+	You define an interface by using the interface keyword.
+	
+	A class or struct can implement multiple interfaces, 
+	but a class can only inherit from a single class.
+	
+	Interfaces can contain 
+		instance methods, 
+				 properties, 
+				 events, 
+				 indexers, or 
+				 any combination of those four member types. 
+	Interfaces may contain 
+		static constructors, 
+			   fields, 
+			   constants, or 
+			   operators. 
+			   
+	Beginning with C# 11, 
+	interface members that aren't fields may be static abstract.		   
+	
+	An interface can't contain 
+		instance fields, 
+		instance constructors, or 
+				 finalizers.
+	
+	Interface members are 
+		public by default, and 
+	you can explicitly specify accessibility modifiers, 
+		such as 
+			public, 
+			protected, 
+			internal, 
+			private, 
+			protected internal, or 
+			private protected. 
+			
+	A private member must have a default implementation.
+	
+	To implement an interface member, 
+	the corresponding member of the implementing class must be public, 
+	non-static, 
+	and have the same name and signature as the interface member.
+	
+	
+	A class or struct 
+	that implements an interface 
+	must provide an implementation 
+	for all declared members 
+	without a default implementation provide by the interface. 
+	
+	However, 
+	if a base class implements an interface, 
+	any class that's derived from the base class 
+	inherits that implementation.
+	
+	...
+	Properties and indexers of a class 
+	can define extra accessors 
+	for a property or indexer that's defined in an interface. 
+	
+	For example, an interface might declare 
+		a property that has a get accessor. 
+		
+	The class that implements the interface can declare 
+		the same property with both a get and set accessor. 
+		
+	However, if the property or indexer uses explicit implementation, 
+	the accessors must match.
+	
+	...
+	Interfaces can inherit from one or more interfaces.
+	
+	The derived interface inherits the members from its base interfaces.
+	
+	A class 
+	that implements a derived interface 
+	must implement all members in the derived interface, 
+	including all members of 
+	the derived interface's base interfaces. 
+	
+	That class may be implicitly converted to the derived interface or 
+	any of its base interfaces. 
+	
+	A class might include an interface multiple times 
+	through base classes 
+	that it inherits or through interfaces 
+	that other interfaces inherit. 
+	
+	However, the class can provide an implementation of an interface only one time 
+	and only if the class declares the interface 
+	as part of the definition of the class (class ClassName : InterfaceName).
+	
+	If the interface is inherited 
+	because you inherited a base class that implements the interface, 
+	the base class provides the implementation of the members of the interface. 	
+	
+	However, 
+	the derived class can reimplement any virtual interface members 
+	instead of using the inherited implementation.
+	
+	When interfaces declare a default implementation of a method, 
+	any class implementing that interface inherits that implementation 
+	(You need to cast the class instance to the interface type 
+	to access the default implementation on the Interface member).
+	
+	A base class can also implement interface members by using virtual members. 
+	
+	In that case, 
+	a derived class can change the interface behavior 
+	by overriding the virtual members.
+	
+Interfaces summary
+	An interface has the following properties:
+	o 
+	In C# versions earlier than 8.0, 
+	an interface is like an abstract base class 
+	with only abstract members. 
+	
+	A class or struct 
+	that implements the interface 
+	must implement all its members.
+	
+	o Beginning with C# 8.0, 
+	an interface may define default implementations for some or all of its members. 
+	
+	o A class or struct that implements 
+	the interface doesn't have to implement members 
+	that have default implementations. 
+	
+	o An interface can't be instantiated directly. 
+	Its members are implemented by 
+	any class or struct that implements the interface.
+	
+	o A class or struct can implement multiple interfaces. 
+	A class can inherit a base class 
+	and also implement one or more interfaces.	
+	
+	
