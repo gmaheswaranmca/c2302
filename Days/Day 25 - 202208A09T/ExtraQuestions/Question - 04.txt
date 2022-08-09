@@ -30,11 +30,10 @@ class HighSchoolStudent : SchoolStudent
 	
 **************Derived Class Level 2:**************	
 class FrenchLanguageCreditedHighSchoolStudent : HighSchoolStudent
-	* evsMark
-	* mathematicsMark
+	* frenchMark
 	+ FrenchLanguageCreditedHighSchoolStudent(...,frenchMark) !!!calls base class constructor 
 	+ ReadFrenchLanguageCreditedHighSchool()	!!! highSchooler.Read() call ie highSchooler.Read(), then read french mark
-	+ DisplayFrenchLanguageCreditedHighSchool() !!! schooler.Display() call, print science, social science, maths marks, schooler.DisplayTotalAndAverage() call
+	+ DisplayFrenchLanguageCreditedHighSchool() !!! schooler.Display() call, print science, social science, maths marks, frenchMark, schooler.DisplayTotalAndAverage() call
 	+ CalculateFrenchLanguageCreditedHighSchool() !!! calculate newly using languages, science, social science and french marks
 				  !!! Here, we dont call base.CalculateHighSchoolStudent()
 	
