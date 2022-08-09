@@ -146,6 +146,86 @@ inheritance:
 	
 	But interfaces can be used to achieve multiple inheritance. 
 	
+	If we want to use the data hidining,
+	cases are two now.
+	
+	Case 1
+		One is base class is not inherited 
+		
+		attributes of the base class can be private to go for "DATA HIDING"
+	
+	Case 2
+		base class in inherited 
+		
+		attributes of the base class can be protected to go for "DATA HIDING"
+	
+	
+	Relationship out of inheritance: "is a" relationship
+	
+	class Teacher
+	class ScienceTeacher:Teacher 
+	class EnglishTeacher:Teacher 
+	class SocialScienceTeacher:Teacher 
+	class MathematicsTeacher:Teacher 
+	
+	ScienceTeacher "is a" Teacher
+	EnglishTeacher "is a" Teacher
+	SocialScienceTeacher "is a" Teacher
+	MathematicsTeacher "is a" Teacher
+	
+	"has a" relationship 
+	
+	class Address
+	{
+	}
+	class Teacher
+	{
+		Address address;
+	}
+	
+	Teacher "has a" Address
+	
+	
+	In object-based language, there will not no-inheritance in the language.
+	There how will you define ScienceTeacher using Teacher.
+	
+	class ScienceTeacher
+	{
+		Teacher teacher;
+	}
+	
+	ScienceTeacher has teacher
+	ie ScienceTeacher contains the teacher as the inner object 
+	
+	Types of "has a" relationship 
+		one-one
+		one-many
+		many-one 
+		many-many 
+		
+	"has a" relationship is called composition.
+	
+	
+Summary,
+		In OOP, we have "is a" and "has a" relationships.
+		"is a" relationship meant the inheritance 
+		"has a" relationship meant for container object 
+------------------------------------------------------------------------
+what can be the members of the base class?
+	fields
+	methods
+	constructors 
+	finalizer
+
+what can be the members of the derived class?
+	fields
+	methods
+	constructors 
+	finalizer
+
+
+		
+	
 	
 	
 	

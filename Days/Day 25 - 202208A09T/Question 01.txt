@@ -1,0 +1,44 @@
+------------------------------------------------------------------------
+Question:
+------------------------------------------------------------------------
+Define a class "Rectangle" with following members:
+	class Rectangle
+	fields:
+	* length : int 
+	* width: int 
+	methods:
+	+ Rectangle() : parameterless 
+	+ ReadRectangle() : void 
+	+ PrintRectangle() : void 
+	+ FindArea() : int 
+	+ FindCircumference() : int 
+	
+Define a class "Box" with following members:
+	class Box:Rectangle 
+	fields: 
+		- height :int 
+	methods:
+		+Box():paremeterless 
+		+ReadBox():void 
+		+PrintBox():void 
+		+FindVolume():int 
+		
+Define Driver program to create the object of Box 
+Read the details for box from keyboard 
+And find the area, circumference of the one of the face of the box.
+And find volume of the box.
+Print the details of the box.
+
+
+Test Case:
+Enter the box details
+Enter length:4
+Enter width:3
+Enter height:6
+The details of the box is
+Length:4
+Width:3
+height:6
+Area of bottom face:12
+Circumference of bottom face:14
+Volume:72
