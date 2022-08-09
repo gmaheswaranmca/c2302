@@ -1,0 +1,89 @@
+Question 2  (class Hierarchical Inheritance)
+Define the following classes 
+**************Base Class:**************
+class SchoolStudent
+	* static nextRollNumber: int 
+	+ static DisplayNextRollNumber()
+	
+	* rollNumber: int 
+	* studentName: string
+	* firstLanguageMark: int
+	* secondLanguageMark: int
+	* totalMark:int 
+	* averageMark: int
+	
+	+ SchoolStudent(studentName,firstLanguageMark,secondLanguageMark) !!! sets also the roll number using static field and increment nextRollNumber
+	+ ReadSchoolStudent()	!!! prints name, languages marks
+	+ DisplaySchoolStudent() !!! prints name, roll no, languages marks
+	+ DisplayTotalAndAverage() 
+	+ CalculateSchoolStudent()
+**************Derived Class 1:**************	
+class PrimarySchoolStudent : SchoolStudent
+	* evsMark
+	* mathematicsMark
+	+ PrimarySchoolStudent(evsMark,mathematicsMark) !!!calls base class constructor 
+	+ ReadPrimarySchoolStudent()	!!! base.ReadSchoolStudent() call, then read evs and maths marks
+	+ DisplayPrimarySchoolStudent() !!! base.DisplaySchoolStudent() call, print evs and maths marks, base.DisplayTotalAndAverage() call
+	+ CalculatePrimarySchoolStudent() !!! calculate newly using languages marks along with evs and maths marks
+				  !!! Here, we dont call base.CalculateSchoolStudent()
+
+**************Derived Class 2:**************	
+class HighSchoolStudent : SchoolStudent
+	* scienceMark
+	* socialScienceMark
+	* mathematicsMark
+	+ HighSchoolStudent(...,scienceMark,socialScienceMark,mathematicsMark) !!!calls base class constructor 
+	+ ReadHighSchoolStudent()	!!! base.ReadSchoolStudent() call, then read science, social science and maths marks
+	+ DisplayHighSchoolStudent() !!! base.DisplaySchoolStudent() call, print science, social science and maths marks, base.DisplayTotalAndAverage() call
+	+ CalculateHighSchoolStudent() !!! calculate newly using languages marks along with science, social science and maths marks
+				  !!! Here, we dont call base.CalculateHighSchoolStudent()	
+
+	
+
+Write the deriver program to 
+1. define "firstChild" object of class "PrimarySchoolStudent"
+   define "secondChild" object of class "HighSchoolStudent"
+2. read name, languages marks, other subject marks 
+3. calculate total and average 
+4. print the mark list of "firstChild"
+   print the mark list of "secondChild"
+5. print the next roll number 
+
+
+Test Case:
+Input/Output:
+***************Enter Student Details:***************
+Enter student name:Mahesh
+Enter first language mark:40
+Enter second language mark:50
+Enter EVS mark:60
+Enter Mathematics mark:70
+Enter student name:Muthu
+Enter first language mark:70
+Enter second language mark:80
+Enter Science mark:90
+Enter Social Science mark:60
+Enter Mathematics mark:70
+
+Mark List:
+Student#1:
+Name: Mahesh
+Roll Number: 1001
+First Language Mark: 40
+Second Language Mark: 50
+EVS Mark: 60
+Mathematics Mark: 70
+Total: 220
+Average: 55
+Student#2:
+Name: Muthu
+Roll Number: 1002
+First Language Mark: 70
+Second Language Mark: 80
+Science Mark: 90
+Social Science Mark: 60
+Mathematics Mark: 70
+Total: 370
+Average: 74
+Next Roll Number is 1003
+Press any key to shutdown app!!!

@@ -1,0 +1,58 @@
+Question 2 (class Inheritance)
+Define the following classes 
+**************Base Class:**************
+class SchoolStudent
+	* static nextRollNumber: int 
+	+ static DisplayNextRollNumber()
+	
+	* rollNumber: int 
+	* studentName: string
+	* firstLanguageMark: int
+	* secondLanguageMark: int
+	* totalMark:int 
+	* averageMark: int
+	
+	+ SchoolStudent(studentName,firstLanguageMark,secondLanguageMark) !!! sets also the roll number using static field and increment nextRollNumber
+	+ ReadSchoolStudent()	!!! prints name, languages marks
+	+ DisplaySchoolStudent() !!! prints name, roll no, languages marks
+	+ DisplayTotalAndAverage() 
+	+ CalculateSchoolStudent()
+**************Derived Class 1:**************	
+class PrimarySchoolStudent : SchoolStudent
+	* evsMark
+	* mathematicsMark
+	+ PrimarySchoolStudent(evsMark,mathematicsMark) !!!calls base class constructor 
+	+ ReadPrimarySchoolStudent()	!!! base.ReadSchoolStudent() call, then read evs and maths marks
+	+ DisplayPrimarySchoolStudent() !!! base.DisplaySchoolStudent() call, print evs and maths marks, base.DisplayTotalAndAverage() call
+	+ CalculatePrimarySchoolStudent() !!! calculate newly using languages marks along with evs and maths marks
+				  !!! Here, we dont call base.CalculateSchoolStudent()
+	
+Write the deriver program to 
+1. define "firstChild" object of class "PrimarySchoolStudent"
+2. read name, languages marks, other subject marks 
+3. calculate total and average 
+4. print the mark list of "firstChild"
+5. print the next roll number 
+
+
+Test Case:
+Input/Output:
+***************Enter Student Details:***************
+Enter student name:Mahesh
+Enter first language mark:50
+Enter second language mark:60
+Enter EVS mark:70
+Enter Mathematics mark:60
+
+Mark List:
+Student#1
+Name: Mahesh
+Roll Number: 1001
+First Language Mark: 50
+Second Language Mark: 60
+EVS Mark: 70
+Mathematics Mark: 60
+Total: 240
+Average: 60
+Next Roll Number is 1002
+Press any key to shutdown app!!!
