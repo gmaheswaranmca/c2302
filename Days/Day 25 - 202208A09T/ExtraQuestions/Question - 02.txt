@@ -13,7 +13,7 @@ class SchoolStudent
 	* averageMark: int
 	
 	+ SchoolStudent(studentName,firstLanguageMark,secondLanguageMark) !!! sets also the roll number using static field and increment nextRollNumber
-	+ ReadSchoolStudent()	!!! prints name, languages marks
+	+ ReadSchoolStudent()	!!! reads name, languages marks
 	+ DisplaySchoolStudent() !!! prints name, roll no, languages marks
 	+ DisplayTotalAndAverage() 
 	+ CalculateSchoolStudent()
@@ -21,7 +21,7 @@ class SchoolStudent
 class PrimarySchoolStudent : SchoolStudent
 	* evsMark
 	* mathematicsMark
-	+ PrimarySchoolStudent(evsMark,mathematicsMark) !!!calls base class constructor 
+	+ PrimarySchoolStudent(...,evsMark,mathematicsMark) !!!calls base class constructor 
 	+ ReadPrimarySchoolStudent()	!!! base.ReadSchoolStudent() call, then read evs and maths marks
 	+ DisplayPrimarySchoolStudent() !!! base.DisplaySchoolStudent() call, print evs and maths marks, base.DisplayTotalAndAverage() call
 	+ CalculatePrimarySchoolStudent() !!! calculate newly using languages marks along with evs and maths marks
