@@ -26,7 +26,8 @@ Questions:
 			Read length, width and height of the box 
 			The find area of the box 
 			Print area of the triangle, circle and box one by one 
-	
+
+Test Case	
 	Input 
 		Enter Triangle Details 
 		Enter breath : 5 
@@ -34,9 +35,9 @@ Questions:
 		Enter Circle Details 
 		Enter radius : 10
 		Enter Box Details 
-		Enter length: 4
-		Enter width: 2
-		Enter height: 6
+		Enter length: 4		8x2=16
+		Enter width: 2		12x2=24		
+		Enter height: 6		24x2=48	
 	Ouput
 		Area of the triangle is 15
 		Area of the circle is 31.4
@@ -45,26 +46,79 @@ Questions:
 	--Overloading
 	
 2. class Account
-		accountNumber
-		accountHolderName
-		principle		--->	P
-		duration 		---> 	N
-		rateOfInterest	--->	I
+		- accountNumber
+		- accountHolderName
 		
-		public float CalculateInterest
+		public void Read()
+		{
+		}
+		public float CalculateInterest()
 		{
 			return 0;
 		}
    class SI: Account 
+		- principle:float		--->	P
+		- duration:int 		---> 	N
+		- rateOfInterest:float	--->	I
+		public void Read()
+		{
+		}
 		public float CalculateInterest
 		{
 			//define code 
 		}
    class CI: Account 
+		P 			attributes
+		R 
+		n 
+		t 
+		A 
+		public void Read()
+		{
+		}
 		public float CalculateInterest
 		{
 			//define code 
 		}
+		
+   override the CalculateInterest
+   Main 
+		Read the P(principle) N(duration - number of years) R(rate of interest) details from keyboard
+		Create object of class SI and assign into Account reference variable account 
+		Then print the CalculateInterest() value 
+		Create object of class CI and assign into Account reference variable account 
+		Then print the CalculateInterest() value 
+
+Test Case:
+Input 
+	
+Output
+	Simple Interest is 
+	Compound Interest is 
+
+
+Simple Interest = PNR/100
+Compount Interest 
+A = the future value of the investment/loan, including interest
+P = the principal investment amount (the initial deposit or loan amount)
+r = the annual interest rate (decimal)
+n = the number of times that interest is compounded per unit t
+t = the time the money is invested or borrowed for
+
+P (1 + r/n)^nt - P
+
+If an amount of $5,000 is deposited into a savings account at an annual interest rate of 5%, compounded monthly, the value of the investment after 10 years can be calculated as follows...
+
+P = 5000.
+r = 5/100 = 0.05 (decimal).
+n = 12.
+t = 10.
+
+If we plug those figures into the formula, we get the following:
+
+A = 5000 (1 + 0.05 / 12) (12 * 10) = 8235.05.
+
+So, the investment balance after 10 years is $8,235.05.
    
 3. class Student 
 	To create a class student and 
