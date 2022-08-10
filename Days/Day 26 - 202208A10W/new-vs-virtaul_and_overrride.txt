@@ -1,0 +1,31 @@
+Hiding Example (new keyword)
+
+SchoolStudent 
+	void Read()				{reading name and lang marks;}		//I
+HSStudent:SchoolStudent 
+	new void Read()			{base.Read();reading subject marks;}	//II
+FCHSStudent:SchoolStudent 	
+	new void Read()			{base.Read();reading french mark;}	//III
+	
+FCHSStudent	fchss = new FCHSStudent();
+HSStudent hss = fchss;
+SchoolStudent ss = fchss;
+fchss.Read();			// III
+hss.Read();				// II
+ss.Read();				// I
+
+
+Overriding Example (virtual and override keyword)
+SchoolStudent 
+	virtual void Read()				{reading name and lang marks;}		//I
+HSStudent:SchoolStudent 
+	override void Read()			{/*base.Read();//WRONG*/reading subject marks;}	//II
+FCHSStudent:SchoolStudent 	
+	override void Read()			{/*base.Read();//WRONG*/reading french mark;}	//III
+	
+FCHSStudent	fchss = new FCHSStudent();
+HSStudent hss = fchss;
+SchoolStudent ss = fchss;
+fchss.Read();			// III
+hss.Read();				// III
+ss.Read();				// III

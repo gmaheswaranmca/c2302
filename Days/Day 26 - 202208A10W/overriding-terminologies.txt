@@ -1,0 +1,46 @@
+virtual function: 
+	o the function with "virtual" qualifier 
+	  and with definition is called virtual function 
+	  
+	o virtual function is overridable 
+	
+
+override function:
+	o the function with "override" qualifier 
+	  and it will have redefinition of the base class function 
+	
+	o to redefine the base class function in DERIVED class
+	  in the base class we have to add the qualifier "virtual" or "abstract" or "override"
+
+	o virtual function is overridable 
+	o abstract function is overridable 
+	o override function is overridable 
+
+abstract function:
+	o the function with "abstract" qualifier 
+	and without definition is called abstract function 
+	
+	o abstract function class has to be qualified with "abstract"
+	
+	o abstract function is overridable 
+	
+abstract class:
+	o the class with "abstract" qualifier is called abstract class 
+	
+	o abstract class can have abstract functions 
+	o abstract class may not have abstract functions 
+	
+	o abstract class cannot be object created 
+		-- if abstract class is inherited into derived class 
+		and derived class has to define all the abstract functions if any 
+		then derived class canbe object created 
+		
+	Example:	
+		BASE CLASS of three abstract functions has to be abstract 
+		DERIVED CLASS if defined all the abstract function, then it may be concrete ie object creatable
+		DERIVED CLASS if not defined few abstract functions, then it also has to be abstract 
+		
+		
+	
+	
+	

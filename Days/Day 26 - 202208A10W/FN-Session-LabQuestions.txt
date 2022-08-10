@@ -1,12 +1,101 @@
-overloading
-	the same named function with different prototypes (signatures, declarations)
+overloading (compile-time)
+	the same named function with different prototypes (signatures, declarations) in the class
+	
 	
 	then functions call will be resolved 
 	with arguments in number 
 		 arguments order 
 		 arguments datatypes
+Examples:		 
+	int FindSum(int,int)			//I
+	float FindSum(float,float)		//II
+	int FindSum(int,int,int)		//III
+	
+	float FindSum(int,float)		//IV
+	float FindSum(float,int)		//V
+How function is resolved at call:	
+	In I and II, Name resolution (resolving) is by type
+	In I and III, Name resolution (resolving) is by number of arguments 
+	In IV and V,  Name resolution (resolving) is by arrangement of the arguments type 
+	In I and IV, Name resolution (resolving) is by second argument type
+	In I and V, Name resolution (resolving) is by first argument type
+	In II and V, Name resolution (resolving) is by second argument type
 	
 overriding
+	the same named and same prototyped function in 
+	both base and drived class is overriding.
+	
+	I
+		"virtual" qualifier in base class function 
+		"override" qualifier in derived class function 
+		====> overriding 
+		
+		====> giving new definition for existing function 
+		
+		Assumption: object is for only derived class
+		
+		if we call the overridden function with base CLASS reference 
+		OR 
+		we call the overridden function with derived CLASS reference 
+		
+		then 
+		only one function will be called ie the BASE CLASS function 
+		the reason the BASE CLASS function is just redefined in the DERIVED CLASS 
+		
+	II "new" qualifier in derived class function 		NOTE we are not using virtual-override keywords 
+		
+		Now we have two same named functions 
+		one in BASE CLASS 
+		another in DERIVED CLASS 
+		
+		
+		Assumption: object is for only derived class
+		
+		if we call the function with base CLASS reference 
+			the function of BASE class will be called 
+		AND 
+		if we call the function with derived CLASS reference 
+			the function of DERIVED class will be called 
+		
+Summary 		
+override 	----- Overriding 		-- Dynamic Binding -- runtime 
+new 		----- Hiding			-- Static Binding  -- compile-time 
+	
+
+static void Main()
+{
+	float si, ci;
+
+	Account acc = null;
+
+	acc = new SimpeInterest();
+	Console.WriteLine("Enter details for the SI");
+	Console.WriteLine("*****************Parent*************");
+	acc.Read();
+	Console.WriteLine("*****************Child*************");
+	((SimpeInterest)acc).Read();
+	
+	float si1 = ((SimpeInterest)acc).Calculate();
+	si = acc.Calculate();
+
+	Console.WriteLine($"Si={si}");
+	Console.WriteLine($"Si1={si1}");
+
+	acc = new CompoundInterest();
+	Console.WriteLine("Enter details for the Ci");
+
+	Console.WriteLine("*****************Parent*************");
+	acc.Read();
+	Console.WriteLine("*****************Child*************");
+	((CompoundInterest)acc).Read();
+	
+	float ci1 = ((CompoundInterest)acc).Calculate();
+	ci = acc.Calculate();
+
+	Console.WriteLine($"ci={ci}");
+	Console.WriteLine($"ci1={ci1}");
+	Console.Read();
+}	
 
 Questions:
 1. Create class 
@@ -68,11 +157,10 @@ Test Case
 			//define code 
 		}
    class CI: Account 
-		P 			attributes
-		R 
-		n 
-		t 
-		A 
+		- principle:float		--->	P
+		- duration:int 		---> 	T
+		- rateOfInterest:float	--->	R
+		- times:int 			---> N
 		public void Read()
 		{
 		}
@@ -83,43 +171,77 @@ Test Case
 		
    override the CalculateInterest
    Main 
-		Read the P(principle) N(duration - number of years) R(rate of interest) details from keyboard
+		
 		Create object of class SI and assign into Account reference variable account 
+		Read the P(principle) N(duration - number of years) R(rate of interest) details from keyboard
 		Then print the CalculateInterest() value 
+		
+		
 		Create object of class CI and assign into Account reference variable account 
+		Read the P(principle) T(duration - number of years) R(rate of interest),
+		times 
+		details from keyboard
+		
 		Then print the CalculateInterest() value 
 
 Test Case:
-Input 
-	
-Output
-	Simple Interest is 
-	Compound Interest is 
+Input/Output:
+Enter details for the SI
+Enter Account Number:
+1001
+Enter Account Holder Name:
+gokul
+Enter Principal Amount:
+5000
+Enter Number of Years:
+10
+Enter rate of interst:
+5
+Si=2500
+Enter details for the Ci
+Enter Account Number:
+1002
+Enter Account Holder Name:
+gokul
+Enter Principal Amount:
+5000
+Enter Number of Years:
+10
+Enter rate of interst:
+5
+Enter increses number of times:
+12
+ci=3235.047
 
 
 Simple Interest = PNR/100
+
+
 Compount Interest 
-A = the future value of the investment/loan, including interest
-P = the principal investment amount (the initial deposit or loan amount)
-r = the annual interest rate (decimal)
-n = the number of times that interest is compounded per unit t
-t = the time the money is invested or borrowed for
+	A = the future value of the investment/loan, including interest
+	P = the principal investment amount (the initial deposit or loan amount)
+	r = the annual interest rate (decimal)
+	n = the number of times that interest is compounded per unit t
+	t = the time the money is invested or borrowed for
 
-P (1 + r/n)^nt - P
+	P (1 + r/n)^nt - P
 
-If an amount of $5,000 is deposited into a savings account at an annual interest rate of 5%, compounded monthly, the value of the investment after 10 years can be calculated as follows...
+	If an amount of $5,000 is deposited into a savings account at 
+	an annual interest rate of 5%, 
+	compounded monthly, 
+	the value of the investment after 10 years can be calculated as follows...
 
-P = 5000.
-r = 5/100 = 0.05 (decimal).
-n = 12.
-t = 10.
+	P = 5000.
+	r = 5/100 = 0.05 (decimal).
+	n = 12.
+	t = 10.
 
-If we plug those figures into the formula, we get the following:
+	If we plug those figures into the formula, we get the following:
 
-A = 5000 (1 + 0.05 / 12) (12 * 10) = 8235.05.
+	A = 5000 (1 + 0.05 / 12) (12 * 10) = 8235.05.
 
-So, the investment balance after 10 years is $8,235.05.
-   
+	So, the investment balance after 10 years is $8,235.05.
+	   
 3. class Student 
 	To create a class student and 
 	create 2 methods storeDetails and displayDetails in it. 
