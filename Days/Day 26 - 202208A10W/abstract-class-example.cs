@@ -86,31 +86,17 @@
             Account acc = null;
 
             acc = new SimpeInterest();
-            Console.WriteLine("Enter details for the SI");
-            Console.WriteLine("*****************Parent*************");
+            Console.WriteLine("Enter details for the SI");           
             acc.Read();
-            Console.WriteLine("*****************Child*************");
-            ((SimpeInterest)acc).Read();
-
-            float si1 = ((SimpeInterest)acc).Calculate();
             si = acc.Calculate();
 
             Console.WriteLine($"Si={si}");
-            Console.WriteLine($"Si1={si1}");
-
+			
             acc = new CompoundInterest();
             Console.WriteLine("Enter details for the Ci");
-
-            Console.WriteLine("*****************Parent*************");
             acc.Read();
-            Console.WriteLine("*****************Child*************");
-            ((CompoundInterest)acc).Read();
-
-            float ci1 = ((CompoundInterest)acc).Calculate();
             ci = acc.Calculate();
-
             Console.WriteLine($"ci={ci}");
-            Console.WriteLine($"ci1={ci1}");
             Console.Read();
         }
     }
