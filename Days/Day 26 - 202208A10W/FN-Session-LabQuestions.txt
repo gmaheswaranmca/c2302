@@ -1,0 +1,90 @@
+overloading
+	the same named function with different prototypes (signatures, declarations)
+	
+	then functions call will be resolved 
+	with arguments in number 
+		 arguments order 
+		 arguments datatypes
+	
+overriding
+
+Questions:
+1. Create class 
+	class Shape 
+		public int FindArea(int breath,int height)		-> triangle 	-> breath * height
+		public float FindArea(int radius)    				-> circle 		-> radius
+		public int FindArea(int length,int width, int height)		
+												-> box surface area 	-> 
+													(2*l*w) + (2*w*h) + (2*l*h)
+	clas MainClass
+		Main 
+			Shape shape = new Shape();
+			Read breath and height for triangle 
+			Then find the area of the triangle 
+			Read radis of the circle 
+			Then find area of the circle 
+			Read length, width and height of the box 
+			The find area of the box 
+			Print area of the triangle, circle and box one by one 
+	
+	Input 
+		Enter Triangle Details 
+		Enter breath : 5 
+		Enter height : 6
+		Enter Circle Details 
+		Enter radius : 10
+		Enter Box Details 
+		Enter length: 4
+		Enter width: 2
+		Enter height: 6
+	Ouput
+		Area of the triangle is 15
+		Area of the circle is 31.4
+		Area of the box is 88
+	
+	--Overloading
+	
+2. class Account
+		accountNumber
+		accountHolderName
+		principle		--->	P
+		duration 		---> 	N
+		rateOfInterest	--->	I
+		
+		public float CalculateInterest
+		{
+			return 0;
+		}
+   class SI: Account 
+		public float CalculateInterest
+		{
+			//define code 
+		}
+   class CI: Account 
+		public float CalculateInterest
+		{
+			//define code 
+		}
+   
+3. class Student 
+	To create a class student and 
+	create 2 methods storeDetails and displayDetails in it. 
+	create another class Mark that inherites details of student and 
+	create another 2 methods getMarks and displayDetails 
+	to calculate and display marks of 2 subjects.
+		
+4. Create 2 classes Square and Cube 
+	to find the area and surface area respectively, 
+	using the same method Area. 
+	
+	class Square 
+		public int FindArea()
+	class Cube : Square 
+		public int FindArea()
+
+
+Example from FN session to demonstrate the overloading:
+	Create a class Calculator that has 2 methods named Add, 
+		One to add two integers and 
+		the other to add to strings. 
+   Print both the output in the main program.	
