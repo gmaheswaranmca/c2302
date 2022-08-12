@@ -1,7 +1,7 @@
 Case 1
-Assume in the school
-they have some students with only primary school students 
-and few students are with french credited primary school students 
+	Assume in the school
+	they have some students with only primary school students 
+	and few students are with french credited primary school students 
 
 	abstract class SchoolStudent
 		abstract void Read() --- no definition  
@@ -11,21 +11,21 @@ and few students are with french credited primary school students
 		override void Read() -- definition till name, lang subj, subj, french sub marks 
 	
 Case 2
-Assume in the school
-they have policy that all the primary school students should take the credit "French Language"
-	
-Option 1:
-abstract class SchoolStudent
-	abstract void Read() --- no definition  
-abstract class PrimarySchoolStudent:SchoolStudent 
-	//override void Read() -- definition till name, lang subj, subj marks
-class FCPrimarySchoolStudent:PrimarySchoolStudent
-	override void Read() -- definition till name, lang subj, subj, french sub marks 	
-	
-Option 2:	
-abstract class SchoolStudent
-	abstract void Read() --- no definition  
-abstract class PrimarySchoolStudent:SchoolStudent 
-	override void Read() { } // empty definition 
-class FCPrimarySchoolStudent:PrimarySchoolStudent
-	override void Read() -- definition till name, lang subj, subj, french sub marks 		
+	Assume in the school
+	they have policy that all the primary school students should take the credit "French Language"
+		
+	Option 1:
+		abstract class SchoolStudent
+			abstract void Read() --- no definition  
+		abstract class PrimarySchoolStudent:SchoolStudent 
+			//override void Read() -- definition till name, lang subj, subj marks
+		class FCPrimarySchoolStudent:PrimarySchoolStudent
+			override void Read() -- definition till name, lang subj, subj, french sub marks 	
+			
+	Option 2:	
+		abstract class SchoolStudent
+			abstract void Read() --- no definition  
+		abstract class PrimarySchoolStudent:SchoolStudent 
+			override void Read() { } // empty definition 
+		class FCPrimarySchoolStudent:PrimarySchoolStudent
+			override void Read() -- definition till name, lang subj, subj, french sub marks 		

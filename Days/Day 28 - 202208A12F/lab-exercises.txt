@@ -1,0 +1,64 @@
+------------------------------------------
+Today Fri, 12-Aug-2022
+------------------------------------------
+Partial class
+Partial method/function 
+toString() from Object class 
+------------------------------------------
+1.
+//Person.cs firstName, secondName
+class Person	!!! make it as partial class 
+	private string firstName;
+	private string secondName;
+}
+//Person01.cs constructor, and toString 
+class Person	!!! make it as partial class 
+	public Person(string,string){} !!!!
+	override public string ToString(){} !!! it has to fullname
+}
+//Main function to test Person 
+
+------------------------------------------
+Today Thu, 11-Aug-2022
+------------------------------------------
+abstract class
+interface 
+------------------------------------------
+1. 
+interface IShape
+	float CalclateArea()
+	float CalculatePerimeter()
+class Circle:IShape	
+	-radius:float 
+	//Define Constructor of arg radius 
+	//implement CalclateArea() and CalculatePerimeter()
+class Rectangle:IShape	
+	// same as Circle but definition for Rectangle 
+class Triangle:IShape	
+	// same as Circle but definition for Triangle
+Main function 
+	to test the objects of the classes Circle, Rectangle, Triangle 
+	using the only one IShape reference variable to hold these objects 
+	and to print the area and perimeter of 
+	each shape we implemented in the classes 
+	
+2. School Problem 
+class Exam
+	int Pass(int mark1, int mark2, int mark3)	-> 1 for Pass, 0 for Fail 
+		//implemented will not overridden
+interface IClassify
+	string Division(int mark1, int mark2, int mark3) 
+		//-> average>=60 ==> "FIRST", >=50 ==> "SECOND", "NO DIVISION"
+class Result:Exam,IClassify
+	//implement here the Division() 
+
+Main function 
+	//We need to create the object for Result and 
+		we have to call the functions Pass and Division 
+		
+	
+
+	
+
+
+
