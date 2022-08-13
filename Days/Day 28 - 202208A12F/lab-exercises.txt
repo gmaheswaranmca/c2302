@@ -18,6 +18,13 @@ class Person	!!! make it as partial class
 }
 //Main function to test Person 
 
+
+partial method 
+		1. it should not have access modifier 
+		2. it should be void 
+		3. it should not have out argment 
+		4. it should not have virtual override sealed new extern
+
 ------------------------------------------
 Today Thu, 11-Aug-2022
 ------------------------------------------

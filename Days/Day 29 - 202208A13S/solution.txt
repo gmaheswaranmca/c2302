@@ -1,0 +1,661 @@
+Manoj is not there
+Rajul is not responding 
+
+Albin
+1. define a class 							| test 
+   create object of the class 				| test 
+   
+   class Student
+   object 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^   
+ class Student
+    {
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("We are creating 4 empty student objects");
+            Student albin = new Student();
+            Student abhirami = new Student();
+            Student harsh = new Student();
+            Student athira = new Student();
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+    }   
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Output:
+We are creating 4 empty student objects
+End of the program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+   
+2. add an attribute to the class			| test 	
+Roopa Srinithi & Delisha
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    class Student
+    {
+        public int rollNumber;
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("We are creating 4 empty student objects");
+
+            Student albin = new Student();
+            albin.rollNumber = 1001;
+            
+            Student abhirami = new Student();
+            abhirami.rollNumber = 1002;
+            
+            Student harsh = new Student();
+            harsh.rollNumber = 1003;
+            
+            Student athira = new Student();
+            athira.rollNumber = 1004;
+
+            Console.WriteLine("albin rollnumber:" + albin.rollNumber);
+            Console.WriteLine($"abhirami rollnumber:{abhirami.rollNumber}");
+            Console.WriteLine("harsh rollnumber:{0}", harsh.rollNumber);
+            Console.WriteLine("athira rollnumber:" + athira.rollNumber);
+
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+    }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^	
+We are creating 4 empty student objects
+albin rollnumber:1001
+abhirami rollnumber:1002
+harsh rollnumber:1003
+athira rollnumber:1004
+End of the program	
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+3. methods									| test 
+Ajithmaran is not in the panel
+
+
+Harsh Jain
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  class Student
+    {
+        public int rollNumber;
+        public void Welcome()
+        {
+            Console.WriteLine("Welcome " + this.rollNumber + "!");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("We are creating 4 empty student objects");
+
+            Student albin = new Student();
+            albin.rollNumber = 1001;
+            
+            Student abhirami = new Student();
+            abhirami.rollNumber = 1002;
+            
+            Student harsh = new Student();
+            harsh.rollNumber = 1003;
+            
+            Student athira = new Student();
+            athira.rollNumber = 1004;
+
+            albin.Welcome();
+            abhirami.Welcome();
+            harsh.Welcome();
+            athira.Welcome();
+            
+
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+We are creating 4 empty student objects
+Welcome 1001!
+Welcome 1002!
+Welcome 1003!
+Welcome 1004!
+End of the program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+4. no-arg constructor 						| test 
+Srinivasan 
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class Student
+    {
+        public int rollNumber;
+        public void Welcome()
+        {
+            Console.WriteLine("Welcome " + this.rollNumber + "!");
+        }
+        public Student()
+        {
+            this.rollNumber = -1;
+        }
+        
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("We are creating 4 empty student objects");
+
+            Student albin = new Student();
+            albin.Welcome();
+            albin.rollNumber = 1001;
+            
+            Student abhirami = new Student();
+            abhirami.Welcome();
+            abhirami.rollNumber = 1002;
+            
+            Student harsh = new Student();
+            harsh.Welcome();
+            harsh.rollNumber = 1003;
+            
+            Student athira = new Student();
+            athira.Welcome();
+            athira.rollNumber = 1004;
+
+            albin.Welcome();
+            abhirami.Welcome();
+            harsh.Welcome();
+            athira.Welcome();
+            
+
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+    }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+We are creating 4 empty student objects
+Welcome -1!
+Welcome -1!
+Welcome -1!
+Welcome -1!
+Welcome 1001!
+Welcome 1002!
+Welcome 1003!
+Welcome 1004!
+End of the program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+5. arg constructor 							| test 
+
+Praveen
+Lalasha
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+I
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class Student
+    {
+        public int rollNumber;
+        public void Welcome()
+        {
+            Console.WriteLine("Welcome " + this.rollNumber + "!");
+        }
+        public Student()
+        {
+            this.rollNumber = -1;
+        }
+        public Student(int p_rollNumber)
+        {
+            this.rollNumber = p_rollNumber;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("We are creating 4 empty student objects");
+
+            Student albin = new Student(11);
+            albin.Welcome();
+            albin.rollNumber = 1001;
+            
+            Student abhirami = new Student(12);
+            abhirami.Welcome();
+            abhirami.rollNumber = 1002;
+            
+            Student harsh = new Student();
+            harsh.Welcome();
+            harsh.rollNumber = 1003;
+            
+            Student athira = new Student(14);
+            athira.Welcome();
+            athira.rollNumber = 1004;
+
+            albin.Welcome();
+            abhirami.Welcome();
+            harsh.Welcome();
+            athira.Welcome();
+            
+
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+    }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+We are creating 4 empty student objects
+Welcome 11!
+Welcome 12!
+Welcome -1!
+Welcome 14!
+Welcome 1001!
+Welcome 1002!
+Welcome 1003!
+Welcome 1004!
+End of the program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+II
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ class Student
+    {
+        private int rollNumber;
+        public void Welcome()
+        {
+            Console.WriteLine("Welcome " + this.rollNumber + "!");
+        }
+        public Student()
+        {
+            this.rollNumber = -1;
+        }
+        public Student(int p_rollNumber)
+        {
+            this.rollNumber = p_rollNumber;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("We are creating 4 empty student objects");
+
+            Student albin = new Student(1001);            
+            Student abhirami = new Student(1002);            
+            Student harsh = new Student(1003);            
+            Student athira = new Student(1004);
+
+
+            albin.Welcome();
+            abhirami.Welcome();
+            harsh.Welcome();
+            athira.Welcome();
+            
+
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+    }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+We are creating 4 empty student objects
+Welcome 1001!
+Welcome 1002!
+Welcome 1003!
+Welcome 1004!
+End of the program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Ramesh is not in the panel
+
+
+
+6. both no-arg arg 							| test 
+Solved
+
+7. ToString()								| test 
+Veena Lakshmi 
+Aurojit 
+Palak is not responding	
+Srinivasan joined to help to learn 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class Student
+    {
+        private int rollNumber;
+        public void Welcome()
+        {
+            Console.WriteLine("Welcome " + this.rollNumber + "!");
+        }
+        public Student()
+        {
+            this.rollNumber = -1;
+        }
+        public Student(int p_rollNumber)
+        {
+            this.rollNumber = p_rollNumber;
+        }
+        public override string ToString()
+        {
+            return "Hello " + this.rollNumber + "!";
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("We are creating 4 empty student objects");
+
+            Student albin = new Student(1001);            
+            Student abhirami = new Student(1002);            
+            Student harsh = new Student(1003);            
+            Student athira = new Student(1004);
+
+
+            albin.Welcome();
+            abhirami.Welcome();
+            harsh.Welcome();
+            athira.Welcome();
+
+            Console.WriteLine(albin);
+            Console.WriteLine(abhirami);
+            Console.WriteLine(harsh);
+            Console.WriteLine(athira);
+
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+    }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+We are creating 4 empty student objects
+Welcome 1001!
+Welcome 1002!
+Welcome 1003!
+Welcome 1004!
+Hello 1001!
+Hello 1002!
+Hello 1003!
+Hello 1004!
+End of the program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Palak is not stable as she ill	
+	
+	
+1. no-member derived class 					| test 
+
+Ramesh 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class Student
+    {
+        private int rollNumber;
+        public void Welcome()
+        {
+            Console.WriteLine("Welcome " + this.rollNumber + "!");
+        }
+        public Student()
+        {
+            this.rollNumber = -1;
+        }
+        public Student(int p_rollNumber)
+        {
+            this.rollNumber = p_rollNumber;
+        }
+        public override string ToString()
+        {
+            return "Hello " + this.rollNumber + "!";
+        }
+    }
+    class StudentSubject:Student 
+    {
+        public StudentSubject(int p_rollNumber):base(p_rollNumber)
+        {
+            
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("We are creating 4 empty student objects");
+            Console.WriteLine("*********************Base Class****************");
+            Student albin = new Student(1001);            
+            Student abhirami = new Student(1002);            
+            Student harsh = new Student(1003);            
+            Student athira = new Student(1004);
+
+
+            albin.Welcome();
+            abhirami.Welcome();
+            harsh.Welcome();
+            athira.Welcome();
+
+            Console.WriteLine(albin);
+            Console.WriteLine(abhirami);
+            Console.WriteLine(harsh);
+            Console.WriteLine(athira);
+
+
+            Console.WriteLine("*********************Derived Class****************");
+            StudentSubject ramesh = new StudentSubject(1001);
+            StudentSubject aurojit = new StudentSubject(1002);
+            StudentSubject veena = new StudentSubject(1003);
+            StudentSubject palak = new StudentSubject(1004);
+
+
+            ramesh.Welcome();
+            aurojit.Welcome();
+            veena.Welcome();
+            palak.Welcome();
+
+            Console.WriteLine(ramesh);
+            Console.WriteLine(aurojit);
+            Console.WriteLine(veena);
+            Console.WriteLine(palak);
+
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+    }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+We are creating 4 empty student objects
+*********************Base Class****************
+Welcome 1001!
+Welcome 1002!
+Welcome 1003!
+Welcome 1004!
+Hello 1001!
+Hello 1002!
+Hello 1003!
+Hello 1004!
+*********************Derived Class****************
+Welcome 1001!
+Welcome 1002!
+Welcome 1003!
+Welcome 1004!
+Hello 1001!
+Hello 1002!
+Hello 1003!
+Hello 1004!
+End of the program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+2. add member attribute to derived class 	| test 
+Stutee is not there as she is facing network issue
+Ganga P Chandran is not there 
+Amrutha 
+
+
+3. method									| test 
+Amrutha
+
+4. no-arg constructor 						| test 
+5. arg constructor 							| test 
+Ramesh 
+Amrutha 
+6. both no-arg arg 							| test 
+7. ToString()								| test 
+Amrutha 
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class Student
+    {
+        protected int rollNumber;
+        public void Welcome()
+        {
+            Console.WriteLine("Welcome " + this.rollNumber + "!");
+        }
+        public Student()
+        {
+            this.rollNumber = -1;
+        }
+        public Student(int p_rollNumber)
+        {
+            this.rollNumber = p_rollNumber;
+        }
+        public override string ToString()
+        {
+            return "Hello " + this.rollNumber + "!";
+        }
+    }
+    class StudentSubject:Student 
+    {
+        protected string subjectName;
+        public StudentSubject(int p_rollNumber, string p_subjectName):base(p_rollNumber)
+        {
+            this.subjectName = p_subjectName;
+        }
+        public void Print()
+        {
+            Console.WriteLine($"Roll Number:{base.rollNumber}");
+            Console.WriteLine($"Subject Name:{this.subjectName}");
+        }
+        public override string ToString()
+        {
+            return "Hello " + base.rollNumber + " is studing the subject " + this.subjectName + "!";
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("We are creating 4 empty student objects");
+            Console.WriteLine("*********************Base Class****************");
+            Student albin = new Student(1001);            
+            Student abhirami = new Student(1002);            
+            Student harsh = new Student(1003);            
+            Student athira = new Student(1004);
+
+
+            albin.Welcome();
+            abhirami.Welcome();
+            harsh.Welcome();
+            athira.Welcome();
+
+            Console.WriteLine(albin);
+            Console.WriteLine(abhirami);
+            Console.WriteLine(harsh);
+            Console.WriteLine(athira);
+
+
+            Console.WriteLine("*********************Derived Class****************");
+            StudentSubject ramesh = new StudentSubject(1001,"History");
+            StudentSubject aurojit = new StudentSubject(1002,"Politics");
+            StudentSubject veena = new StudentSubject(1003,"Geography");
+            StudentSubject palak = new StudentSubject(1004,"Econmics");
+
+            ramesh.Welcome();
+            ramesh.Print();
+
+            aurojit.Welcome();
+            aurojit.Print();
+
+            veena.Welcome();
+            veena.Print();
+
+            palak.Welcome();
+            palak.Print();
+
+            Console.WriteLine(ramesh);
+            Console.WriteLine(aurojit);
+            Console.WriteLine(veena);
+            Console.WriteLine(palak);
+
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+    }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+We are creating 4 empty student objects
+*********************Base Class****************
+Welcome 1001!
+Welcome 1002!
+Welcome 1003!
+Welcome 1004!
+Hello 1001!
+Hello 1002!
+Hello 1003!
+Hello 1004!
+*********************Derived Class****************
+Welcome 1001!
+Roll Number:1001
+Subject Name:History
+Welcome 1002!
+Roll Number:1002
+Subject Name:Politics
+Welcome 1003!
+Roll Number:1003
+Subject Name:Geography
+Welcome 1004!
+Roll Number:1004
+Subject Name:Econmics
+Hello 1001 is studing the subject History!
+Hello 1002 is studing the subject Politics!
+Hello 1003 is studing the subject Geography!
+Hello 1004 is studing the subject Econmics!
+End of the program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. class with one method 					| test 
+2. derive it override here 					| test 
+		3. assign into parent class reference and call method 
+		4. copy parent reference to child reference and call method 
+
+1. class with no-implementation method 		| test ???
+2. derive it override here 					| test 
+		3. assign into parent class reference and call method 
+		4. copy parent reference to child reference and call method 
+
+1. interface with a method 					| test 
+2. implement it in a class 					| test 
+		3. assign into parent interface reference and call method 
+		4. copy parent reference to child reference and call method 
+
+1. interface with a method 
+2. inherit interface into another interface with another method 
+3. implement (2) into class 
+
+1. interface with a method 
+2. another interface with a method 
+3. inherit (1) and (2) into third interface 
+4. implement (3) into a class 
+5. implement (1) and (2) into a class 
+
+1. create a sealed function class 
+2. inherit (1)
+
+1. create a sealed class 
+2. inherit (1) check 
+   if syntax error, create object to call its function 
+   
+1. create a class with a abstract function 
+2. inherit just	-- dont implement ???  
+3. inherit (2) -- implement first one 
+
+1. create a class with a abstract function 
+2. inherit just	-- implement it and make method as sealed 
+3. inherit (2)  -- try override the method ??? error. if so, just create object.
+
+
+	
+
+   

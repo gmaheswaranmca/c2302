@@ -1,0 +1,152 @@
+Object Orietned Programming 
+	1. Encapsulation
+		-> Data Hiding 
+			-> Abstraction 
+	2. Polimorphism
+		-> Inheritance 
+	3. Abstraction 
+---------------------------------	
+With Veena Lakshmi
+
+encapsulation: 
+	o "wrapping up of the attributes and behaviours together as a bundle 
+	  and behaviours should act on attributes "
+	  
+	  collection of the attrbutes are called "object"
+	  the attributes if we hide them, they can be exposed to the outside 
+	  via the "behaviours" of the object 
+	  the behaviours of the object will hide the attributes and 
+	  act on attributes to expose outside 
+	  
+	o it leads to the data hiding 
+	
+		o it leads to the abstraction (by hiding the attributes) 
+		
+polimorphism : 
+	many forms 
+	o polygon takes many forms triangle, circle and rectangle 
+	  if we "draw" it. "draw" is the behaviour by which 
+	  polygon takes many forms.
+	  
+	Example: 
+		polygon
+			draw
+			
+			triangle
+				draw
+			circle 
+				draw
+			rectangle 
+				draw
+				
+		dynamic binding 
+
+		overloading or 								achieved at compile-time 
+		new keyword for the derived function 
+		
+abstraction:
+	1. function and its function call 		
+	2. encapsulated function hides the data 
+	3. hiding the object at function calling 
+		"parent reference variable in C# 
+		can invoke the child's object overridden function" 
+---------------------------------
+With 
+	Palak Saraf:
+		Network Issue.
+		After few minutes 
+---------------------------------
+With 
+	Srinivasan:
+		
+abstract 	
+	- abstract method is no-definition method 
+		o abstract method class should be abstract 
+		o abstract method must be overridden to leave the abstraction 
+	- abstract class cannot be instantiated / object created
+		o abstract class may have abstract methods 
+		o abstract class must be inherited 
+
+sealed 
+	- sealed method should have definition 
+		o sealed method should no be overridden
+		o overridable method can be sealed to restrict further overriding 
+			A 
+				virtual/abstract void f 
+			B:A 
+				override void f 
+			C:B 
+				override sealed void f 
+			/*D:C
+				override void f	// throw error 
+			*/
+	- sealed class should have implemented functions only 
+		o sealed class should not be inherited 
+		
+static 
+	- static variable 		
+	- static function 
+	- static constructor 
+	
+	o static members 
+		are shared members for the all the objects of the class 
+	o static members will be called outside using class name and dot operator 
+      if they are public or internal 	
+	
+virtual 
+	o virtual method is overridable method and will have definition 
+	o virtual method has to be overridden using the keyword "override" in the derived class 
+		
+override 
+	o the method in base class if virtual or abstract or override 
+	  then we can override the method in derived class using keyword "override" 
+	  
+new 
+	o the new method in base class method signature is defined newly 
+	  in the derived class using the keyword "new" 
+	o new function will resolve with base or derived reference 
+	  so that base reference will call only the base method 
+	  and derived reference will call only the derived reference 
+	
+assembly means project's build as exe or dll 
+	will have root namespace 
+
+private 		o members visiblity is within the same class 
+protected		o members visiblity is within the same and derived classes 
+
+public 			o members visiblity is within the same, derived classes and other classes 
+					of the same assessmbly or referred assembly 
+					
+internal 		o members visiblity is within the same, derived classes and other classes 
+					of the same assessmbly only 
+internal protected 
+				o in same assembly, visibility with same class, derived class, other classes 
+				o visibility with derived classes of other assemblies also 
+---------------------------------	
+	
+class Person 
+	public static int count;
+	public static int nextPersonId;
+	-- 
+	
+	static Person()
+	{
+		count = 100;
+		nextPersonId = 10101;
+	}
+	
+	public Person(string,string)
+	{
+	}
+
+
+Main 
+	Console.WriteLine(Person.count);
+	
+	
+Main 
+	Person person = new Person("","");
+---------------------------------
+static class 
+nested class 	
+---------------------------------

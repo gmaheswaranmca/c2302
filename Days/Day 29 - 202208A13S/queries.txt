@@ -1,0 +1,61 @@
+1. define a class 							| test 
+   create object of the class 				| test 
+2. add an attribute to the class			| test 	
+3. methods									| test 
+4. no-arg constructor 						| test 
+5. arg constructor 							| test 
+6. both no-arg arg 							| test 
+7. ToString()								| test 
+	
+1. no-member derived class 					| test 
+2. add member attribute to derived class 	| test 
+3. method									| test 
+4. no-arg constructor 						| test 
+5. arg constructor 							| test 
+6. both no-arg arg 							| test 
+7. ToString()								| test 
+
+1. class with one method 					| test 
+2. derive it override here 					| test 
+		3. assign into parent class reference and call method 
+		4. copy parent reference to child reference and call method 
+
+1. class with no-implementation method 		| test ???
+2. derive it override here 					| test 
+		3. assign into parent class reference and call method 
+		4. copy parent reference to child reference and call method 
+
+1. interface with a method 					| test 
+2. implement it in a class 					| test 
+		3. assign into parent interface reference and call method 
+		4. copy parent reference to child reference and call method 
+
+1. interface with a method 
+2. inherit interface into another interface with another method 
+3. implement (2) into class 
+
+1. interface with a method 
+2. another interface with a method 
+3. inherit (1) and (2) into third interface 
+4. implement (3) into a class 
+5. implement (1) and (2) into a class 
+
+1. create a sealed function class 
+2. inherit (1)
+
+1. create a sealed class 
+2. inherit (1) check 
+   if syntax error, create object to call its function 
+   
+1. create a class with a abstract function 
+2. inherit just	-- dont implement ???  
+3. inherit (2) -- implement first one 
+
+1. create a class with a abstract function 
+2. inherit just	-- implement it and make method as sealed 
+3. inherit (2)  -- try override the method ??? error. if so, just create object.
+
+
+	
+
+   
