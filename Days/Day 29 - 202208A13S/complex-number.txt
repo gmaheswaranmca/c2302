@@ -1,0 +1,70 @@
+class ComplexNumber // 2+i3 // real part, imaginary part 
+{
+	private int real;
+	private int imaginary;
+	
+	public ComplexNumber(int p_real, int p_imaginary)
+	{
+		this.real = p_real;
+		this.imaginary = p_imaginary;
+	}
+	override public string ToString()
+	{
+		return $"{this.real}+i{this.imaginary}";
+	}
+}
+
+	2+i3 
++	7+i8
+---------	
+    9+i11
+	
+Solved ComplexNumber	
+	
+
+    class ComplexNumber // 2+i3 // real part, imaginary part 
+    {
+        private int real;
+        private int imaginary;
+
+        public ComplexNumber(int p_real, int p_imaginary)
+        {
+            this.real = p_real;
+            this.imaginary = p_imaginary;
+        }
+        override public string ToString()
+        {
+            return $"{this.real}+i{this.imaginary}";
+        }
+
+        public ComplexNumber FindSum(ComplexNumber second)
+        {
+            ComplexNumber first = this;
+            ComplexNumber sum = new ComplexNumber(0, 0);
+            sum.real = first.real + second.real;
+            sum.imaginary = first.imaginary + second.imaginary;
+            return sum;
+        }
+    }
+    class Program 
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Start of the program");
+            ComplexNumber firstNumber = new ComplexNumber(2, 3);
+            ComplexNumber secondNumber = new ComplexNumber(7, 8);
+
+            Console.WriteLine($"first={firstNumber}");
+            Console.WriteLine($"second={secondNumber}");
+
+            ComplexNumber sum = firstNumber.FindSum(secondNumber);
+            Console.WriteLine($"sum={sum}");
+
+            Console.WriteLine("End of the program");
+
+            Console.Read();
+        }
+    }	
+	
+Job:
+	Include the FindDifference function to find diff bt two complex numbers

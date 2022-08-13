@@ -615,33 +615,438 @@ Hello 1004 is studing the subject Econmics!
 End of the program
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+
+
 1. class with one method 					| test 
 2. derive it override here 					| test 
 		3. assign into parent class reference and call method 
 		4. copy parent reference to child reference and call method 
+		
+Thosif is not there 		
+Logesh 
+	class Phone 
+		MakeCall	
+	class AndroidPhone:Phone 
+		MakeCall 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^		
+ class Phone
+    {
+        virtual public void MakeCall()
+        {
+            Console.WriteLine("Make Voice Call");
+        }
+    }
+    class AndroidPhone:Phone
+    {
+        override public void MakeCall()
+        {
+            Console.WriteLine("Make Video Call");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Start of the program");
+            //Derived Class object by base reference and derived reference
+            Phone childPhone = new AndroidPhone();
+            childPhone.MakeCall();
+
+            AndroidPhone parentAndroid = (AndroidPhone)childPhone;
+            parentAndroid.MakeCall();
+
+            Phone anotherChild = parentAndroid;
+            anotherChild.MakeCall();
+
+            //base Class object by base reference
+            Phone fatherPhone = new Phone();
+            fatherPhone.MakeCall();
+
+
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+    }	
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Start of the program
+Make Video Call
+Make Video Call
+Make Video Call
+Make Voice Call
+End of the program
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. class with no-implementation method 		| test ???
 2. derive it override here 					| test 
 		3. assign into parent class reference and call method 
 		4. copy parent reference to child reference and call method 
 
+Ashish
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ abstract class Phone
+    {
+        virtual public void MakeCall()
+        {
+            Console.WriteLine("Make Voice Call");
+        }
+        abstract public void SendSMS();
+    }
+    class AndroidPhone:Phone
+    {
+        override public void MakeCall()
+        {
+            Console.WriteLine("Make Video Call");
+        }
+        override public void SendSMS()
+        {
+            Console.WriteLine("Send SMS");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Start of the program");
+            //Derived Class object by base reference and derived reference
+            Phone childPhone = new AndroidPhone();
+            childPhone.MakeCall();
+            childPhone.SendSMS();
+
+            AndroidPhone parentAndroid = (AndroidPhone)childPhone;
+            parentAndroid.MakeCall();
+            parentAndroid.SendSMS();
+
+            Phone anotherChild = parentAndroid;
+            anotherChild.MakeCall();
+            anotherChild.SendSMS();
+
+            //base Class object by base reference // ERROR because of abstract class
+            /*
+            Phone fatherPhone = new Phone();
+            fatherPhone.MakeCall();
+            */
+
+
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+    }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Start of the program
+Make Video Call
+Send SMS
+Make Video Call
+Send SMS
+Make Video Call
+Send SMS
+End of the program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 1. interface with a method 					| test 
 2. implement it in a class 					| test 
 		3. assign into parent interface reference and call method 
 		4. copy parent reference to child reference and call method 
+Savithri
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+interface IPhone
+    {
+        void MakeCall();
+        
+        void SendSMS();
+    }
+    class AndroidPhone:IPhone
+    {
+        public void MakeCall()
+        {
+            Console.WriteLine("Make Video Call");
+        }
+        public void SendSMS()
+        {
+            Console.WriteLine("Send SMS");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Start of the program");
+            //Implemented Class object by base interface reference and implemented reference
+            IPhone childPhone = new AndroidPhone();
+            childPhone.MakeCall();
+            childPhone.SendSMS();
 
-1. interface with a method 
-2. inherit interface into another interface with another method 
-3. implement (2) into class 
+            AndroidPhone parentAndroid = (AndroidPhone)childPhone;
+            parentAndroid.MakeCall();
+            parentAndroid.SendSMS();
 
-1. interface with a method 
+            IPhone anotherChild = parentAndroid;
+            anotherChild.MakeCall();
+            anotherChild.SendSMS();
+
+            //we cannot creaate the object for interface IPhone
+            /*
+            IPhone fatherPhone = new IPhone();
+            fatherPhone.MakeCall();
+            */
+
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+    }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Start of the program
+Make Video Call
+Send SMS
+Make Video Call
+Send SMS
+Make Video Call
+Send SMS
+End of the program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. interface with a method 						
 2. another interface with a method 
 3. inherit (1) and (2) into third interface 
 4. implement (3) into a class 
 5. implement (1) and (2) into a class 
 
+interface IArea
+	FindArea 
+interface IPermeter
+	FindPerimeter 
+interface IAreaPerimer:IArea,IPerimeter	
+
+RectangleIAP:IAreaPerimer 
+	FindArea
+	FindPerimter 
+
+RectangleIAIP:IArea,IPermeter	
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Gokulraj is off the day 
+Sebin Benny 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    interface IArea
+    {
+        int FindArea(int length, int width);
+    }
+
+    interface IPerimeter
+    {   
+        int FindPerimeter(int length, int width);
+    }
+
+    interface IAreaPerimeter : IArea, IPerimeter
+    {
+
+    }
+
+    class RectangleIAP : IAreaPerimeter
+    {
+        public int FindArea(int length, int width)
+        {
+            return length *width;
+        }
+        public int FindPerimeter(int length, int width)
+        {
+            return 2 * (length+width);
+        }
+    }
+    class RectangleIAIP : IArea, IPerimeter
+    {
+        public int FindArea(int length, int width)
+        {
+            return length * width;
+        }
+        public int FindPerimeter(int length, int width)
+        {
+            return 2 * (length + width);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            IArea area;
+            IPerimeter perimeter;
+            IAreaPerimeter areaPerimter;
+
+            Console.WriteLine("Start of the program");
+            RectangleIAP hall = new RectangleIAP();
+            Console.WriteLine("hall area is " + hall.FindArea(20,10));
+            Console.WriteLine("hall perimeter is " + hall.FindPerimeter(20, 10));
+
+            area = hall;
+            Console.WriteLine("hall area is " + area.FindArea(20, 10));
+            
+            perimeter = hall;
+            Console.WriteLine("hall perimeter is " + perimeter.FindPerimeter(20, 10));
+
+            areaPerimter = hall;
+            Console.WriteLine("hall area is " + areaPerimter.FindArea(20, 10));
+            Console.WriteLine("hall perimeter is " + areaPerimter.FindPerimeter(20, 10));
+
+
+            RectangleIAIP room = new RectangleIAIP();
+
+            Console.WriteLine("room area is " + room.FindArea(10, 10));
+            Console.WriteLine("room perimeter is " + room.FindPerimeter(10,10));
+
+            area = room;
+            Console.WriteLine("room area is " + area.FindArea(20, 10));
+
+            perimeter = room;
+            Console.WriteLine("room perimeter is " + perimeter.FindPerimeter(20, 10));
+
+            RectangleIAIP roomFriend = (RectangleIAIP)perimeter;
+            Console.WriteLine("room area is " + roomFriend.FindArea(10, 10));
+            Console.WriteLine("room perimeter is " + roomFriend.FindPerimeter(20, 10));
+
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+    }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+interface IMileage
+	FindMileage
+	
+interface IAirPollution
+	CalculateAirPollution
+	
+interface IMileagePollution:IMileage,IAirPollution	
+
+class FuelScooter:IMileagePollution 
+	FindMileage
+	CalculateAirPollution 
+
+class ElecticScooter:IMileage,IAirPollution	
+	FindMileage
+	CalculateAirPollution 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. interface with a method 
+2. interface with a method
+3. implement (1) and (2) into class 
+
+Athira
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+interface IFlightClass		!!! Business, Economy
+	void DisplayClass(string className);
+interface IFlightType		!!! Domestic, Internation
+	void DisplayType(string typeName);
+	
+class CommercialAeroPlane: IFlightClass, IFlightType
+	public void DisplayClass(string className){}
+	public void DisplayType(string typeName){}
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   interface IFlightClass     // !!! Business, Economy
+    {
+        void DisplayClass(string className);
+    }
+
+    interface IFlightType       //!!! Domestic, Internation
+    {
+        void DisplayType(string typeName);
+    }
+    class CommercialAeroPlane : IFlightClass, IFlightType
+    {
+        public void DisplayClass(string className)
+        {
+            Console.WriteLine("AeroPlane class is " + className);
+        }
+        public void DisplayType(string typeName)
+        {
+            Console.WriteLine("AeroPlane type is " + typeName);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            CommercialAeroPlane economyDomesticFlight = new CommercialAeroPlane();
+            CommercialAeroPlane economyInternationalFlight = new CommercialAeroPlane();
+            CommercialAeroPlane businessDomesticFlight = new CommercialAeroPlane();
+            CommercialAeroPlane businessInternationalFlight = new CommercialAeroPlane();
+
+            economyDomesticFlight.DisplayClass("Economy");
+            economyDomesticFlight.DisplayType("Domestic");
+
+            economyInternationalFlight.DisplayClass("Economy");
+            economyInternationalFlight.DisplayType("International");
+
+            businessDomesticFlight.DisplayClass("Business");
+            businessDomesticFlight.DisplayType("Domestic");
+
+            businessInternationalFlight.DisplayClass("Business");
+            businessInternationalFlight.DisplayType("International");
+
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+    }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AeroPlane class is Economy
+AeroPlane type is Domestic
+AeroPlane class is Economy
+AeroPlane type is International
+AeroPlane class is Business
+AeroPlane type is Domestic
+AeroPlane class is Business
+AeroPlane type is International
+End of the program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^	
+
 1. create a sealed function class 
 2. inherit (1)
+
+Abhirami
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+class Program
+    {
+        class Animal
+        {  
+            virtual public void Move()
+            {
+                Console.WriteLine("Animal can move.");
+            }
+        }
+        class Mammal:Animal
+        {
+            sealed override public void Move()
+            {
+                Console.WriteLine("Mammal can walk.");
+            }
+        }
+
+        /*class Cat : Mammal // Compile Time Error
+        {
+            override public void Move()
+            {
+
+            }
+        }*/
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Start of the program");
+            Mammal cat = new Mammal();
+            cat.Move();
+
+            Animal fish = new Animal();
+            fish.Move();
+
+            Console.WriteLine("End of the program");
+            Console.Read();
+        }
+    }
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Start of the program
+Mammal can walk.
+Animal can move.
+End of the program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 1. create a sealed class 
 2. inherit (1) check 
