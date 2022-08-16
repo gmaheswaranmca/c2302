@@ -4,6 +4,19 @@ Property
 	- Get accessor 			----> It should return a data
 	- Set accessor 			----> Takes the data using the keyword value
 	- It is used to encapsulate member data(/variable/field/attribute) 
+
+Syntax:
+	public returnType propertyName
+	{
+		get
+		{
+			return attribute;
+		}
+		set 
+		{
+			attribute = value;
+		}
+	}
 	
 Readonly Property 
 	- Only Get accessor 
@@ -13,6 +26,44 @@ WriteOnly Property
 
 Read/Write Property 
 	- Both Get and Set accessors
+	
+Indexer Property 
+	- allows object referecne to act as array ie subscripted object reference 
+	- Array based same type attributes can be accessed via indexer 
+	
+	-return value is any type you are mentioning 
+		Suppose if it Person{first_name,middle_name, last_name}
+			indexer for Person should return string 
+			indexer can take number or name as the input 
+				to achieve number based indexer, name based indexer 
+		Suppose if it Box{length,width,height}
+			indexer for Box should return integer 
+			indexer can take number or name as the input 
+				to achieve number based indexer, name based indexer 	
+
+Syntax:
+	public returnType this[int index]
+	{
+		get
+		{
+			if(index == 0)
+				return attribute1;
+			else if(index == 1)
+				return attribute2;		
+			else if(index == 2)
+				return attribute3;		
+			return errorCode;
+		}
+		set 
+		{
+			if(index == 0)
+				attribute1 = value;
+			else if(index == 1)
+				attribute2 = value;
+			else if(index == 2)
+				attribute3 = value;
+		}
+	}					
 	
 Methods are of two kinds
 	1. block body 
@@ -208,5 +259,244 @@ Create a class Box that has the following:
 	o ToString() overridden function to return the string 
 		consisting of space separated length, width and height 
 	
-	
+*****************************************Problem 4*****************************************	
+Defining class for all purpose
+
+Create a class Box that has the following:
+	o A member variables length, width and height [integers/private]		
+	o A constructor function:
+		It takes 3 parameters and assigns it to length, width and height respectively.
+	o A constructor function:
+		It takes no paraemeters.
+	o ToString() overridden function to return the string 
+		consisting of space separated length, width and height 	
+	o All the member variables have only properties with set/get accessors both
+	o indexer property 
+		number based indexer will help to read / write the attributes as array index access 
+		name based indexer
 		
+Main 
+Console.WriteLine("Start of the program");
+
+            Box box1 = new Box();//no-arg constructor 
+            box1.Length = 4;
+            box1.Width = 2;
+            box1.Height = 6;
+            Console.WriteLine($"Box is of length={box1.Length}, width={box1.Width}, height={box1.Height}");
+
+            Box box2 = new Box();//no-arg constructor 
+            box2.Length = 4;
+            box2.Width = 2;
+            box2.Height = 6;
+            Console.WriteLine(box2);//ToString is called automatically 
+
+            Box box3 = new Box(4, 2, 6);//arg constructor 
+            Console.WriteLine(box3);//ToString is called automatically 
+
+            Box box4 = new Box(4, 2, 6);//arg constructor 
+            Console.WriteLine($"Box is of length={box4.Length}, width={box4.Width}, height={box4.Height}");
+
+            Box box5 = new Box();//no-arg constructor 
+            box5[0] = 4; //indexer write
+            box5[1] = 2;
+            box5[2] = 6;
+            Console.WriteLine("length=" + box5[0]);//indexer read
+            Console.WriteLine("width=" + box5[1]);
+            Console.WriteLine("height=" + box5[2]);
+
+            Box box6 = new Box();//no-arg constructor 
+            box6["length"] = 4; //named indexer write
+            box6["width"] = 2;
+            box6["height"] = 6;
+            Console.WriteLine("length=" + box6["length"]);//named indexer read
+            Console.WriteLine("width=" + box6["width"]);
+            Console.WriteLine("height=" + box6["height"]););
+	
+	
+	
+public int this[int index]
+        {
+            get
+            {
+                if (index == 0)
+                    return this.Length;
+                else if (index == 1)
+                    return this.Width;
+                else if (index == 2)
+                    return this.Height;
+                return -1;
+            }
+            set
+            {
+                if (index == 0)
+                    this.Length = value;
+                else if (index == 1)
+                    this.Width = value;
+                else if (index == 2)
+                    this.Height = value;
+            }
+        }
+
+        public int this[string index]
+        {
+            get
+            {
+                if (index == "length")
+                    return this.Length;
+                else if (index == "width")
+                    return this.Width;
+                else if (index == "height")
+                    return this.Height;
+                return -1;
+            }
+            set
+            {
+                if (index == "length")
+                    this.Length = value;
+                else if (index == "width")
+                    this.Width = value;
+                else if (index == "height")
+                    this.Height = value;
+            }
+        }	
+		
+		
+----------------Completed Code----------------------
+class Box
+    {
+        private int length;
+        private int width;
+        private int height;
+
+        public int Length
+        {
+            get { return this.length; }
+            set
+            {
+                this.length = value;
+            }
+        }
+        public int Width
+        {
+            get { return this.width; }
+            set
+            {
+                this.width = value;
+            }
+        }
+        public int Height
+        {
+            get { return this.height; }
+            set
+            {
+                this.height = value;
+            }
+        }
+
+        public Box()
+        {
+        }
+
+        public Box(int length, int width, int height)
+        {
+            this.Length = length;
+            this.Width = width;
+            this.Height = height;
+        }
+
+        public override string ToString()
+        {
+            return $"width={this.Width}, length={this.Length} and height={this.Height}";
+        }
+
+        public int this[int index]
+        {
+            get
+            {
+                if (index == 0)
+                    return this.Length;
+                else if (index == 1)
+                    return this.Width;
+                else if (index == 2)
+                    return this.Height;
+                return -1;
+            }
+            set
+            {
+                if (index == 0)
+                    this.Length = value;
+                else if (index == 1)
+                    this.Width = value;
+                else if (index == 2)
+                    this.Height = value;
+            }
+        }
+
+        public int this[string index]
+        {
+            get
+            {
+                if (index == "length")
+                    return this.Length;
+                else if (index == "width")
+                    return this.Width;
+                else if (index == "height")
+                    return this.Height;
+                return -1;
+            }
+            set
+            {
+                if (index == "length")
+                    this.Length = value;
+                else if (index == "width")
+                    this.Width = value;
+                else if (index == "height")
+                    this.Height = value;
+            }
+        }
+    }
+
+    class Program 
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Start of the program");
+
+            Box box1 = new Box();//no-arg constructor 
+            box1.Length = 4;
+            box1.Width = 2;
+            box1.Height = 6;
+            Console.WriteLine($"Box is of length={box1.Length}, width={box1.Width}, height={box1.Height}");
+
+            Box box2 = new Box();//no-arg constructor 
+            box2.Length = 4;
+            box2.Width = 2;
+            box2.Height = 6;
+            Console.WriteLine(box2);//ToString is called automatically 
+
+            Box box3 = new Box(4, 2, 6);//arg constructor 
+            Console.WriteLine(box3);//ToString is called automatically 
+
+            Box box4 = new Box(4, 2, 6);//arg constructor 
+            Console.WriteLine($"Box is of length={box4.Length}, width={box4.Width}, height={box4.Height}");
+
+            Box box5 = new Box();//no-arg constructor 
+            box5[0] = 4; //indexer write
+            box5[1] = 2;
+            box5[2] = 6;
+            Console.WriteLine("length=" + box5[0]);//indexer read
+            Console.WriteLine("width=" + box5[1]);
+            Console.WriteLine("height=" + box5[2]);
+
+            Box box6 = new Box();//no-arg constructor 
+            box6["length"] = 4; //named indexer write
+            box6["width"] = 2;
+            box6["height"] = 6;
+            Console.WriteLine("length=" + box6["length"]);//named indexer read
+            Console.WriteLine("width=" + box6["width"]);
+            Console.WriteLine("height=" + box6["height"]);
+        
+
+            Console.Read();
+        }
+    }
