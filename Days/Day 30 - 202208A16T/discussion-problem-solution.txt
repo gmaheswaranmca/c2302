@@ -23,7 +23,7 @@ Methods are of two kinds
 	2. expression body 
 		get => subject1name;
 		
-
+*****************************************Problem 1*****************************************
 Create a class Student that has the following:
 	A member variables subject1name, subject2name, subject3name, subject4name, 
 		subject5name, subject6name [string]
@@ -194,14 +194,14 @@ Solution 3:
 		get accessor 		(experssion body)
 		and set accessor 	(experssion body)
 		
-Problem 2		
+*****************************************Problem 2*****************************************		
 Create a class Box that has the following:
 	o A member variables length, width and height [integers/private]
 	o A constructor function:
 		It takes 3 parameters and assigns it to length, width and height respectively.
 	o All the member variables have only properties with get accessors only(read only properties)
 	
-Problem 3
+*****************************************Problem 3*****************************************
 Create a class Box that has the following:
 	o A member variables length, width and height [integers/private]
 	o All the member variables have only properties with set accessors only(write only properties)
