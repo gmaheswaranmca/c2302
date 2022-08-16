@@ -1,0 +1,212 @@
+Property
+	- It is a member of the class 
+	- We have two "code blocks" called accessors of the properties 
+	- Get accessor 			----> It should return a data
+	- Set accessor 			----> Takes the data using the keyword value
+	- It is used to encapsulate member data(/variable/field/attribute) 
+	
+Readonly Property 
+	- Only Get accessor 
+	
+WriteOnly Property 
+	- Only Set accessor 
+
+Read/Write Property 
+	- Both Get and Set accessors
+	
+Methods are of two kinds
+	1. block body 
+		get
+		{
+			return subject1name;
+		}
+	2. expression body 
+		get => subject1name;
+		
+
+Create a class Student that has the following:
+	A member variables subject1name, subject2name, subject3name, subject4name, 
+		subject5name, subject6name [string]
+	A member variables subject1marks, subject2marks, subject3marks, subject4marks, 
+		subject5marks, subject6marks [integers]
+	o Total member variables are 12
+	
+Solution 1: 
+	Properties of 
+		get accessor 		(with body block)
+		and set accessor 	(with body block)
+		
+class Student
+    {
+        private string subject1name;
+        private string subject2name;
+        private string subject3name;
+        private string subject4name;
+        private string subject5name;
+        private string subject6name;
+        private int subject1marks;
+        private int subject2marks;
+        private int subject3marks;
+        private int subject4marks;
+        private int subject5marks;
+        private int subject6marks;
+
+        public string Subject1name
+        {
+            get { return subject1name; }
+            set
+            {
+                subject1name = value;
+            }
+        }
+        public string Subject2name
+        {
+            get { return subject2name; }
+            set
+            {
+                subject2name = value;
+            }
+        }
+        public string Subject3name
+        {
+            get { return subject3name; }
+            set
+            {
+                subject3name = value;
+            }
+        }
+        public string Subject4name
+        {
+            get { return subject4name; }
+            set
+            {
+                subject4name = value;
+            }
+        }
+        public string Subject5name
+        {
+            get { return subject5name; }
+            set
+            {
+                subject5name = value;
+            }
+        }
+        public string Subject6name
+        {
+            get { return subject6name; }
+            set
+            {
+                subject6name = value;
+            }
+        }
+        public int Subject1marks
+        {
+            get { 
+                return subject1marks; }
+            set
+            {
+                subject1marks = value;
+            }
+        }
+        public int Subject2marks
+        {
+            get { return subject2marks; }
+            set
+            {
+                subject2marks = value;
+            }
+        }
+        public int Subject3marks
+        {
+            get { return subject3marks; }
+            set
+            {
+                subject3marks = value;
+            }
+        }
+        public int Subject4marks
+        {
+            get { return subject4marks; }
+            set
+            {
+                subject4marks = value;
+            }
+        }
+        public int Subject5marks
+        {
+            get { return subject5marks; }
+            set
+            {
+                subject5marks = value;
+            }
+        }
+        public int Subject6marks
+        {
+            get { return subject6marks; }
+            set
+            {
+                subject6marks = value;
+            }
+        }
+    }
+
+    class Program 
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Start of the program");
+
+            Student albin = new Student();
+            albin.Subject1name = "malayalam";   //set accessor of property
+            albin.Subject2name = "english";
+            albin.Subject3name = "Physics";
+            albin.Subject4name = "Chemistry";
+            albin.Subject5name = "Mathematics";
+            albin.Subject6name = "Computer Science";
+            albin.Subject1marks = 60;//60 + 12 = 72
+            albin.Subject2marks = 85;
+            albin.Subject3marks = 60;
+            albin.Subject4marks = 80;
+            albin.Subject5marks = 90;
+            albin.Subject6marks = 95;
+
+            Console.WriteLine(albin.Subject1name + " marks is " + albin.Subject1marks);//get accessor of property 
+            Console.WriteLine(albin.Subject2name + " marks is " + albin.Subject2marks);
+            Console.WriteLine(albin.Subject3name + " marks is " + albin.Subject3marks);
+            Console.WriteLine(albin.Subject4name + " marks is " + albin.Subject4marks);
+            Console.WriteLine(albin.Subject5name + " marks is " + albin.Subject5marks);
+            Console.WriteLine(albin.Subject6name + " marks is " + albin.Subject6marks);
+
+
+            Console.WriteLine("End of the program");
+
+            Console.Read();
+        }
+    }		
+		
+Solution 2: 
+	Properties of 
+		get accessor 		(auto)
+		and set accessor 	(auto)
+
+Solution 3: 
+	Properties of 
+		get accessor 		(experssion body)
+		and set accessor 	(experssion body)
+		
+Problem 2		
+Create a class Box that has the following:
+	o A member variables length, width and height [integers/private]
+	o A constructor function:
+		It takes 3 parameters and assigns it to length, width and height respectively.
+	o All the member variables have only properties with get accessors only(read only properties)
+	
+Problem 3
+Create a class Box that has the following:
+	o A member variables length, width and height [integers/private]
+	o All the member variables have only properties with set accessors only(write only properties)
+	o ToString() overridden function to return the string 
+		consisting of space separated length, width and height 
+	
+	
+		
