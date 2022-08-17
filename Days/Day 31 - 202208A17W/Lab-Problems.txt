@@ -51,3 +51,13 @@ Input:
 	
 Output:
 	Maximum salary is 2800
+	
+	
+3. Given array, find each element the reverse and store it in another array
+Data type of the is "short"
+I/P
+size=4, 
+array=15 23 18 17
+O/P
+Given array is 15 23 18 17 
+The expected array is 51 32 81 71
