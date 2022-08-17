@@ -1,0 +1,53 @@
+1. Find the largest element from an array 
+
+Problement Statement   
+For given N Salaries, find maximum salary
+
+Test Case 1    
+Input:
+	Enter number of salaries(N):5
+	Enter Salary 1 : 1000
+	Enter Salary 2 : 3000
+	Enter Salary 3 : 2000
+	Enter Salary 4 : 2500
+	Enter Salary 5 : 2800
+Output:
+	Maximum salary is 3000
+	
+Test Case 2  
+Input:
+	Enter number of salaries(N):4
+	Enter Salary 1 : 2800
+	Enter Salary 2 : 2000
+	Enter Salary 3 : 3000
+	Enter Salary 4 : 1000
+	
+Output:
+	Maximum salary is 3000
+	
+2. Find the second largest element from an array 
+
+Problement Statement   
+For given N Salaries, find second maximum salary
+
+Test Case 1    
+Input:
+	Enter number of salaries(N):5
+	Enter Salary 1 : 1000
+	Enter Salary 2 : 3000
+	Enter Salary 3 : 2000
+	Enter Salary 4 : 2500
+	Enter Salary 5 : 2800
+Output:
+	Second Maximum salary is 2800
+	
+Test Case 2  
+Input:
+	Enter number of salaries(N):4
+	Enter Salary 1 : 2800
+	Enter Salary 2 : 2000
+	Enter Salary 3 : 3000
+	Enter Salary 4 : 1000
+	
+Output:
+	Maximum salary is 2800
