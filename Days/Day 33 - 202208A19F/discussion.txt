@@ -1,0 +1,270 @@
+arrays and strings:
+Topics
+	1. Arrays
+		Linear Data Type 
+		Collection of same type data 
+		
+		
+	2. Types of Arrays
+		1D array 
+		2D array 
+		Multidimension array 
+		jagged array 
+		
+		int array 
+		string array 
+		double array 
+		employees array using class Employee 
+				employees is of Employee array			????
+				
+	3. Strings
+	4. String Methods
+	
+Learning Outcomes:
+	1. Able to write programs on 
+		Matrix Addition, 
+			   Multiplication, 
+			   Transpose 
+			   
+	  Count the number of vowels, 
+					      consonants, 
+						  special characters in the given String.
+	2. Able to write programs on Sorting arrays 
+		using different algorithms
+	3. Able to search a value in an array 
+		(linear and binary)
+	4. Able to create programs for 
+		finding median, 
+				mode value , 
+				highest, 
+				second highest 
+					and
+				duplicate elements in an array	
+------------------------------------------------------------------------
+FN Session
+	o object array 
+	o Started strings 
+		-- concat method 
+		-- string comparison
+		-- copy method 
+		-- Contains, EndsWith, 
+				StartsWith xxxx
+		-- ToUpper, ToLower 					xxxx
+		-- SubString??				revise 
+		-- IndexOf 					xxxx
+------------------------------------------------------------------------
+To search an employee from array of employees 
+------------------------------------------------------------------------	
+
+------------------------------------------------------------------------
+int array 		int[] numbers = {30,20,50,10,40};
+string array 	string[] names = {"gokul","susheela","logesh","chitraa","lalasa","delisa"};
+double array 	double[] salaries = {3000,2000,5000,1000,4000};
+short array 	short[] numbers = {30,20,50,10,40};
+array of class Employee -- objects here employees 
+	{empId,name,deptName,jobTitle,salary}
+				Employee[] employees = {
+					new Employee(1001,"gokul","Communications","Communication Engineer",3000),
+					new Employee(1002,"susheela","Computer Science","Software Architech",2000),					
+					new Employee(1003,"logesh","Communications","Software Designer",5000),
+					new Employee(1004,"chitraa","Computer Science","Programmer",1000),
+					new Employee(1005,"lalasa","Computer Applications","Software Engineer",4000),
+					new Employee(1006,"delisa","Information Science","IT Specialist",2500),
+				} 
+array of class Student -- objects here students 
+			{rollNumber,name,mark1,mark2,total,average}
+			Student[] students = {
+					new Student(1001,"gokul",70,85),
+					new Student(1002,"susheela",80,65),					
+					new Student(1003,"logesh",57,68),
+					new Student(1004,"chitraa",75,90),
+					new Student(1005,"lalasa",65,45),
+					new Student(1006,"delisa",80,68)
+				} 
+------------------------------------------------------------------------
+1. largest element 
+2. sort array 
+	ascending 		
+	descending 
+	
+	sorting "legacy selection sort technique"
+	
+3. second largest element 
+4. smallest element 
+5. second smallest element 
+6. read array 
+7. print array
+8. duplicate removal 
+9. rotate array left k positions 
+10. rotate array right k positions 
+11. reverse the array !!!!!!******************************
+12. reverse each element(each number reversal) of the array !!!!DONE 
+
+13. search 
+	linear 
+	binary 
+14. sort algorithms 
+	selection sort 
+	bubble sort 
+	insertion sort 
+	quick sort 
+	merge sort 	
+------------------------------------------------------------------------
+
+Given problem statement:
+	To search an employee from array of employees
+
+13. search 
+	linear 				!!! unsorted array --- traversal of array from first to last elements 
+	binary 				!!! sorted array ---
+	
+array of class Employee -- objects here employees 
+	{empId,name,deptName,jobTitle,salary}
+	
+Employee[] employees = {
+	new Employee(1001,"gokul","Communications","Communication Engineer",3000),
+	new Employee(1002,"susheela","Computer Science","Software Architech",2000),					
+	new Employee(1003,"logesh","Communications","Software Designer",5000),
+	new Employee(1004,"chitraa","Computer Science","Programmer",1000),
+	new Employee(1005,"lalasa","Computer Applications","Software Engineer",4000),
+	new Employee(1006,"delisa","Information Science","IT Specialist",2500),
+} 
+------------------------------------------------------------------------
+RULE: DONT USE only start index and size of the array for search and sorting 
+      ===> DO USE two indices(beginnin and end indices) from the array 
+			if we apply search and sort for entire array 
+			just use "start index and end index" as two indices 
+------------------------------------------------------------------------
+Given array: (Not applicable for binary search, because elements are not sorted)
+30,20,50,10,40,90,60,15,45,78, size=10
+
+Do Sort To apply the binary search 
+
+Sorted array: (applicable for binary search) 
+10,15,20,30,40,45,50,60,78,90, size=10
+
+Search Element: 30
+
+10,15,20,30,40,45,50,60,78,90
+0							9			0 to size-1
+START 						END 
+
+MID = (START + END) / 2 = (0+9)/2 = 4
+at index 4 the element is 40 
+Is mid element and search element same? No 
+compare mid element and search element 
+	either with < or > 
+now we will use < symbol for comparison 
+
+if search element < MID element 	
+	     30 < 40 
+Our search element will be before the mid element 
+The search element may be available before the mid element 
+ie index 0 to before mid element index [ 4 ]
+ 
+
+10,15,20,30,40,45,50,60,78,90
+0			 |				9			0 to size-1
+START 		 |				END 
+             MID?
+			 
+10,15,20,30						MID = (0 + 3)/2 = 3 /2 = 1
+0   |     3							 
+    |
+	MID?
+search element < MID element ---> FALSE 
+search element > MID element ---> TRUE 
+	here, search element is after the mid element 
+
+	20,30
+	2   3		MID = (2 + 3) / 2 = 5/ 2 = 2
+	|
+	|
+	MID ?
+	
+	
+	30
+	3		START 
+	3		END 				MID = (3+3)/2 = 3
+	3       MID ? YES search element 
+	
+	
+	MID is the position we found the search element 
+------------------------------------------------------------------------
+A-Array, S-Start Index, E-End Index, M-Mid Index, F-Find/Search Element 
+0   1  2 3  4  5  6  7   8  9 		A
+10,15,20,30,40,45,50,60,78,90			index 
+S                           			0
+							E 			9
+		     M							4
+
+S<=E
+	1. F == A[M], we found the element 
+	Rule 1 is failed 
+	2. F < A[M], New End Index ie E=M-1
+	Rule 2 is failed 
+	3. F > A[M], New Start Index ie S=M+1
+S>E --> Element will not be found. Because sub array is empty.
+    	
+			 
+F=30			 
+0   1  2 3  4  5  6  7   8  9 		A
+10,15,20,30,40,45,50,60,78,90			index 
+S                           			0
+							E 			9 [Rule 1 failed, Rule 2 passed]
+		     M							4
+-----------------------------------------------		  
+0   1  2 3  4  5  6  7   8  9 		A
+10,15,20,30,40,45,50,60,78,90			index 
+S                           			0
+		  E 			                3 				
+    M							        1 [Rule 1 failed, Rule 2 failed, Rule 3 is passed]		  
+-----------------------------------------------			
+0   1  2 3  4  5  6  7   8  9 		A
+10,15,20,30,40,45,50,60,78,90			index 
+       S                           	    2
+		  E 			                3 				
+       M							    2 R1F,R2F,R3P
+-----------------------------------------------			
+0   1  2 3  4  5  6  7   8  9 		A
+10,15,20,30,40,45,50,60,78,90			index 
+          S                           	3
+		  E 			                3
+		  M                             3    R1P 								
+-----------------------------------------------	
+Element is at Mid which 3 is the position of the found element ie 30		  
+	   
+	   
+
+
+F=35			 
+0   1  2 3  4  5  6  7   8  9 		A
+10,15,20,30,40,45,50,60,78,90			index 
+S                           			0
+							E 			9 
+		     M							4 R1F,R2P
+			 
+0   1  2 3  4  5  6  7   8  9 		A
+10,15,20,30,40,45,50,60,78,90			index 
+S                           			0
+		  E 			                3 
+    M							        1 R1F,R2F,R3P 
+
+0   1  2 3  4  5  6  7   8  9 		A	
+10,15,20,30,40,45,50,60,78,90			index 
+      S                           		2
+		  E 			                3 
+      M							        2 R1F,R2F,R3P
+	  
+0   1  2 3  4  5  6  7   8  9 		A	
+10,15,20,30,40,45,50,60,78,90			index 
+          S                           	3
+		  E 			                3 
+		  M								3 R1F,R2F,R3P
+		  
+0   1  2 3  4  5  6  7   8  9 		A	
+10,15,20,30,40,45,50,60,78,90			index 
+            S                           4
+		  E 			                3 
+------------------------------------------------------------------------	  
+
