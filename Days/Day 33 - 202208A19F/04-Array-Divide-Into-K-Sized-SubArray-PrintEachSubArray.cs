@@ -31,7 +31,7 @@ class Program
 
 	static void SortArrayDesc(int[] dataList, int startIndex, int endIndex)
 	{
-		//bt startIndex and endIndex,salary = 10,20,28,30,15,sorted salary = 10,15,20,28,30
+		//bt startIndex and endIndex,salary = 10,20,28,30,15,sorted salary = 30,28,20,15,10
 		for (int i = startIndex; i <= (endIndex - 1); i++)//select element
 		{
 			for (int j = i + 1; j <= endIndex; j++)//next elements
