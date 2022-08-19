@@ -31,7 +31,7 @@ class Program
 
 	static void SortArrayDesc(int[] dataList, int startIndex, int endIndex)
 	{
-		//bt startIndex and endIndex,salary = 10,20,28,30,15,sorted salary = 10,15,20,28,30
+		//bt startIndex and endIndex,salary = 10,20,28,30,15,sorted salary = 30,28,20,15,10
 		for (int i = startIndex; i <= (endIndex - 1); i++)//select element
 		{
 			for (int j = i + 1; j <= endIndex; j++)//next elements
@@ -61,19 +61,22 @@ class Program
 	static void Main(string[] args)
 	{
 		//Given List:      30,20,50,10,40,90,60,15,45,78 size = 10
-		//Expected List 1: 10,20,30,40,50,90,78,60,45,15 size = 10
-		//                 --------------                   first five elements sorted asc
-		//                                ---------------   next five elements sorted desc
-		int[] numbers1 = { 30, 20, 50, 10, 40, 90, 60, 15, 45, 78 };
-		int[] numbers2 = { 30, 20, 50, 10, 40, 90, 60, 15, 45, 78 };
+		
+		
 		int numberOfNumbers = 10;
-
+		
+		int[] numbers1 = { 30, 20, 50, 10, 40, 90, 60, 15, 45, 78 };
+		//Given List:      30,20,50,10,40,90,60,15,45,78 size = 10
+		//Expected List 1: 10,15,20,30,40,45,50,60,78,90 size = 10
 		Console.WriteLine("Given array is ");
 		PrintArray(numbers1, 0, numberOfNumbers - 1);
 		SortArrayAsc(numbers1, 0, numberOfNumbers - 1);
 		Console.WriteLine("Asc Sorted array is ");
 		PrintArray(numbers1, 0, numberOfNumbers - 1);
 
+		int[] numbers2 = { 30, 20, 50, 10, 40, 90, 60, 15, 45, 78 };
+		//Given List:      30,20,50,10,40,90,60,15,45,78 size = 10
+		//Expected List 1: 90,78,60,50,45,40,30,20,15,10 size = 10
 		Console.WriteLine("Given array is ");
 		PrintArray(numbers2, 0, numberOfNumbers - 1);
 		SortArrayDesc(numbers2, 0, numberOfNumbers - 1);
