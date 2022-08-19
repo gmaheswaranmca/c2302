@@ -40,9 +40,14 @@ class Program
 
 		return true;
 	}
-		static void Main(string[] args)
+	static void Main(string[] args)
 	{   
+		
 		int[] A = { 10, 15, 20,  40, 30, 45, 50, 60, 78, 90 };
+		//for given array 
+		//we find the array is sorted or not 
+		//we find the any sub array of main array is sorted or not 
+		//					==> if sub array is not sorted, we sort the sub array 
 		int N = 10;
 		int S = 0;
 		int E = N - 1;
