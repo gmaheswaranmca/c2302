@@ -291,3 +291,14 @@ If the sample has an even number of observations,
 then we'll need to calculate the mean of the two middle values 
 in the sorted sample
 ------------------------------------------------------------------------
+
+string.Compare(strA,strB)
+Returns
+	Less than zero(negative number) 			strA < strB
+		strA precedes strB in the sort order.
+	Zero 					strA == strB
+		strA occurs in the same position as strB in the sort order. 
+	Greater than zero(positive number) 		strA > strB
+		strA follows strB in the sort order
+		
+------------------------------------------------------------------------		
