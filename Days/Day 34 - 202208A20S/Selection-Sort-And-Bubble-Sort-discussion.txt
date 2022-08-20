@@ -1,0 +1,105 @@
+30 20 10 15 25
+
+[30] <(20) 10 15 25> Do Swap
+[20]  <30 (10) 15 25> Do Swap 
+[10]  <30 20 (15) 25>
+
+Actual Selection Sort 
+30 20 10 15 25
+[30] <20 10 15 25> min=10, Do Swap 30 and 10
+10 [20] <30 15 25> min=15, Do Swap 20 and 15
+10 15 [30] <20 25> min=20, Do Swap 30 and 20 
+10 15 20 [30] <25> min=25, Do Swap 30 and 25 
+10 15 20 25 30
+
+
+static void SortArrayAsc(Employee[] dataList, int startIndex, int endIndex)
+{   
+	for (int i = startIndex; i <= (endIndex - 1); i++)//select element
+	{
+		int minIndex = i;
+		for (int j = i + 1; j <= endIndex; j++)//next elements
+		{
+			// next element < selected element
+			//if (string.Compare(dataList[j].Name,dataList[i].Name)<0)
+			if (string.Compare(dataList[j].DeptName, dataList[minIndex].DeptName) < 0)
+			{
+				//swap next element and selected element
+				minIndex = j;   
+			}
+		}
+		if(minIndex != i)
+		{
+			Employee temp = dataList[i];
+			dataList[i] = dataList[minIndex];
+			dataList[minIndex] = temp;
+		}
+	}
+}
+
+
+=======================================================
+
+30 20 10 15 25
+Bubble Sort 
+	
+	loop			
+		for each element 
+			compare "element" and its "next element" ie if[next element is less than element]
+				do swap 
+	until "there 'no swap'" 
+
+
+The initial data is
+30 20 10 15 25	
+-- --			Compare "Required Swap?" Yes
+20 30 10 15 25
+   -- --		Compare "Required Swap?" Yes
+20 10 30 15 25
+      -- --		Compare "Required Swap?" Yes
+20 10 15 30 25
+         -- --	Compare "Required Swap?" Yes  
+20 10 15 25 30
+			-- --
+
+Swap was there in the cycle, So we are continuing			
+As last element takes its position ie sorted, so reduce the list to before the last element
+20 10 15 25	
+-- --		Compare "Required Swap?" Yes 
+10 20 15 25
+   -- --	Compare ? Yes 
+10 15 20 25 
+      -- -- Compare ? No    
+
+Swap was there in the cycle, So we are continuing				  
+As last element of the processing list  
+	takes its position ie sorted, 
+	so reduce the list to before the last element of processing list
+10 15 20 	  
+-- --    Compare? No
+10 15 20 
+   -- -- Compare? No 
+   
+Swap was not there in the cycle, So we stop here to conclue "the entire list is sorted"
+
+
+
+=======================================================
+Example 2
+Initial Data 
+10 20 30 40 50 60 70
+-- --                 ?N
+10 20 30 40 50 60 70
+   -- --              ?N
+10 20 30 40 50 60 70
+      -- --           ?N
+10 20 30 40 50 60 70
+         -- --        ?N
+10 20 30 40 50 60 70		 
+            -- --     ?N
+10 20 30 40 50 60 70		 			
+               -- --  ?N
+			   
+Is there any swap in the previous cycle? There is no swap in the cycle.
+So, We conclude that "the list is sorted"
+=======================================================
