@@ -302,3 +302,39 @@ Returns
 		strA follows strB in the sort order
 		
 ------------------------------------------------------------------------		
+enum type:
+	It is the value type which will have collection of named constants in its definition.
+	o Each named constant is assoiciated with an integer number.
+	o First constant by default it will take zero.
+	o Next constant if number is not associated manually, 
+	  is associated next integer number from its previous constant 
+
+enum SearchTechnique
+{ 
+	LinearSearch,
+	BinarySearch
+}//LinearSearch=0,BinarySearch=1
+
+enum SearchTechnique
+{ 
+	LinearSearch=1,
+	BinarySearch
+}//LinearSearch=1,BinarySearch=2
+
+
+enum SearchTechnique
+{ 
+	LinearSearch=1,
+	BinarySearch=4
+}//LinearSearch=1,BinarySearch=4
+
+
+//Define variable for type enum SearchTechnique
+SearchTechnique searchTech;
+
+searchTech = SearchTechnique.LinearSearch;
+searchTech = SearchTechnique.BinarySearch;
+
+//Define variable for type enum SearchTechnique and initialize
+SearchTechnique searchTech = SearchTechnique.LinearSearch;
+------------------------------------------------------------------------

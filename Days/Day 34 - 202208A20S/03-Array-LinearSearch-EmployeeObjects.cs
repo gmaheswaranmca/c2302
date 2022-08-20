@@ -54,7 +54,7 @@ class Program
 
 	static void Main(string[] args)
 	{
-		//For array=10,15,20,30,40,45,50,60,78,90 of size=10, search the given number
+		//employees's 
 		Employee[] employees = {
 			new Employee(1001,"gokul","Communications","Communication Engineer",3000),
 			new Employee(1002,"susheela","Computer Science","Software Architech",2000),
