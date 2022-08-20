@@ -45,8 +45,7 @@ class Program
 				// next element < selected element
 				//if (string.Compare(dataList[j].Name,dataList[i].Name)<0)
 				if (string.Compare(dataList[j].DeptName, dataList[minIndex].DeptName) < 0)
-				{
-					//swap next element and selected element
+				{					
 					minIndex = j;
 				}
 			}

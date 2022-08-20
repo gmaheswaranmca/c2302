@@ -21,8 +21,7 @@ class Program
 			{
 				// next element < selected element
 				if (dataList[j]<dataList[minIndex])
-				{
-					//swap next element and selected element
+				{					
 					minIndex = j;   
 				}
 			}
