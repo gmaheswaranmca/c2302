@@ -267,4 +267,27 @@ S                           			0
             S                           4
 		  E 			                3 
 ------------------------------------------------------------------------	  
+In statistics maths, a mode is a value that occurs the highest numbers of time.
+------------------------------------------------------------------------	  
+Calculating the Mean of a Sample
+If we have a sample of numeric values, 
+then its mean or the average is the total sum of the values (or observations) 
+divided by the number of values.
 
+Say we have the sample [4, 8, 6, 5, 3, 2, 8, 9, 2, 5]. 
+We can calculate its mean by performing the operation:
+
+(4 + 8 + 6 + 5 + 3 + 2 + 8 + 9 + 2 + 5) / 10 = 5.2
+------------------------------------------------------------------------
+The median of a sample of numeric data is the value 
+that lies in the middle when we sort the data. 
+The data may be sorted in ascending or descending order, 
+the median remains the same.
+When locating the number in the middle of a sorted sample, we can face two kinds of situations:
+
+If the sample has an odd number of observations, 
+then the middle value in the sorted sample is the median
+If the sample has an even number of observations, 
+then we'll need to calculate the mean of the two middle values 
+in the sorted sample
+------------------------------------------------------------------------

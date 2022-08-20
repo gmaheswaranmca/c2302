@@ -1,0 +1,27 @@
+static void SortArrayAsc(int[] dataList, int startIndex, int endIndex)
+{
+	//bt startIndex and endIndex,salary = 10,20,28,30,15,sorted salary = 10,15,20,28,30
+	for (int i = startIndex; i <= (endIndex - 1); i++)//select element
+	{
+		for (int j = i + 1; j <= endIndex; j++)//next elements
+		{
+			if (dataList[j] < dataList[i])// next element < selected element
+			{
+				//swap next element and selected element
+				int temp = dataList[i];
+				dataList[i] = dataList[j];
+				dataList[j] = temp;
+			}
+		}
+	}
+}
+
+Sorting:
+	o Selection Sorting (Legacy Selection)
+	o in-place sorting 
+	o comparison sorting 
+	o The above algoirth will work for 
+			- entire array and
+			- any sub array of main array 
+			
+			
