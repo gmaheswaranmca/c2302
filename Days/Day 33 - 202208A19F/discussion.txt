@@ -308,6 +308,9 @@ enum type:
 	o First constant by default it will take zero.
 	o Next constant if number is not associated manually, 
 	  is associated next integer number from its previous constant 
+	  
+	-- type conversion is there 
+		between enum constant names and its associated numbers as integer 
 
 enum SearchTechnique
 { 
@@ -338,3 +341,10 @@ searchTech = SearchTechnique.BinarySearch;
 //Define variable for type enum SearchTechnique and initialize
 SearchTechnique searchTech = SearchTechnique.LinearSearch;
 ------------------------------------------------------------------------
+like 
+	bool -> true, false
+enum is for user-defined datatype of set of constant names 
+------------------------------------------------------------------------
+	ConnectionType.UDP
+	ConnectionType.TCP
+------------------------------------------------------------------------	
