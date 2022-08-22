@@ -1,0 +1,86 @@
+****Base Task:****
+Enter number of ages:10
+Enter ages one by one:
+Enter age at 0 :30
+Enter age at 1 :20
+Enter age at 2 :50
+Enter age at 3 :10
+Enter age at 4 :40
+Enter age at 5 :90
+Enter age at 6 :60
+Enter age at 7 :15
+Enter age at 8 :45
+Enter age at 9 :78
+The given ages are
+30 20 50 10 40 90 60 15 45 78 
+
+****Task 1:****
+the min age is 78
+the max age is 90
+the diff of min and max age is 12
+the diff is not divisible by 5
+****Task 2:****
+The distinct ages are
+30 20 50 10 40 90 60 15 45 78 
+
+****Task 3:****
+The list of age and frequency:
+30 occurs 1 times.
+20 occurs 1 times.
+50 occurs 1 times.
+10 occurs 1 times.
+40 occurs 1 times.
+90 occurs 1 times.
+60 occurs 1 times.
+15 occurs 1 times.
+45 occurs 1 times.
+78 occurs 1 times.
+
+
+****Task 4:****
+Bofore Ascending Order, Ages:
+30 20 50 10 40 90 60 15 45 78 
+
+After Ascending Order, Ages:
+10 15 20 30 40 45 50 60 78 90 
+
+****Task 5:****
+Bofore Descending Order, Ages:
+10 15 20 30 40 45 50 60 78 90 
+
+After Descending Order, Ages:
+90 78 60 50 45 40 30 20 15 10 
+
+****Task 6:****
+Bofore Descending Order by freq:
+The list of age and frequency:
+90 occurs 1 times.
+78 occurs 1 times.
+60 occurs 1 times.
+50 occurs 1 times.
+45 occurs 1 times.
+40 occurs 1 times.
+30 occurs 1 times.
+20 occurs 1 times.
+15 occurs 1 times.
+10 occurs 1 times.
+
+
+After Descending Order by freq:
+The list of age and frequency:
+90 occurs 1 times.
+78 occurs 1 times.
+60 occurs 1 times.
+50 occurs 1 times.
+45 occurs 1 times.
+40 occurs 1 times.
+30 occurs 1 times.
+20 occurs 1 times.
+15 occurs 1 times.
+10 occurs 1 times.
+
+
+****Task 7:****
+The number of even ages:8
+The number of odd ages:2
+****End!!!

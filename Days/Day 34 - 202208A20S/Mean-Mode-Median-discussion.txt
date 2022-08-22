@@ -1,10 +1,19 @@
 for numbers=30, 20, 50, 10, 40, 90, 60, 15, 45, 78, Size=10
 	find the following
 	o Mean		= Sum(numbers)/Size 
-	o Mode		= a value that occurs the highest numbers of time
-	              If each element is a distinct, then maximum of the element is the mode.
+		return type is double 
+	o Mode		= "a value that occurs the highest numbers of time."
+				  if more than one element have highest frequency, 
+				  all highest freq elements are modes -- multiple elements
+	              if the elements are distinct, return -1 as the mode.
+		return type is integer
+			30, 20, 50, 10, 40, 90, 60, 15, 45, 78		--> No mode, all distinct, so,-1
+			30, 20, 50, 20, 40, 90, 20, 15, 45, 78		--> 20 is the mode
+			30, 20, 50, 20, 50, 90, 20, 15, 50, 78		--> 20 and 50 are the mode
+		
 	o Median	= median of a sample of numeric data is the value 
 	that lies in the middle when we sort the data
+		return type is double 
 
 ------------------------------------------------------------------------
 

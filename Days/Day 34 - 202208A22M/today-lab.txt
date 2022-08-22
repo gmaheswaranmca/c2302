@@ -1,0 +1,41 @@
+exception handling:
+	exception is unexpected event like runtime error 
+	
+	exception handler can handle the exception 
+	
+		try
+		{
+		}
+		catch()
+		{
+		}
+		catch()
+		{
+		}
+		[finallly
+		{
+		}]
+	
+	why do we use handler?
+		To continue the program execution after exception is raised and 
+		hanlded properly.
+	
+	user-defined exception:
+		derived exception class from class Exception 
+	
+Lab Exercise:
+	Create an BankAccount class and 
+	a) insufficient balance exception on withdrawal 	! balance is less than withdrawal amount 
+	b) minimum balance violation exception on withdrawal 
+
+	class QueueFullException: Exception
+	{
+		public QueueFullException():base("Queue is full")
+		{
+		}
+	}
+	
+	maxQSize=4
+	qSize=4
+	
+	throw new QueueFullException();

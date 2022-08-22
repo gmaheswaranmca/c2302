@@ -1,0 +1,130 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Expension
+{   
+    class InSufficientBalance:Exception
+    {
+        public InSufficientBalance():base("In Sufficient Balance in your Account.")
+        {
+
+        }
+        
+    }
+    class MinimumBalanceViolation:Exception
+    {
+        public MinimumBalanceViolation() : base("It Goes Below the Minimum Balannce  in your Account.")
+        {
+
+        }
+
+    }
+
+class BankAccount
+    {
+        
+        public int AccountNumber { get; set; }
+        public string AccountHolderName { get; set; }
+        public int AccountBalance { get; set; }
+
+        public BankAccount(int accountNumber, string accountHolderName, int intialAmount)
+        {
+            this.AccountNumber = accountNumber;
+            this.AccountHolderName = accountHolderName;
+            this.AccountBalance = intialAmount;
+        }
+        public void Deposit(int amount )
+        {
+            
+            this.AccountBalance += amount;            
+        }
+        
+        public void Withdraw(int amount)
+        {
+            int minBalance = 1000;
+
+            if((AccountBalance-amount)<0)
+            {
+                throw new InSufficientBalance();
+            }
+            if ((AccountBalance - amount) < minBalance)
+            {
+                throw new MinimumBalanceViolation();
+            }
+            this.AccountBalance -= amount;
+        }
+
+
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Expension
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int addAmount, withAmount,Choos,temp;
+            BankAccount Customer = new BankAccount(1001,"Gokul",1000);
+            do
+            {
+                Console.WriteLine("1 For deposite\n 2 for withdraw");
+                temp = int.Parse(Console.ReadLine());
+                if (temp == 1)
+                {
+                    Console.WriteLine("Enter the amount to add");
+                    addAmount = int.Parse(Console.ReadLine());
+                    Customer.Deposit(addAmount);
+                    Console.WriteLine($"Current Balance is{Customer.AccountBalance}");
+                }
+                else
+                {
+                    Console.WriteLine("Enter the amount to withdraw");
+                    withAmount = int.Parse(Console.ReadLine());
+                    try
+                    {
+                        Customer.Withdraw(withAmount);
+                       
+                    }
+                    catch (InSufficientBalance ex)
+                    {
+
+                        Console.WriteLine("In sufficient Balance......");
+
+                        Console.WriteLine(ex.Message);
+                    }
+                    catch (MinimumBalanceViolation ex)
+                    {
+                        Console.WriteLine("Minimum Balance Amount is Not Saticify......");
+                        Console.WriteLine(ex.Message);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Minimum Balance Amount is Not Saticify......");
+                        Console.WriteLine(ex.Message);
+                    }
+                    finally
+                    {
+                        Console.WriteLine("Program handeled properly");
+                        Console.WriteLine($"Current Balance is{Customer.AccountBalance}");
+                    }
+                }
+                Console.WriteLine("IF do want continue amont press>1");
+                Choos = int.Parse(Console.ReadLine());
+            }
+            while (Choos == 1);
+              Console.Read();
+
+
+
+        }
+    }
+}
