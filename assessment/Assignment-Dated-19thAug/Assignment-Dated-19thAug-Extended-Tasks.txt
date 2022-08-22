@@ -5,17 +5,17 @@ Task 08:
 		The mode of the ages
 		The median of the ages
 		
-Task 08:
+Task 09:
 	He searches for the age using linear search and finds the position of the age in the sequence of ages.
 	He arranges the ages in the ascending order then he searches the age using binary search.
 	He is doing either linear search or binary search based on choice.
 
-Task 09:	
+Task 10:	
      He draws a table of three columns such as 
 	 “Serial Number”, “Age”, and “Bonus(Rs1000 age<30, Rs5000 age>0)” and
 	 in the rows details for ages. 
 	
 Can we help Albert to complete his tasks using the program?
-Note 1: For task 8, use the enum type “SearchType{LinearSearch,BinarySearch}” based choice.
-Note 2: For task 9, use the relevant C# class with properties and constructor. 
+Note 1: For task 9, use the enum type “SearchType{LinearSearch,BinarySearch}” based choice.
+Note 2: For task 10, use the relevant C# class with properties and constructor. 
 	And construct objects of the class for the ages sequence and then print the objects in tabular format.			
