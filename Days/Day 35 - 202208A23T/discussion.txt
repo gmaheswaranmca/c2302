@@ -1,0 +1,144 @@
+1. array 
+	"array is a collection of similar type(homogeneous) elements"
+	"used to store multiple similar values in a single name"
+	"reference type to hold multiple similar type data"
+	three types of arrays:
+		1D array 
+		2D / multi Dimensional array 
+			-> rectangular 		example: matrix: 2D array: a multiple rows, each row is same size
+						example:       int [,] matrix = new int[3,2]{
+									{1,2},
+									{3,4},
+									{5,6}
+							};
+								  
+			-> non-rectangular : jagged
+						multi dimension, last dimension size is differred
+						example:       int [][] childsmarks = new int[4][];
+								  childsmarks[0] = new int[]{75,80};
+								  childsmarks[1] = new int[]{80,56,78,90};
+								  childsmarks[2] = new int[]{60,78,90,80,50};
+								  childsmarks[3] = new int[]{65,78,90,34,56,70};
+								  Console.WriteLine($"{childsmarks[0][1]} {childsmarks[1][3]} {childsmarks[2][4]} {childsmarks[3][5]}");
+2. applications of arrays 
+	1. matrix manipulation 
+	2. table formatted data processing like spread sheet kind of data processing 
+	3. searching - linear, binary 
+	4. sorting - bubble, selection, insertion, quick, merge etc 
+	5. stack, queue 
+	
+3. array - searching
+	1. binary ->
+		(i) for sorted array 
+		
+	2. linear -> 
+		(i) for both sorted and unsorted array 
+		(ii) search sequentially from first element to last element : traversal of the array
+			a) to search a data from the array - number of time the traversal 
+			b) to search multiple items from the array 
+				example: 10,40,20 three data items to get searched in array {....}
+				example: {10,40,20} three data items to get searched in array {....}
+			c) to search range between 20 and 50 from the array 
+		
+			
+4. array - sortings 
+
+5. o  class member - property 
+		property meant for get and set of the member variable 
+   o class member - indexer property 
+		o access the member variable using subscripted object 
+		o "making the object as array" --> object as smart array
+			-> collection of same type member variables/properties (OR)
+			-> member variable/property array 
+		o name of the indexer property is "this keyword" 
+			along with square brackets where we define the index number 
+		
+		class Student{
+			private int [] marks = new int[5];
+			public int[] Marks{get{return marks;}; set{marks=value;}}
+			public int this[int i]{
+				get{returns Marks[i];}
+				set{Marks[i]=value;}
+			}
+		}		
+		void Main()		{
+			Student ashish = new Student();
+			ashish.Marks[0] = 50; ashish.Marks[1] = 70;
+			ashish.Marks[2] = 80; ashish.Marks[3] = 66;
+			ashish.Marks[4] = 86;
+			
+			Console.WriteLine("Mark 1=" + ashish.Marks[0]); //...			
+			
+			ashish[0] = 50; ashish[1] = 70;
+			ashish[2] = 80; ashish[3] = 66;
+			ashish[4] = 86;
+			
+			Console.WriteLine("Mark 1=" + ashish[0]); //...
+		}
+		
+		
+		class Student{
+			
+			public int Mark1{get; set;}
+			public int Mark2{get; set;}
+			public int Mark3{get; set;}
+			public int Mark4{get; set;}
+			public int Mark5{get; set;}
+			public int this[int i]{
+				get{
+					switch(i)
+					{
+						case 0: return Mark1;
+						case 1: return Mark2;
+						case 2: return Mark3;
+						case 3: return Mark4;
+						case 4: return Mark5;
+					}
+					
+					returns -1;//throw error object IndexOutOfBounds
+				}
+				set{
+					switch(i)
+					{
+						case 0: 
+							Mark1=value; break;
+						case 1: 
+							Mark2=value; break;
+						case 2: 
+							Mark3=value; break;
+						case 3: 
+							Mark4=value; break;
+						case 4: 
+							Mark5=value; break;
+						default:
+							//throw error object IndexOutOfBounds 
+							break;
+					}
+					
+				}
+			}
+		}
+		
+		void Main()
+		{
+			Student ashish = new Student();
+			ashish.Mark1 = 50;
+			ashish.Mark2 = 70;
+			ashish.Mark3 = 80;
+			ashish.Mark4 = 66;
+			ashish.Mark5 = 86;
+			
+			Console.WriteLine("Mark 1=" + ashish.Mark1); //...
+			
+			
+			ashish[0] = 50;
+			ashish[1] = 70;
+			ashish[2] = 80;
+			ashish[3] = 66;
+			ashish[4] = 86;
+			
+			Console.WriteLine("Mark 1=" + ashish[0]); //...
+		}
+	
+6. enum type 
+
