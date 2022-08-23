@@ -52,93 +52,104 @@
 			-> member variable/property array 
 		o name of the indexer property is "this keyword" 
 			along with square brackets where we define the index number 
-		
-		class Student{
-			private int [] marks = new int[5];
-			public int[] Marks{get{return marks;}; set{marks=value;}}
-			public int this[int i]{
-				get{returns Marks[i];}
-				set{Marks[i]=value;}
-			}
-		}		
-		void Main()		{
-			Student ashish = new Student();
-			ashish.Marks[0] = 50; ashish.Marks[1] = 70;
-			ashish.Marks[2] = 80; ashish.Marks[3] = 66;
-			ashish.Marks[4] = 86;
-			
-			Console.WriteLine("Mark 1=" + ashish.Marks[0]); //...			
-			
-			ashish[0] = 50; ashish[1] = 70;
-			ashish[2] = 80; ashish[3] = 66;
-			ashish[4] = 86;
-			
-			Console.WriteLine("Mark 1=" + ashish[0]); //...
-		}
-		
-		
-		class Student{
-			
-			public int Mark1{get; set;}
-			public int Mark2{get; set;}
-			public int Mark3{get; set;}
-			public int Mark4{get; set;}
-			public int Mark5{get; set;}
-			public int this[int i]{
-				get{
-					switch(i)
-					{
-						case 0: return Mark1;
-						case 1: return Mark2;
-						case 2: return Mark3;
-						case 3: return Mark4;
-						case 4: return Mark5;
-					}
-					
-					returns -1;//throw error object IndexOutOfBounds
-				}
-				set{
-					switch(i)
-					{
-						case 0: 
-							Mark1=value; break;
-						case 1: 
-							Mark2=value; break;
-						case 2: 
-							Mark3=value; break;
-						case 3: 
-							Mark4=value; break;
-						case 4: 
-							Mark5=value; break;
-						default:
-							//throw error object IndexOutOfBounds 
-							break;
-					}
-					
-				}
-			}
-		}
-		
-		void Main()
-		{
-			Student ashish = new Student();
-			ashish.Mark1 = 50;
-			ashish.Mark2 = 70;
-			ashish.Mark3 = 80;
-			ashish.Mark4 = 66;
-			ashish.Mark5 = 86;
-			
-			Console.WriteLine("Mark 1=" + ashish.Mark1); //...
-			
-			
-			ashish[0] = 50;
-			ashish[1] = 70;
-			ashish[2] = 80;
-			ashish[3] = 66;
-			ashish[4] = 86;
-			
-			Console.WriteLine("Mark 1=" + ashish[0]); //...
-		}
+//Example 1		
+class Student{
+	private int [] marks = new int[5];
+	public int[] Marks{get{return marks;} set{marks=value;}}
+	public int this[int i]{
+		get{return Marks[i];}
+		set{Marks[i]=value;}
+	}
+}		
+class Solve
+{
+static void Main()		{
+	Student ashish = new Student();
+	ashish.Marks[0] = 50; ashish.Marks[1] = 70;
+	ashish.Marks[2] = 80; ashish.Marks[3] = 66;
+	ashish.Marks[4] = 86;
 	
+	Console.WriteLine("Mark 1=" + ashish.Marks[0]); //...			
+	
+	ashish[0] = 50; ashish[1] = 70;
+	ashish[2] = 80; ashish[3] = 66;
+	ashish[4] = 86;
+	
+	Console.WriteLine("Mark 1=" + ashish[0]); //...
+	Console.Read();
+}
+}
+	
+
+//Example 2	
+class Student
+{
+
+	public int Mark1 { get; set; }
+	public int Mark2 { get; set; }
+	public int Mark3 { get; set; }
+	public int Mark4 { get; set; }
+	public int Mark5 { get; set; }
+	public int this[int i]
+	{
+		get
+		{
+			switch (i)
+			{
+				case 0: return Mark1;
+				case 1: return Mark2;
+				case 2: return Mark3;
+				case 3: return Mark4;
+				case 4: return Mark5;
+			}
+
+			return - 1;//throw error object IndexOutOfBounds
+		}
+		set
+		{
+			switch (i)
+			{
+				case 0:
+					Mark1 = value; break;
+				case 1:
+					Mark2 = value; break;
+				case 2:
+					Mark3 = value; break;
+				case 3:
+					Mark4 = value; break;
+				case 4:
+					Mark5 = value; break;
+				default:
+					//throw error object IndexOutOfBounds 
+					break;
+			}
+
+		}
+	}
+}
+class Solve
+{
+	static void Main()
+	{
+		Student ashish = new Student();
+		ashish.Mark1 = 50;
+		ashish.Mark2 = 70;
+		ashish.Mark3 = 80;
+		ashish.Mark4 = 66;
+		ashish.Mark5 = 86;
+
+		Console.WriteLine("Mark 1=" + ashish.Mark1); //...
+
+
+		ashish[0] = 50;
+		ashish[1] = 70;
+		ashish[2] = 80;
+		ashish[3] = 66;
+		ashish[4] = 86;
+
+		Console.WriteLine("Mark 1=" + ashish[0]); //...
+		Console.Read();
+	}
+}	
 6. enum type 
 

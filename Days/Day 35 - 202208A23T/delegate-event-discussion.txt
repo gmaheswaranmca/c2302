@@ -1,0 +1,46 @@
+Anonymous Type, Delegates, Events and Lambda
+Learning Outcomes:
+	1. Identify the need of lambda expressions and use 
+		Where, 
+		First, 
+		FirstOrDefault, 
+		Min, 
+		Max, 
+		MinBy and MaxBy 
+		to write code
+	2. Identify the use of Delegate and able to create a program 
+		which can hold same signature as delegate 
+		that can be assigned to delegates.
+Topics: 
+	1. Extension Methods
+	2. Anonymous Type
+	3. Var and Dynamic
+	4. Delegates
+	5. Events
+	6. Anonymous Methods
+	7. Lambda Expression
+	8. Expression Tree
+------------------------------------------------------------------------------
+User Defined Types: 
+	class[reference type], interface[reference type], enum[value type]
+	Delegate[reference type]
+------------------------------------------------------------------------------
+<class Student>
+	
+Student stutee = new Student();	//reference to object 
+stutee.ProcessMarkList();
+------------------------------------------------------------------------------
+what is delegate?
+	o "delegate" is a reference to method of same delegate signature 
+	o analogy: delegate is function/method pointer we had in C/C++
+		"safe function pointer"
+	o use the keyword "delegate" to define the delegate type 
+	o For "message passing ie events", delegate type is playing important role.
+		-- message passing : communication between the objects by sharing the message 
+		-- "events" the term is from Microsoft to replace "message passing" 
+------------------------------------------------------------------------------	
+	to call a function using delegate type:
+	1. delegate type 
+	2. object of delegate type which will refer the method going to be called 
+	3. delegate name is used to call the method/function 
+------------------------------------------------------------------------------	
