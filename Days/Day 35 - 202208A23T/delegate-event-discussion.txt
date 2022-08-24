@@ -44,3 +44,78 @@ what is delegate?
 	2. object of delegate type which will refer the method going to be called 
 	3. delegate name is used to call the method/function 
 ------------------------------------------------------------------------------	
+delegate vs event:
+	delegate - reference to method 
+	event - a variable of delegate plus extra facitilities, 
+		not local variable, may be instance member
+		
+how to declare an event:
+	we need the delegate.
+	if we have the delegate named "opDT"
+		[public] event opDT op;
+		
+what is event and talk about event:
+	event is a wrapper around delegate 
+	
+	event is working in the principle of publisher/subscriber model.
+--------------------------------------------------------------Source 	
+	delegate void OnAreaChangeDT();
+	class Rectangle 
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+		public event OnAreaChangeDT OnAreaChange;
+		
+		public void Calculate()
+		{
+			//raise the event -- publish the event 
+			OnAreaChange();
+		}
+		
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	
+	class Consumer 
+		Rectangle myTableTop;
+		Rectangle myLaptopDisplay;
+		
+		public Consumer()
+		{
+			myTableTop  = new Rectangle();
+			myTableTop.OnAreaChange += myTableTop_OnAreaChange;
+			
+			
+			myLaptopDisplay = new Rectangle();
+			myLaptopDisplay.OnAreaChange += myLaptopDisplay_OnAreaChange;
+		}
+		
+		void myTableTop_OnAreaChange(){
+			Console.WriteLine("1)We handled the OnAreaChange event.");
+			Console.WriteLine("1)We are at myTableTop_OnAreaChange.");
+		}
+		
+		void myLaptopDisplay_OnAreaChange(){
+			Console.WriteLine("2)We handled the OnAreaChange event.");
+			Console.WriteLine("2)We are at myLaptopDisplay_OnAreaChange.");
+		}
+		
+		public void BulkCalculate()
+		{
+			myTableTop.Calculate();
+			myLaptopDisplay.Calculate();
+		}
+		
+	object of rectangle if defined in another class			---  Object Consumer 
+	there we can subscribe the event to handle the event. 
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	
+	object of the event class is defined 
+	add event handler function to the event of the object 
+	at the time of calling(raising) the event, 
+	the event handler function is called automatically.
+	
+	
+	Main()
+	{
+		Consumer consumer = new Consumer();
+		consumer.BulkCalculate();
+	}
+------------------------------------------------------------------------------	
+
