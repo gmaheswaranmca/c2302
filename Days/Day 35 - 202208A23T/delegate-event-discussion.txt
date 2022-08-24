@@ -55,67 +55,94 @@ how to declare an event:
 		[public] event opDT op;
 		
 what is event and talk about event:
-	event is a wrapper around delegate 
-	
-	event is working in the principle of publisher/subscriber model.
---------------------------------------------------------------Source 	
-	delegate void OnAreaChangeDT();
-	class Rectangle 
-	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-		public event OnAreaChangeDT OnAreaChange;
-		
-		public void Calculate()
-		{
-			//raise the event -- publish the event 
-			OnAreaChange();
-		}
-		
-	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-	
-	class Consumer 
-		Rectangle myTableTop;
-		Rectangle myLaptopDisplay;
-		
-		public Consumer()
-		{
-			myTableTop  = new Rectangle();
-			myTableTop.OnAreaChange += myTableTop_OnAreaChange;
-			
-			
-			myLaptopDisplay = new Rectangle();
-			myLaptopDisplay.OnAreaChange += myLaptopDisplay_OnAreaChange;
-		}
-		
-		void myTableTop_OnAreaChange(){
-			Console.WriteLine("1)We handled the OnAreaChange event.");
-			Console.WriteLine("1)We are at myTableTop_OnAreaChange.");
-		}
-		
-		void myLaptopDisplay_OnAreaChange(){
-			Console.WriteLine("2)We handled the OnAreaChange event.");
-			Console.WriteLine("2)We are at myLaptopDisplay_OnAreaChange.");
-		}
-		
-		public void BulkCalculate()
-		{
-			myTableTop.Calculate();
-			myLaptopDisplay.Calculate();
-		}
-		
-	object of rectangle if defined in another class			---  Object Consumer 
-	there we can subscribe the event to handle the event. 
-	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-	
-	object of the event class is defined 
-	add event handler function to the event of the object 
-	at the time of calling(raising) the event, 
-	the event handler function is called automatically.
+	The event keyword is used to declare an event in a publisher class.	
+	to declare 
+	to raise an event
+	to subscribe event with event handler 
+	to unsubscribe event ie release event handler 
 	
 	
-	Main()
-	{
-		Consumer consumer = new Consumer();
-		consumer.BulkCalculate();
-	}
-------------------------------------------------------------------------------	
+What is the Similarity Between Delegates and Events in C#?
+	Both Delegates and Events in C# are related to event-driven
+	
+What is the Difference Between Delegates and Events in C#?
+	Delegates vs Events in C#
+		A delegate is a reference type variable that holds the reference to a method.	
+		An event is a delegate type class member used 
+		by the object or class to provide notification 
+		to other objects that an event has occurred.
+	Keyword
+		A delegate is declared using the keyword ‘delegate’.	
+		An event is declared using the “event” keyword.	
+	Dependency
+		Delegates are undependable.	
+		Events are depended on delegates.	
 
+choice of delegates or events?		
+	The choice of delegates or events is often difficult, 
+	because the two language features are similar. 
+
+	Events are even built using the language support for delegates.	
+	
+	They both offer a late binding scenario: 
+	they enable scenarios where a component communicates by calling a method 
+	that is only known at run time. 	
+	
+	They both support single and multiple subscriber methods. 
+	You may find this referred to as singlecast and multicast support. 
+	They both support similar syntax for adding and removing handlers.
+	
+	Finally, raising an event and calling a delegate 
+	use exactly the same method call syntax.
+	
+----------------------------------------------------------------------
+**********************Events Raise, Handle:**********************
+		Event Handling Mechanism OR Event Model 
+----------------------------------------------------------------------
+	Events in .NET are based on the delegate model. 
+	The delegate model follows the observer design pattern, 
+	which enables a subscriber to register with and 
+	receive notifications from a provider. 	
+	
+	An "event sender" pushes a notification 
+	that an event has happened, 
+	and an "event receiver" receives 
+	that notification and 
+	defines a response to it. 
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Events
+	An event is a message sent by an object to signal the occurrence of an action. 
+	The action can be caused by user interaction, such as a button click, 
+	or it can result from some other program logic, 
+	such as changing a property's value. 
+	The object that raises the event is called the "event sender".
+	
+	The event sender doesn't know which object or method 
+	will receive (handle) the events it raises.
+	
+	The event is typically a member of the event sender
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	
+	For example, 
+	the Click event is a member of the Button class, and 
+	the PropertyChanged event is a member of the class 
+	that implements the INotifyPropertyChanged interface
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	
+	To define an event, you use the C# event keyword 
+	in the signature of your event class, 
+	and specify the type of delegate for the event.
+	
+	Typically, to raise an event, you add a method.
+	
+Event handlers
+	To respond to an event, you define an event handler method in the event receiver. 
+	This method must match the signature of the delegate for the event you are handling. 
+	In the event handler, 
+	you perform the actions that are required when the event is raised, 
+	such as collecting user input after the user clicks a button. 
+	To receive notifications when the event occurs, 
+	your event handler method must subscribe to the event.
+----------------------------------------------------------------------
+	
+		
