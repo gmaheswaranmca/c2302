@@ -1,0 +1,45 @@
+event 		
+	--------------------------------------------------------
+	"observer design pattern"
+		-- message passing model for the .NET framework
+		-- communication among objects 
+	"event encapsulates delegate 
+	and delegate encapsulates method" 
+	
+	"action" 
+	--------------------------------------------------------
+	a member of class object 
+		like member data, member method, constructors, properties,
+			member event 
+	--------------------------------------------------------
+	1. define user-defined delegate***** or library(built-in) delegate 
+		-- if user-defined, 
+		-- 		Inside the class or "Outside the class ***********" 
+	2. declare "member event" in the class -- Inside the class 
+	3. a.Check the event has associated with "event handler"
+	   b.if so, Invoke/Call the event 
+		-----------------------
+	   Q:When the event will be called?
+	   A:"to generate an action and to let know the user of the object 
+	   to hanlde the action" 
+	   Example: Button's 	click 	<----> 
+				User Application's Form's click-hanlder of the Button object
+	   Example: If state of the object is changed, 
+			then event for the state can be raised/invoked
+			Our Example Cases,
+			
+			Train class's OnTrainFullyReserved event is raised 
+			when the bookings matched the capacity 
+			
+			Flight class's OnFlightFullyReserved event is raised 
+			when the bookings matched the capacity 
+			
+			Provisional Store Product class's OnStockEmpty event is raised
+			when stock qty of the product reached to zero 
+			
+	4. Define event handler code 		--- User Class 
+	5. Attach the event handler to the event 	--- User Class (where) -- 
+										--- (when) after created the consumed object 
+	--------------------------------------------------------
+	
+exception 
