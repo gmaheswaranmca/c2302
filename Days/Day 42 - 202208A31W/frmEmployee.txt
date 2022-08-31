@@ -1,0 +1,37 @@
+CREATE TABLE employee
+(employee_id INT, 
+employee_name VARCHAR(256) NOT NULL DEFAULT '', 
+job_title VARCHAR(50) NOT NULL DEFUALT '', 
+salary float NOT NULL DEFAULT 0,
+PRIMARY KEY(employee_id)
+);
+
+------------------------------------------------------------
+frmEmployee				: Employee Details
+	
+	
+	<New> <Load Employees>
+	ID     Name    Job Title   		Salary 			New/Edit Employee 										
+	1001   Aurojit Programmer  		  7000 			ID			[				]				
+	1002   Stutee  Software Engineer  6500 			Name		[				]				
+	1003   Ashish  Lead               7500 			Job Title   [				]				
+													Salary		[				]
+	<Edit> <Delete>									<Save>
+	
+	Actions :
+	0. Load Employees: Loads the employees from database 
+	1. New : We can create new employee 
+	2. Edit : The selected employee from table is loaded into for for viewving or editing 
+	3. Delete : It will delete the employee from database 
+	            And reloads the employees table from database 
+	4. Save :
+		If it is New, 
+			then employee will be created in the database 
+			and reloads the employees from database 
+		If it is Old, 
+			then employee will be updated in the database 
+			and reloads the employees from database 
+	
+	The work flow is for CRUD(Create, Retrieve, Update, Delete) operations 
+	on employee table.
+------------------------------------------------------------

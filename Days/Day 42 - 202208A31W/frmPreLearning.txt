@@ -1,0 +1,52 @@
+frmPreLearning
+	<Load>					
+	ComboBox 					DataGridView
+	
+	ListBox 
+	
+	<button1>
+	
+<Load>		: ControlType:Button, Name: BtnLoad, Text: Load
+			  
+ComBox 		: ControlType:ComboBox, Name: comboBox1
+			  DisplayMember: Name, ValueMember: Id   <------------ Properties Box:Categorized->Data
+ListBox     : ControlType:ListBox, Name: listBox1
+			  DisplayMember: Name, ValueMember: Id	 <------------ Properties Box:Categorized->Data
+button1     : ControlType:Button, Name: button1, Text: button1 
+DataGridView : ControlType:DataGridView (Data category of toolbox), Name: dataGridView1	
+			Columns:	<--Misc of Categorized Properties Box
+			Add 4 columns 
+				Column1: HeaderText:ID,DataPropertyName:Id
+				Column2: HeaderText:Employee Name,DataPropertyName:Name
+				Column3: HeaderText:Job Title,DataPropertyName:JobTitle
+				Column4: HeaderText:Salary,DataPropertyName:Salary
+--------------------------------------------------------------				
+private void BtnLoad_Click(object sender, EventArgs e)
+{
+	var aurojit = new { Id = 1001, Name = "Aurojit", JobTitle = "Programmer", Salary = 7000 };
+	var stutee = new { Id = 1002, Name = "Stutee", JobTitle = "Software Engineer",  Salary = 6500 };
+	var ashish = new { Id = 1003, Name = "Ashish", JobTitle = "Lead",  Salary = 7500 };
+
+	var employees = new[] {aurojit, stutee, ashish };
+	/*var employees2 = new[] { new { Id = 1001, Name = "Aurojit", JobTitle = "Programmer", Salary = 7000 },
+			new { Id = 1002, Name = "Stutee", JobTitle = "Software Engineer",  Salary = 6500 },
+			new { Id = 1003, Name = "Ashish", JobTitle = "Lead",  Salary = 7500 }
+	};*/
+
+	comboBox1.DataSource = employees;
+	/*comboBox1.ValueMember = "Id";
+	comboBox1.DisplayMember = "Name";*/
+
+
+	listBox1.DataSource = employees;
+	/*listBox1.ValueMember = "Id";
+	listBox1.DisplayMember = "Name";*/
+
+	dataGridView1.DataSource = employees;
+}
+
+private void button1_Click(object sender, EventArgs e)
+{
+	MessageBox.Show(comboBox1.SelectedValue + "");
+}
+--------------------------------------------------------------
