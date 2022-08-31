@@ -1,7 +1,7 @@
 CREATE TABLE employee
 (employee_id INT, 
 employee_name VARCHAR(256) NOT NULL DEFAULT '', 
-job_title VARCHAR(50) NOT NULL DEFUALT '', 
+job_title VARCHAR(50) NOT NULL DEFAULT '', 
 salary float NOT NULL DEFAULT 0,
 PRIMARY KEY(employee_id)
 );
@@ -29,7 +29,7 @@ frmEmployee				: Employee Details
 			Column4=Salary:Salary 								<Button:BtnSave:Save>
 	<Button:BtnEdit:Edit> <Button:BtnDelete:Delete>					
 	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-	
+	Name of the Db File: "EmployeeDb.mdf"
 	
 	Actions :
 	0. Load Employees: Loads the employees from database 
@@ -48,3 +48,33 @@ frmEmployee				: Employee Details
 	The work flow is for CRUD(Create, Retrieve, Update, Delete) operations 
 	on employee table.
 ------------------------------------------------------------
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            string conStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\work\jobs\C2302\apps\appFirst\EmployeeDb.mdf;Integrated Security=True";
+            string query = "INSERT INTO employee(employee_id,employee_name,job_title,salary) VALUES(@employee_id,@employee_name,@job_title,@salary);";//safe way of sending data
+            //string query2 = $"INSERT INTO employee(employee_id,employee_name,job_title,salary) VALUES({TxtID.Text},'{TxtName.Text}','{TxtJobTitle.Text}',{TxtSalary.Text});";//allows sql injection
+            SqlConnection con = new SqlConnection(conStr);
+            con.Open();
+            SqlCommand cmd = new SqlCommand(query, con);
+            cmd.Parameters.AddWithValue("@employee_id", int.Parse(TxtID.Text));//safe guard the data
+            cmd.Parameters.AddWithValue("@employee_name", TxtName.Text);
+            cmd.Parameters.AddWithValue("@job_title", TxtJobTitle.Text);
+            cmd.Parameters.AddWithValue("@salary", Double.Parse(TxtSalary.Text));
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            MessageBox.Show("Employee is created");
+
+            BtnNew_Click(null,null);
+        }
+
+        private void BtnNew_Click(object sender, EventArgs e)
+        {
+            TxtID.Text = string.Empty;
+            TxtName.Text = string.Empty;
+            TxtJobTitle.Text = string.Empty;
+            TxtSalary.Text = string.Empty;
+        }
+		
+------------------------------------------------------------		
