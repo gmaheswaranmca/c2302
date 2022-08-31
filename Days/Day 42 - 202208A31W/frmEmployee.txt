@@ -18,6 +18,19 @@ frmEmployee				: Employee Details
 													Salary		[				]
 	<Edit> <Delete>									<Save>
 	
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	Form:Employee Page:BackgroundColor=White:Font=12pt
+	<Button:BtnNew:New> <Button:BtnLoad:Load Employees>
+	DataGridView:GrdEmployees:						Label:New Employee
+		Columns: 									Label:Id				TextBox:TxtId
+			Column1=ID:Id							Label:Name				TextBox:TxtName
+			Column2=Employee Name:Name				Label:Job Title 		TextBox:TxtJobTitle
+			Column3=Job Title:JobTitle				Label:Salary			TextBox:TxtSalary
+			Column4=Salary:Salary 								<Button:BtnSave:Save>
+	<Button:BtnEdit:Edit> <Button:BtnDelete:Delete>					
+	^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	
+	
 	Actions :
 	0. Load Employees: Loads the employees from database 
 	1. New : We can create new employee 
