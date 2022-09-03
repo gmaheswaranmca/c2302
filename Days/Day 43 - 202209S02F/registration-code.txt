@@ -1,0 +1,67 @@
+create table registration
+(
+	id varchar(50) primary key,
+	first_name varchar(256) not null,
+	last_name varchar(256) not null,
+	password varchar(50) not null
+);
+
+-----------------------------------
+string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=CLoudDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+string insQue = string.Format("INSERT INTO Registration(Id,first_name,last_name,password) VALUES({0},'{1}','{2}',{3})",txtUserId.Text,txt_FName.Text,txt_LName.Text,txt_Pass.Text);
+SqlConnection con = new SqlConnection(conString);
+con.Open();
+SqlCommand cmdObj = new SqlCommand(insQue,con);
+if (cmdObj.ExecuteNonQuery() != 0)//executethe sql query associated with command obj.
+{
+	MessageBox.Show("Data Inserted Successfully");
+}
+con.Close();
+-----------------------------------
+
+-----------------------------------
+ string conString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=CLoudDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            
+            //executethe sql query associated with command obj.
+            SqlConnection con = new SqlConnection(conString);
+            string selectQuery = "SELECT Id,password FROM Registration";
+            SqlDataAdapter adapter = new SqlDataAdapter(selectQuery,con);
+            DataSet ds = new DataSet();
+            adapter.Fill(ds);
+            
+            
+                int flag = 0;
+                for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+                {
+				     if (txt_LUser.Text == (ds.Tables[0].Rows[i]["Id"]).ToString() && textBox2.Text == (ds.Tables[0].Rows[i]["password"]).ToString())
+                    {
+                        flag = 1;
+					user_id = Convert.ToInt32(txt_LUser.Text);  
+                    }            
+                }
+                if (flag == 1)
+                {
+                    string insQue = string.Format("INSERT INTO Login(Id) VALUES({0})", txt_LUser.Text);
+                    SqlConnection con1 = new SqlConnection(conString);
+                    con1.Open();
+                    SqlCommand cmdObj = new SqlCommand(insQue, con1);
+                    cmdObj.ExecuteNonQuery();
+                    con1.Close();
+                    Form3 frm3 = new Form3();
+                    frm3.Show();
+                
+                }
+                else
+                {
+                    MessageBox.Show("User Not Registered or UserId/Password Wrong ");
+                }
+        }
+-----------------------------------
+
+-----------------------------------
+private void Btn_LogIn_Click(object sender, EventArgs e)
+        {
+            Form2 frmObj = new Form2();
+            frmObj.Show();
+        }
+-----------------------------------

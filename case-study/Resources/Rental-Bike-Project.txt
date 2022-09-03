@@ -1,0 +1,17 @@
+Functional Components (Console, Winforms, WPF - 3Tier/MVVM)
+	Customer Application
+		Login
+		Register
+		Pick Bike for Rent 
+			Bike Brand [          ] Search 
+			List of bikes based on search
+			Pick the bike and go for ride
+		Book Bike 
+		Bookings History
+	Admin Application (Employees of the bike rental company)
+		Bike 
+			List - Add New Bike - View/Edit - Delete 
+			
+		Bookings 
+			Date wise 
+			List of booking for given date range
