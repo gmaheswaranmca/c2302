@@ -1,0 +1,41 @@
+-----------------------------------------------------------------
+Employee Project Management
+	Employee can be allocated 3 project, total allocation % is 100
+	Project can be any number of employees, total allocation % is 100
+	
+	Employee Details | No Of Projects Allocation, Total Allocation Percentage
+							
+	Project Details | No Of Employees Allocation, Total Allocation Percentage 
+	
+	Allocation Details 
+		Employee - Project - Allocation% - Allocation Start Date - Allocation End Date 
+		
+-----------------------------------------------------------------
+
+System:
+	Project Manager Application
+		Employee Details Management 
+			Add, Edit, Delete
+		Project Details Management 
+			Add, Edit, Delete
+		Project Allocation 
+			Project [                     ] Select 
+				Employee1 50% Dt-Dt 
+				Employee2 10% Dt-Dt 
+				Employee3 5% Dt-Dt 
+			Employee[                     ] Select 
+				Project1 50% Dt-Dt
+				Project2 30% Dt-Dt 
+			Allication 
+				Start Date   [     ]
+				End Date     [     ]
+				Allocation % [     ]
+		Project Deallocation 	
+			Project [                     ] Select 
+				Employee1 50% Dt-Dt Deallocate 
+				Employee2 10% Dt-Dt Deallocate 
+				Employee3 5% Dt-Dt Deallocate  
+			
+		
+	Employee Application 
+-----------------------------------------------------------------	

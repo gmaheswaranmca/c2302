@@ -1,0 +1,51 @@
+Layouts:
+	Placement of the UIs.
+	
+	Grid						:	Table(rows/columns) like layout 
+	Canvas						:	Free Form Layout (UIs using x & y coordinates)
+	DockPanel
+	StackPanel/WrapPanel
+	
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	Grid Layout for table kind of UI placement 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^	
+	Grid
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"/>
+				...
+			<Grid.RowDefinitions>
+				<RowDefinition Height="100"/>
+				...
+			Placing UIs !!! Two properties for UI placement are Grid.Row="2" Grid.Column="0"
+			
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^			
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	Canvas for Free Form Layout ie x,y coordinates based wrt canvas 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	Canvas Left Top is the 0,0 from which UIs will take coordinates 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	DockPanel 	:  5 UIs Different Sections placement 
+				   Top, Bottom, Left, Right, Middle/Center
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	Header				!!! In UI, DockPanel.Dock="Top"
+	Footer				!!! In UI, DockPanel.Dock="Bottom"
+	Side Bar (Left)		!!! In UI, DockPanel.Dock="Left"
+	Side Bar (Right)	!!! In UI, DockPanel.Dock="Right"
+	Page Area 			!!!  LastChildFill="True" of DockePanel --> Last Child  
+	No Page Area 		!!!  LastChildFill="False"
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	StackPanel			/		WrapPanel
+	   one line 					(wrap)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+	To place the UI in the UI order 
+	either vertically or horizontally.
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+			
