@@ -1,3 +1,123 @@
+Employee Project Management System
+	UI 
+		Admin Login 			!!! UI Done 
+								!!! Code Done 
+									(!!! Not from database -- now hard coded --- to discuss with the team)
+					takes to 
+						"Project Management Window"
+						
+	Allocation Page 
+		Employee ID   Project ID 		Project Allocation%
+			1001		10					20					<Allocation>
+		Employee [...]			Project [...]
+			Stutee 				EPMS 
+			10 EPMS	20%			1001 Stutee 20% 
+			20 LMS	40%			1006 Albin  30%
+			30 BMS  40%			Yet to allcoate 
+			Fully Allocated 	
+			
+		SELECT 
+		Employee.EmployeeId, Employee.EmployeeName, Allocation.AllocationPercentage 
+		FROM Employee INNER JOIN Allocation 
+		ON(Employee.EmployeeId=Allocation.EmployeeId)
+		
+		SELECT 
+		Project.ProjectId, Project.ProjectName, Allocation.AllocationPercentage 
+		FROM Project INNER JOIN Allocation 
+		ON(Project.ProjectId=Allocation.ProjectId)
+		
+	Nav->Emp		
+		Employee Management 
+			Employee ID | Employee Name | Password | Job Position | Salary
+			1001             Stutee			
+			1002 			 Aurojit 
+			1003			 Ajith 
+			1004 			 Ashish
+			1005 			 Praveen
+			1006			 Albin 
+	
+	Nav->Project 
+		Project Management  
+			Project ID | Project Name | Start Date | End Date 
+			10				EPMS
+			20				LMS 
+			30				BMS 
+								
+						Calculate Bonus 
+							
+							
+							
+							
+												
+		Employee Login 				
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+
+
+
+Employee
+Project
+Allocation
+EmployeeAllocation { Employee employee; List<Allocation> allocations; }
+
+
+-----------------------------------------------------------------
+*****************************SQL*****************************
+-----------------------------------------------------------------
+CREATE TABLE [dbo].[tbl_login] (
+    [login_Id] NCHAR (20) NOT NULL,
+    [password] NCHAR (50) NOT NULL,
+    [usertype] NCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([login_Id] ASC)
+);
+
+CREATE TABLE [dbo].[tbl_employee] (
+    [emp_id]               INT        NOT NULL,
+    [emp_name]             NCHAR (50) NOT NULL,
+    [emp_dep]              NCHAR (50) NOT NULL,
+    [no_project_allocated] NCHAR (50) NULL,
+    [project_percent]      NCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([emp_id] ASC)
+);
+
+CREATE TABLE [dbo].[tbl_project] (
+    [project_id]          INT        NOT NULL,
+    [project_name]        NCHAR (50) NOT NULL,
+    [project_description] NCHAR (50) NOT NULL,
+    [start_date]          DATE       NOT NULL,
+    [end_date]            DATE       NOT NULL,
+    [allocated_percent]   FLOAT (53) NULL,
+    PRIMARY KEY CLUSTERED ([project_id] ASC)
+);
+
+
+CREATE TABLE [dbo].[tbl_project_management] (
+    [manage_id]           INT        NOT NULL,
+    [emp_id]              INT        NOT NULL,
+    [project_id]          INT        NOT NULL,
+    [assigned_start_date] DATE       NULL,
+    [deadline_date]       DATE       NULL,
+    [percentage]          FLOAT (53) NULL,
+    [status]              NCHAR (20) NOT NULL,
+    PRIMARY KEY CLUSTERED ([manage_id] ASC),
+    FOREIG
 -----------------------------------------------------------------
 Employee Project Management
 	Employee can be allocated 3 project, total allocation % is 100
@@ -39,3 +159,4 @@ System:
 		
 	Employee Application 
 -----------------------------------------------------------------	
+

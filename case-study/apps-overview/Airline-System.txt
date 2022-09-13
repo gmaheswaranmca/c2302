@@ -1,0 +1,50 @@
+Airline System
+----------------------------------------------------------------------------------------
+CREATE TABLE [dbo].[Admin] (
+[UserName] VARCHAR (50) NOT NULL,
+[Password] VARCHAR (50) NOT NULL,
+UNIQUE NONCLUSTERED ([UserName] ASC),
+FOREIGN KEY ([UserName]) REFERENCES [dbo].[Users] ([UserName])
+);
+
+CREATE TABLE [dbo].[Flight] (
+    [flight_id]     VARCHAR (50) NOT NULL,
+    [Airline_name]  VARCHAR (50) NOT NULL,
+    [source]        VARCHAR (50) NOT NULL,
+    [designation]   VARCHAR (50) NOT NULL,
+    [seat_capacity] INT          NOT NULL,
+    [depature]      VARCHAR (50) NOT NULL,
+    [arraival_time] VARCHAR (50) NOT NULL,
+    [flight_charge] FLOAT (53)   NOT NULL,
+    PRIMARY KEY CLUSTERED ([flight_id] ASC)
+);
+
+CREATE TABLE [dbo].[Users] (
+    [UserName]        VARCHAR (50) NOT NULL,
+    [FullName]        VARCHAR (50) NOT NULL,
+    [EmailId]         VARCHAR (50) NOT NULL,
+    [PhoneNo]         BIGINT       NOT NULL,
+    [Gender]          VARCHAR (50) NOT NULL,
+    [Password]        VARCHAR (50) NOT NULL,
+    [ConfirmPassword] VARCHAR (50) NOT NULL,
+    [DOB]             VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([UserName] ASC),
+    UNIQUE NONCLUSTERED ([EmailId] ASC)
+);
+----------------------------------------------------------------------------------------
+	Booking 
+	Booking Cancellation
+----------------------------------------------------------------------------------------
+	UI
+		Flight 
+			Add	!!!Done 
+			List !!!Done 
+		Registration !!!Done 
+		Login - Admin !!!Done 
+		Login - User !!!Done 
+		Logged In (User) 
+			Flight Search Page - Design !!! Done 
+			
+			
+		Booking - Design in progress - under changes	
+----------------------------------------------------------------------------------------

@@ -1,0 +1,89 @@
+class ProductCatalog			//Business Layer 
+	ProductId
+	ProductName
+	Description
+	Quantity
+	...
+
+
+public class ProductDatabase		//Data Access Layer
+	public static bool AddProduct(ProductCatalog catalog)
+	{	
+		String Consting = "Data Source=(localdb)\\MSSQLLocalDB;Initial
+		Catalog=Product;Integrated Security=True;Connect
+		Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadW
+		rite;MultiSubnetFailover=False";
+		SqlConnection con = new SqlConnection(Consting);
+		SqlCommand cmd = new SqlCommand();
+		/*String qur = String.Format("insert into
+		Product(product_id,product_name,description,stock_qty,purchase_price,sell_pri
+		ce,discount)values({0},'{1}','{2}',{3},{4},{5},{6})", txt_ProductId_Text,
+		txt_ProductName_Text, txt_Description_Text, txt_Quantity_Text,
+		txt_PurchasePrice_Text, txt_SalePrice_Text, txt_Discount_Text);*/
+		String qur = "insert into
+		Product(product_id,product_name,description,stock_qty,purchase_price,sell_pri
+		ce,discount)values(@product_id,@product_name,@description,@stock_qty,@purchase_price,@sell_price,@discount)"
+		
+		cmd.CommandText = qur;
+		cmd.Parameters.AddWithValue("@product_id",catalog.product_id);
+		cmd.Parameters.AddWithValue("@product_name",catalog.product_name);
+		cmd.Parameters.AddWithValue("@description",catalog.description);
+		cmd.Parameters.AddWithValue("@stock_qty",catalog.stock_qty);
+		cmd.Parameters.AddWithValue("@purchase_price",catalog.purchase_price);
+		cmd.Parameters.AddWithValue("@sell_price",catalog.sell_price);
+		cmd.Parameters.AddWithValue("@discount",catalog.discount);
+		//...
+		cmd.Connection = con;
+		con.Open();
+		int execCount = cmd.ExecuteNonQuery();
+		con.Close();
+		cmd.Dispose();
+		
+		return execCount != 0;
+		
+		//Clear();
+	}	
+	public static List<ProductCatalog> QueryAll()
+	{
+		
+		String Consting = "Data Source=(localdb)\\MSSQLLocalDB;Initial
+		Catalog=Product;Integrated Security=True;Connect
+		Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadW
+		rite;MultiSubnetFailover=False";
+		SqlConnection con = new SqlConnection(Consting);
+		String selQry = "select * from Product";
+		SqlDataAdapter adapter = new SqlDataAdapter(selQry,con);
+		DataSet ds = new DataSet();
+		adapter.Fill(ds);
+		
+		List<ProductCatalog> catalogues = new List<ProductCatalog>();
+		for(int i=0; i<ds.Tables[0].Rows.Count;i++){
+			var row = ds.Tables[0].Rows[i];
+			catalogues.Add(new ProductCatalog((int)row["product_id"],
+				...)
+				);
+				
+		}
+		
+	}
+....
+
+//Presentation Layer 
+private void btn_Add_Click(object sender, EventArgs e)
+{
+	ProductCatalog catalog = new ProductCatalog(txt_ProductId.Text,
+	txt_ProductName.Text, txt_Description.Text, txt_Quantity.Text,
+	txt_PurchasePrice.Text, txt_SalePrice.Text, txt_Discount.Text);
+	if(ProductDatabase.AddProduct(catalog))
+	{
+		MessageBox.Show("Data is inserted successfully ");
+	}
+	Clear();
+	
+}
+
+private void btn_Show_Click(object sender, EventArgs e)
+{
+	List<ProductCatalogue> catalogues = ProductDatabase.QueryAll();
+	dtg_Product.DataSource = catalogues;
+}

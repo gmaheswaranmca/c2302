@@ -1,0 +1,18 @@
+
+string username="maheswaran";
+string password="1234";
+string sql = String.Format(
+"SELECT * FROM employee where username='{0}' and password='{1}'",
+username,password);
+
+
+Username:albin
+Password:1234
+The sql statement is
+SELECT * FROM employee where username='albin' and password='1234'
+
+Username:maheswaran' OR 1=1 -- Comment
+Password:1234
+The sql statement is
+SELECT * FROM employee where username='maheswaran' OR 1=1 -- Comment' and password='1234'
+
