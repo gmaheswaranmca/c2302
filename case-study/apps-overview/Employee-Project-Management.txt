@@ -1,3 +1,47 @@
+One Admin (Hard Coded) -> Admin Portal
+
+Login: 												
+	login_id(uk), password,	usertype			--> Login Page 	login_id is Employee.empid
+	1001			1234	Employee 
+	1002            2345    
+	1003			4567		
+	Data Source: When will you insert? Ans:Employee Creation
+	
+Employee:
+	empid(uk),empname, empdep, no_of_project_allocated,project_percent
+	1001	  Praveen  Design               0->1               0->28 	
+	1002      Stutee   Programmer           0->1               0->50
+	1003      Albin    Programmer           0->1+1-1-1         0->35+22-35-22
+	Data Source: When will you insert? Ans:Employee Creation
+	
+Project: 
+	project id(uk), project name, project description,startdate,enddate, allocated percent	completed_percent
+	10				LMS              xyz				10/Sep	 10/Nov 	0->28+22+50			0+22
+	20				BMS              zya				15/Sep	 25/Oct 	0->35				0+35
+	Data Source: ? Ans: Project Creation 
+	
+Project management:  
+	manageid(uk),empid, project id, assigned startdate, deadline date, percentage,status
+		1		  1001		10		--					--			    28			Not Done 
+		2		  1003		20		--					--			    35			Done	
+		3		  1003		10		--					--			    22			Done
+		4		  1002		10		--					--				50			Not Done
+----------------------------------------------------------------------
+
+Login: 
+	login_id(uk), password,	usertype			--> Login Page 
+	
+Employee:
+	empid(uk),empname,empdep,no_of_project_allocated,project_percent
+	
+Project: 
+	project id(uk), project name, project description,startdate,enddate, allocated percent
+	
+Project management:  
+	manageid(uk),empid, project id, assigned startdate, deadline date, percentage,status
+
+----------------------------------------------------------------------
+
 Employee Project Management System
 	UI 
 		Admin Login 			!!! UI Done 

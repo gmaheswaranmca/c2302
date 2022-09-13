@@ -1,0 +1,18 @@
+DataBase:LibraryMs
+
+login_table  : (admin table)
+	Id, user_name, password  
+branch_table : 
+	branch_id, branch
+student_table: 
+	Id, Student_name, Branch, Gender, Birth_date, Email,
+	Roll_no, Enroll_year, Password     
+BOOK:
+	Book_ID,Book_Name,Book_Details,Author,
+	Publication,Branch,Price,Quantity,
+	[IssuedQuantity]
+Issue:
+	issue_id,issue_date,book_id,student_id,due_date,returned_date,
+	is_due_date_crossed,fine_amount,is_fine_paid
+DueCertificate,
+	cerificate_id, certificate_date, student_id

@@ -1,0 +1,35 @@
+Data Binding:
+	Binding of UI property to "other clr property"
+	
+	
+	clr property
+		- UI property 
+		- object property 
+		- object property of the collection 
+		
+	For Collection binding we use ItemSource
+	For Single Data binding we use DataContext for the container like layout or window
+		
+	Binding Mechanism is connected with three things 
+		Source 					!!! Data Provider 
+		Target					!!! Data Consumer 
+		Path with which Soruce and Target are bound 
+		
+		
+		Slider to TextBox 
+		Source    Target 					<------------------------ Source.Value is the Path 
+		
+		
+		Form UIs 		Product Object
+		Target 			Source 				<------------------------ Object.<Property> is the Path 
+		
+		TextBox to TextBox 
+		Source 		Target 					<------------------------ Source.Text is the Path 
+		
+		
+		Using Mode of the Binding 
+			we can achieve 
+				One Way Binding 		Slider to TextBox 		<----- Value of Slider is the Path, Mode=OneWay 
+				Two Way Binding 		Slider to TextBox 		<----- Value of Slider is the Path, Mode=TwoWay
+		
+		

@@ -1,5 +1,14 @@
 Airline System
 ----------------------------------------------------------------------------------------
+tbl_Users
+	UserName(pk),FullName,FullName,PhoneNo,Gender,Password,ConfirmPassword,DOB,emailid(uk)
+tbl_book
+	Ticket_id(auto,Pk),username(Fk),flightid(FK),source,destination,date,nooftickets,total_amount
+tbl_Flight
+	flight_id(pk),Airline_name,source,designation,seat_capacity,depature,arraival_time
+
+
+----------------------------------------------------------------------------------------
 CREATE TABLE [dbo].[Admin] (
 [UserName] VARCHAR (50) NOT NULL,
 [Password] VARCHAR (50) NOT NULL,

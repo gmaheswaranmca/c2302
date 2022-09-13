@@ -1,0 +1,8 @@
+Bank
+Total number of tables-4
+
+empl_registration:Name,Phone number,empUserId,empPassword
+transaction:Date,accNo,Debit,Credit,Balance,Sent to
+loan:AccNo,Loanamount
+tbl_custreg:Name, Phone number, Account number, DOB, Pan number, 
+	Gender, SlectAcc, MPIN, UserId, Password
