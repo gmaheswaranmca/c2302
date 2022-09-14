@@ -1,0 +1,47 @@
+MVVM - architectural design pattern
+	(using WPF concepts)
+		based on data binding - dependency of the object properties across app 
+--------------------------------------------
+Styles 
+	scope:
+		control, layout/container, window/user control, app 
+--------------------------------------------
+Resources
+	Resource Dictionary throughout the wpf app
+	o we can define object based on business object or control/ui
+	in the resource 
+	o styles are defined 
+	o layout | window | app 
+--------------------------------------------	
+template 
+	- data template 
+	- control template 
+	- ui/control (collections) --> ItemTemplate(DataTemplate), ItemPanelTemplate
+--------------------------------------------		
+menus, toolbar, staturbar
+--------------------------------------------		
+	user case : Employee (Id, Employee Name, Job Title, Salary)
+--------------------------------------------	
+MVVM	
+	M - Model 				!!! Model means data, for our use case model Employee object 				
+	V - View 				!!! View means presentation, for our case view is the UI for employee object 
+	VM - View Model 		!!! the model to fit for the view and changes in the model 
+								to reflect the view 
+	
+	class EmployeeModel 									
+		!!!model 
+	class EmployeeViewModel	{ FormEmployee, Employees}		
+		!!!viewmodel implemented INotifyPropertyChanged and 
+			this class object properties invoke the PropertyChanged event
+			to tell WPF content system the content is changed so
+			the all the binding will be rebound
+	class FrmEmployee
+		!!!view 
+															
+--------------------------------------------	
+	
+	
+	
+	
+	
+	

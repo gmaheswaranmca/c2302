@@ -6,3 +6,6 @@ transaction:Date,accNo,Debit,Credit,Balance,Sent to
 loan:AccNo,Loanamount
 tbl_custreg:Name, Phone number, Account number, DOB, Pan number, 
 	Gender, SlectAcc, MPIN, UserId, Password
+	
+	
+create table transaction(transaction_number bigint primary key identity(10020201,1),.....);	

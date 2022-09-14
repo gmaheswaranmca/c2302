@@ -1,0 +1,15 @@
+composite key - combination 
+
+take an example of university college students.
+college id, roll no, register number
+
+register number is unique for entire university.
+roll no is unique for only college.
+combination of college id and roll no will be unique.
+
+driver id - unique 	- PK
+
+mobile no - unique 
+
+cab number - unique 
+
