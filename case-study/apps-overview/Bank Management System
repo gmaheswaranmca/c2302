@@ -9,3 +9,8 @@ tbl_custreg:Name, Phone number, Account number, DOB, Pan number,
 	
 	
 create table transaction(transaction_number bigint primary key identity(10020201,1),.....);	
+
+
+
+
+

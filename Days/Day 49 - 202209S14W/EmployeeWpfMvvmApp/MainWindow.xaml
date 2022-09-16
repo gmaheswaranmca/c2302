@@ -1,0 +1,42 @@
+﻿<Window x:Class="EmployeeWpfMvvmApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeeWpfMvvmApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas Grid.Column="0" Margin="0,0,396,0">
+            <DataGrid x:Name="GrdEmployees" HorizontalAlignment="Left" 
+                Height="247" 
+                VerticalAlignment="Top" 
+                Width="365"
+                AutoGenerateColumns="False" Canvas.Left="21" Canvas.Top="49">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id}"  Header="Id" IsReadOnly="True"/>
+                    <DataGridTextColumn Binding="{Binding Name}" Header="Employee Name" IsReadOnly="True"/>
+                    <DataGridTextColumn Binding="{Binding JobTitle}" Header="JobTitle" IsReadOnly="True"/>
+                    <DataGridTextColumn Binding="{Binding Salary}" Header="Salary" IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button x:Name="BtnLoad" Content="Load" HorizontalAlignment="Left" VerticalAlignment="Top" Width="85" Height="34" Canvas.Left="113" Canvas.Top="10"/>
+            <Button x:Name="BtnNew" Content="New" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87"  Height="34" Canvas.Left="21" Canvas.Top="10"/>
+            <Button x:Name="BtnEdit" Content="Edit" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Height="32" Canvas.Left="21" Canvas.Top="301"/>
+            <Button x:Name="BtnDelete" Content="Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Width="97"  Height="32" Canvas.Left="101" Canvas.Top="301"/>
+        </Canvas>
+        <Canvas Margin="396,0,0,0">
+            <Label x:Name="LblFormStatus" Content="New Employee" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.461,-0.885" Height="26" Width="89" Canvas.Left="23" Canvas.Top="18"/>
+            <Label x:Name="LblId" Content="ID" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="22" Canvas.Left="23" Canvas.Top="49"/>
+            <Label x:Name="LblName" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Width="42" Canvas.Left="23" Canvas.Top="98"/>
+            <Label x:Name="LblJobTitle" Content="Job Title" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="1.409,3.231" Height="26" Width="54" Canvas.Left="23" Canvas.Top="152"/>
+            <Label x:Name="LblSalary" Content="Salary" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="4.636,1.923" Height="26" Width="41" Canvas.Left="23" Canvas.Top="204"/>
+            <TextBox x:Name="TxtID" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Canvas.Left="138" Canvas.Top="50" Text="Some Text"/>
+            <TextBox x:Name="TxtName" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Canvas.Left="138" Canvas.Top="100" Text="Some Text"/>
+            <TextBox x:Name="TxtJobTitle" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Canvas.Left="138" Canvas.Top="153" Text="Some Text"/>
+            <TextBox x:Name="TxtSalary" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="244" Canvas.Left="138" Canvas.Top="207" Text="Some Text"/>
+            <Button x:Name="BtnSave" Content="Save" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="40" Canvas.Left="23" Canvas.Top="263"/>
+        </Canvas>
+
+    </Grid>
+</Window>
