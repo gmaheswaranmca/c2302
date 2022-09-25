@@ -1,0 +1,17 @@
+Theming and Skinning
+	The terms Theming and Skinning mean something very specific in WPF. 
+	
+Theming	
+	Theming refers to a Windows theme like Aero or Luna. 
+	In each Windows version (XP, Vista, Win 7) 
+	there’s a different default Theme 
+	where controls like a Button or a Progress Bar look different. 
+	
+Windows Presentation Foundation (WPF) 
+styling and templating refer to a suite of features 
+that let developers and designers create visually compelling effects and 
+a consistent appearance for their product. 
+When customizing the appearance of an app, 
+you want a strong styling and templating model 
+that enables maintenance and sharing of appearance within and among apps. 
+WPF provides that model.	

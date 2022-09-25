@@ -40,7 +40,37 @@ MVVM
 															
 --------------------------------------------	
 	
+	Three Tier Architecture:
 	
+		Data | Table | Business Object - Model 
+		
+		Libraray
+		************Backend************					************Business Logic Layer (Business Objects / Models)
+		Table(s) 										Class(es)
+		book{book_id, book_name, book_details}			BookModel{BookId,BookName,BookDetails,Construct - no arg/args}
+		branch
+		
+		************Data Access Layer (DAL)************
+		Data Access Object (DAO)
+		BookDAO
+		void/bool	Create(BookModel model) --> Inserting into the table book 
+			Update
+			Delete 
+		BookModel ReadById(...)
+		List<BookModel> ReadAll(...)
+		List<BookModel> ReadByBookSearch (...)
+		
+		************Presentation Layer************ 
+		Form -> Add Book Form 
+			Book Name [					]
+			Book Deatails [                 
+										]
+			<Add>	
+				"Are you sure to add the book?" 
+					"Yes"
+						BookModel model = new BookModel(0,txtBookName.Text, txtBookDetails.Text, ...);
+						BookDAO.Create(model);
+						"Book is added successfully."
 	
 	
 	
